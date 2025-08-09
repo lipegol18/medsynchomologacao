@@ -1,0 +1,208 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Tema MedSync - versão escura por padrão */
+  --background: 220 40% 10%;
+  --foreground: 210 40% 98%;
+  --muted: 214 60% 15%;
+  --muted-foreground: 216.9 14.6% 34.9%;
+  --popover: 214 50% 25%;
+  --popover-foreground: 210 40% 98%;
+  --card: 214 50% 20%;
+  --card-foreground: 210 40% 98%;
+  --border: 214 50% 30%;
+  --input: 214 40% 30%;
+  --primary: 210 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 214 60% 40%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 210 100% 60%;
+  --accent-foreground: 0 0% 100%;
+  --accent-light: 210 100% 60% / 0.6;  /* accent com 60% opacidade para hover states */
+  --input-field: 210 100% 95%;  /* azul muito claro para campos de seleção */
+  --destructive: 0 62.8% 50.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 210 100% 50%;
+  --radius: 0.5rem;
+  
+  /* Cores específicas para o MedSync que não mudam com o tema */
+  --medsync-blue: 214 90% 40%;
+  --medsync-dark-blue: 214 90% 25%;
+}
+
+.light {
+  /* Tema claro com paleta Sky */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 216.9 14.6% 34.9%;
+  --semi-foreground: 218 40% 25%;  /* cinza intermediário entre muted e foreground */
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --card: 204 100% 97%;
+  --card-foreground: 222.2 84% 4.9%;
+  --border: 213 94% 68%;  /* blue-400 similar */
+  --input: 214.3 31.8% 91.4%;
+  /* Paleta Sky para elementos principais - Header branco com texto sky */
+  --primary: 0 0% 100%;             /* Branco para o header */
+  --primary-foreground: 199 89% 48%; /* sky-400 para textos do header */
+  --secondary: 204 94% 94%;         /* sky-50 */
+  --secondary-foreground: 199 89% 48%; /* sky-400 */
+  --accent: 199 89% 48%;            /* sky-400 */
+  --accent-foreground: 0 0% 100%;
+  --accent-light: 200 89% 48% / 0.3;   /* accent com 30% opacidade para hover states */
+  --input-field: 204 100% 97%;  /* azul muito claro para campos de seleção */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 199 89% 48%;              /* sky-400 */
+  
+  /* Cores Sky específicas para botões e elementos que não são o header */
+  --sky-primary: 200 98% 39%;       /* sky-500 para botões */
+  --sky-primary-foreground: 0 0% 100%;
+  --radius: 0.5rem;
+  
+  /* Cores específicas do MedSync usando Sky */
+  --medsync-blue: 199 89% 48%;      /* sky-400 */
+  --medsync-dark-blue: 200 98% 39%; /* sky-500 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  
+  /* Estilos para a página de autenticação que respondem ao tema */
+  .auth-page-container {
+    @apply bg-background;
+  }
+  
+  .auth-card {
+    @apply bg-card border-blue-800;
+  }
+  
+  /* Estilos para formulários de autenticação que respondem ao tema */
+  .auth-card input, 
+  .auth-card select {
+    @apply bg-input border-border text-foreground;
+  }
+  
+  .auth-card input::placeholder {
+    @apply text-muted-foreground;
+  }
+  
+  /* Labels na seção de autenticação */
+  .auth-card label {
+    @apply text-foreground;
+  }
+  
+  /* Classes específicas para elementos que devem usar cores Sky no tema claro */
+  .light .btn-sky {
+    background-color: hsl(200 98% 39%); /* sky-500 */
+    color: white;
+  }
+  
+  .light .btn-sky:hover {
+    background-color: hsl(199 89% 48%); /* sky-400 */
+  }
+  
+  .light .text-sky {
+    color: hsl(199 89% 48%); /* sky-400 */
+  }
+  
+  .light .border-sky {
+    border-color: hsl(199 89% 48%); /* sky-400 */
+  }
+  
+  .light .bg-sky {
+    background-color: hsl(199 89% 48%); /* sky-400 */
+  }
+  
+  /* Fonte em negrito para textos do header no tema claro */
+  .light .header-text {
+    font-weight: 500; /* medium */
+  }
+  
+  /* Estilo ativo do header - bloco sky-500 */
+  .header-active {
+    background-color: hsl(200 98% 39%) !important; /* sky-500 */
+    color: white !important;
+    border-radius: 0.25rem;
+  }
+  
+  .header-active:hover {
+    background-color: hsl(201 96% 32%) !important; /* sky-600 - mais escuro no hover */
+  }
+  
+  /* Mensagens de erro */
+  .auth-card .text-red-500, 
+  .auth-card .text-red-600 {
+    @apply text-destructive;
+  }
+  
+  /* Card footer */
+  .auth-card .bg-white {
+    @apply bg-card border-border;
+  }
+  
+  /* Estilos para os tabs */
+  .auth-card .data-\[state\=active\]\:bg-white {
+    @apply bg-primary;
+  }
+  
+  .auth-card .data-\[state\=active\]\:text-blue-800 {
+    @apply text-primary-foreground;
+  }
+  
+  /* Estilos para botões MedSync que respondem ao tema */
+  .btn-medsync-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-medium px-4 py-2 rounded-md;
+  }
+  
+  .btn-medsync-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground font-medium px-4 py-2 rounded-md;
+  }
+  
+  /* Estilo para cards de conteúdo que respondem ao tema */
+  .card-content {
+    @apply bg-card rounded-md shadow-md text-card-foreground;
+  }
+  
+  /* Estilos para os steps do MedSync que respondem ao tema */
+  .step-indicator {
+    @apply flex items-center justify-center w-8 h-8 rounded-full bg-muted text-muted-foreground font-bold;
+  }
+  
+  .step-indicator.active {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  .step-indicator.completed {
+    @apply bg-green-600 text-white;
+  }
+  
+  /* Classes personalizadas para a cor accent-light (accent com 60% opacidade) */
+  .bg-accent-light {
+    background-color: hsl(var(--accent-light));
+  }
+  
+  .hover\:bg-accent-light:hover {
+    background-color: hsl(var(--accent-light));
+  }
+  
+  /* Classe para o azul muito claro dos campos de seleção */
+  .bg-input-field {
+    background-color: hsl(var(--input-field));
+  }
+  
+  /* Classe para texto com cor accent */
+  .text-accent {
+    color: hsl(var(--accent));
+  }
+}
+

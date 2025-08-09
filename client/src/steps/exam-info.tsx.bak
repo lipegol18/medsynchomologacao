@@ -1,0 +1,701 @@
+import { useState, useEffect, useRef } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { FileImage, FileText, Upload, X, Eye } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { getFileUrl, deleteFile } from "@/lib/file-upload";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription, 
+  DialogFooter,
+  DialogClose
+} from "@/components/ui/dialog";
+
+interface ExamInfoProps {
+  additionalNotes: string;
+  setAdditionalNotes: (notes: string) => void;
+  examImage: File | null;
+  setExamImage: (file: File | null) => void;
+  medicalReport: File | null;
+  setMedicalReport: (file: File | null) => void;
+  clinicalIndication: string;
+  setClinicalIndication: (text: string) => void;
+  examImages?: File[];
+  setExamImages?: (files: File[]) => void;
+  // Adicionar URLs de arquivos do servidor
+  examImageUrl?: string | null;
+  medicalReportUrl?: string | null;
+  additionalImageUrls?: string[] | null;
+  // Função para atualizar campos do pedido no banco de dados
+  updateOrderField?: (fieldName: string, value: any) => Promise<boolean>;
+  // ID do pedido atual
+  orderId?: number | null;
+}
+
+export function ExamInfo({
+  additionalNotes,
+  setAdditionalNotes,
+  examImage,
+  setExamImage,
+  medicalReport, 
+  setMedicalReport,
+  clinicalIndication,
+  setClinicalIndication,
+  examImages = [],
+  setExamImages = () => {},
+  examImageUrl = null,
+  medicalReportUrl = null,
+  additionalImageUrls = null,
+  updateOrderField,
+  orderId
+}: ExamInfoProps) {
+  const [processingImage, setProcessingImage] = useState(false);
+  const [processingReport, setProcessingReport] = useState(false);
+  const [examImagePreview, setExamImagePreview] = useState<string | null>(null);
+  const [additionalImages, setAdditionalImages] = useState<{file?: File, preview: string, url?: string}[]>([]);
+  const [reportPreviewOpen, setReportPreviewOpen] = useState(false);
+  
+  // Verificar se temos uma URL de imagem do servidor (prioridade mais alta)
+  useEffect(() => {
+    if (examImageUrl && !examImagePreview) {
+      // Se temos uma URL do servidor, usamos ela
+      setExamImagePreview(getFileUrl(examImageUrl));
+    }
+  }, [examImageUrl, examImagePreview]);
+
+  // Gerenciamento de imagens adicionais do servidor
+  useEffect(() => {
+    if (additionalImageUrls && additionalImageUrls.length > 0) {
+      const serverImages = additionalImageUrls.map(url => ({
+        preview: getFileUrl(url),
+        url: url
+      }));
+      
+      // Mesclar imagens adicionais do servidor com quaisquer novas imagens adicionadas na sessão atual
+      const clientImages = additionalImages.filter(img => img.file);
+      setAdditionalImages([...serverImages, ...clientImages]);
+    }
+  }, [additionalImageUrls]);
+
+  // Estado para armazenar informações do laudo do servidor
+  const [reportFromUrl, setReportFromUrl] = useState<{name: string, url: string} | null>(null);
+  
+  // Processar informações do laudo do servidor
+  useEffect(() => {
+    if (medicalReportUrl) {
+      // Extrair nome do arquivo da URL
+      const parts = medicalReportUrl.split('/');
+      const filename = parts[parts.length - 1];
+      // Decodificar o nome do arquivo se necessário
+      const decodedName = decodeURIComponent(filename);
+      
+      setReportFromUrl({
+        name: decodedName,
+        url: medicalReportUrl
+      });
+    }
+  }, [medicalReportUrl]);
+
+  // Quando o usuário seleciona um arquivo de imagem principal
+  const handleExamImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      
+      // Resetar qualquer estado anterior para garantir limpeza adequada
+      if (examImageUrl) {
+        // Se tínhamos uma imagem prévia do servidor, garantir que não está mais no estado
+        setExamImagePreview(null);
+      }
+      
+      // Atualizar o estado com o novo arquivo
+      setExamImage(file);
+      setProcessingImage(true);
+      
+      // Criar prévia da imagem
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        if (event.target) {
+          setExamImagePreview(event.target.result as string);
+          setProcessingImage(false);
+        }
+      };
+      reader.readAsDataURL(file);
+      
+      console.log("Nova imagem selecionada:", file.name);
+    }
+  };
+
+  // Quando o usuário seleciona um arquivo de laudo
+  const handleMedicalReportChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+      
+      // Resetar qualquer estado anterior
+      if (medicalReportUrl) {
+        setReportFromUrl(null);
+      }
+      
+      setMedicalReport(file);
+      setProcessingReport(true);
+      
+      console.log("Novo laudo selecionado:", file.name);
+      
+      setTimeout(() => {
+        setProcessingReport(false);
+      }, 500);
+    }
+  };
+
+  // Quando o usuário seleciona imagens adicionais
+  const handleAdditionalImagesChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files.length > 0) {
+      const newFiles = Array.from(e.target.files);
+      
+      console.log(`Selecionadas ${newFiles.length} novas imagens adicionais:`, 
+        newFiles.map(f => f.name).join(", "));
+      
+      // Adicionar todas as novas imagens com prévia
+      const promises = newFiles.map(file => 
+        new Promise<{file: File, preview: string}>((resolve) => {
+          const reader = new FileReader();
+          reader.onload = (event) => {
+            if (event.target) {
+              resolve({
+                file,
+                preview: event.target.result as string
+              });
+            }
+          };
+          reader.readAsDataURL(file);
+        })
+      );
+      
+      Promise.all(promises).then(newImages => {
+        // Atualizar o estado com as novas imagens
+        setAdditionalImages(prev => [...prev, ...newImages]);
+        
+        // Atualizar o array de arquivos para o componente pai
+        const allFileImages = examImages ? [...examImages] : [];
+        newFiles.forEach(file => {
+          // Verificar se o arquivo já existe no array para evitar duplicações
+          const exists = allFileImages.some(
+            existingFile => existingFile.name === file.name && existingFile.size === file.size
+          );
+          if (!exists) {
+            allFileImages.push(file);
+          }
+        });
+        
+        setExamImages(allFileImages);
+        console.log(`Array de arquivos atualizado, total de ${allFileImages.length} imagens`);
+      });
+    }
+  };
+
+  // Referência para o input de imagem principal
+  const examImageInputRef = useRef<HTMLInputElement>(null);
+  
+  // Remover imagem principal
+  const removeExamImage = async () => {
+    // Limpar completamente o estado local relacionado à imagem
+    setExamImage(null);
+    setExamImagePreview(null);
+    
+    // Resetar o valor do input para permitir a seleção do mesmo arquivo novamente
+    if (examImageInputRef.current) {
+      examImageInputRef.current.value = "";
+    }
+    
+    if (examImageUrl) {
+      console.log("Removendo imagem do servidor:", examImageUrl);
+      
+      try {
+        // Chamar a API para excluir o arquivo do servidor
+        const deleted = await deleteFile(examImageUrl);
+        
+        if (deleted) {
+          console.log("Imagem excluída com sucesso do servidor");
+          
+          // Se temos uma função para atualizar o banco de dados, removemos a referência do arquivo
+          if (updateOrderField && orderId) {
+            const updated = await updateOrderField("examImageUrl", null);
+            if (updated) {
+              console.log("Referência da imagem removida do banco de dados");
+            } else {
+              console.error("Falha ao remover referência da imagem do banco de dados");
+            }
+          }
+        } else {
+          console.error("Falha ao excluir imagem do servidor");
+        }
+      } catch (error) {
+        console.error("Erro ao excluir imagem do servidor:", error);
+      }
+    }
+    
+    // Garantir que o estado é completamente resetado para permitir nova seleção
+    // Usar um timeout para garantir que o React tenha tempo de atualizar o DOM
+    setTimeout(() => {
+      if (examImageInputRef.current) {
+        examImageInputRef.current.value = "";
+      }
+      
+      // Avisar ao console que a limpeza foi concluída
+      console.log("Campo de upload de imagem resetado e pronto para nova seleção");
+    }, 200);
+  };
+
+  // Referência para o input de laudo médico
+  const medicalReportInputRef = useRef<HTMLInputElement>(null);
+
+  // Remover laudo
+  const removeMedicalReport = async () => {
+    // Limpar estados
+    setMedicalReport(null);
+    setReportFromUrl(null);
+    setProcessingReport(false);
+    
+    // Resetar o valor do input para permitir a seleção do mesmo arquivo novamente
+    if (medicalReportInputRef.current) {
+      medicalReportInputRef.current.value = "";
+    }
+    
+    if (medicalReportUrl) {
+      console.log("Removendo laudo médico do servidor:", medicalReportUrl);
+      
+      try {
+        // Chamar a API para excluir o arquivo do servidor
+        const deleted = await deleteFile(medicalReportUrl);
+        
+        if (deleted) {
+          console.log("Laudo excluído com sucesso do servidor");
+          
+          // Se temos uma função para atualizar o banco de dados, removemos a referência do arquivo
+          if (updateOrderField && orderId) {
+            const updated = await updateOrderField("medicalReportUrl", null);
+            if (updated) {
+              console.log("Referência do laudo removida do banco de dados");
+            } else {
+              console.error("Falha ao remover referência do laudo do banco de dados");
+            }
+          }
+        } else {
+          console.error("Falha ao excluir laudo do servidor");
+        }
+      } catch (error) {
+        console.error("Erro ao excluir laudo do servidor:", error);
+      }
+    }
+    
+    // Garantir que o estado é completamente resetado para permitir nova seleção
+    // Usar um timeout para garantir que o React tenha tempo de atualizar o DOM
+    setTimeout(() => {
+      if (medicalReportInputRef.current) {
+        medicalReportInputRef.current.value = "";
+      }
+      console.log("Campo de upload de laudo resetado e pronto para nova seleção");
+    }, 200);
+  };
+
+  // Referência para o input de imagens adicionais
+  const additionalImagesInputRef = useRef<HTMLInputElement>(null);
+
+  // Remover imagem adicional
+  const removeAdditionalImage = async (index: number) => {
+    const imageToRemove = additionalImages[index];
+    
+    // Remover do estado local
+    setAdditionalImages(additionalImages.filter((_, i) => i !== index));
+    
+    // Se for uma imagem de arquivo, remover do array de arquivos
+    if (imageToRemove.file) {
+      setExamImages(examImages.filter(file => {
+        // Comparar nome e tamanho para identificar o arquivo
+        return file.name !== imageToRemove.file?.name || 
+               file.size !== imageToRemove.file?.size;
+      }));
+    }
+    
+    // Se for uma imagem do servidor
+    if (imageToRemove.url) {
+      console.log("Removendo imagem adicional do servidor:", imageToRemove.url);
+      
+      try {
+        // Chamar a API para excluir o arquivo do servidor
+        const deleted = await deleteFile(imageToRemove.url);
+        
+        if (deleted) {
+          console.log("Imagem adicional excluída com sucesso do servidor");
+          
+          // Se temos uma função para atualizar o banco de dados e a URL está no array de imagens adicionais
+          if (updateOrderField && orderId && additionalImageUrls) {
+            // Criar uma nova lista de URLs de imagens adicionais sem a que foi removida
+            const updatedUrls = additionalImageUrls.filter(url => url !== imageToRemove.url);
+            
+            // Atualizar o banco de dados com a nova lista
+            const updated = await updateOrderField("additionalImageUrls", updatedUrls);
+            if (updated) {
+              console.log("Referência da imagem adicional removida do banco de dados");
+              
+              // Garantir que o input está limpo para permitir novas seleções
+              if (additionalImagesInputRef.current) {
+                additionalImagesInputRef.current.value = "";
+                setTimeout(() => {
+                  if (additionalImagesInputRef.current) {
+                    additionalImagesInputRef.current.value = "";
+                  }
+                }, 100);
+              }
+            } else {
+              console.error("Falha ao remover referência da imagem adicional do banco de dados");
+            }
+          }
+        } else {
+          console.error("Falha ao excluir imagem adicional do servidor");
+        }
+      } catch (error) {
+        console.error("Erro ao excluir imagem adicional do servidor:", error);
+      }
+    }
+    
+    // Sempre resetar o input para permitir selecionar novos arquivos
+    if (additionalImagesInputRef.current) {
+      additionalImagesInputRef.current.value = "";
+    }
+  };
+
+  return (
+    <div>
+      {/* Modal de visualização do laudo */}
+      <Dialog open={reportPreviewOpen} onOpenChange={setReportPreviewOpen}>
+        <DialogContent className="max-w-4xl bg-[#1a2332] border-blue-800 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-white">Visualização do Laudo</DialogTitle>
+            <DialogDescription className="text-blue-300">
+              {reportFromUrl ? reportFromUrl.name : "Laudo do exame"}
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="mt-4 mb-4">
+            {medicalReportUrl && (
+              <div className="w-full h-96 flex items-center justify-center">
+                {medicalReportUrl.toLowerCase().endsWith('.pdf') ? (
+                  <div className="w-full h-full border border-blue-700 rounded-md overflow-hidden">
+                    <iframe 
+                      src={getFileUrl(medicalReportUrl)}
+                      className="w-full h-full" 
+                      title="Laudo do exame"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center p-4 border border-blue-700 rounded-md">
+                    <img 
+                      src={getFileUrl(medicalReportUrl)}
+                      alt="Laudo do exame"
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+          
+          <DialogFooter>
+            <Button 
+              variant="outline" 
+              className="border-blue-600 text-white hover:bg-blue-900"
+              onClick={() => setReportPreviewOpen(false)}
+            >
+              Fechar
+            </Button>
+            <Button 
+              className="bg-blue-700 hover:bg-blue-600"
+              onClick={() => {
+                if (medicalReportUrl) {
+                  window.open(getFileUrl(medicalReportUrl), '_blank');
+                }
+              }}
+            >
+              Abrir em Nova Aba
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+      
+      <Card className="mb-6 bg-[#1a2332] border-blue-800 text-white">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-xl flex items-center text-white">
+            <FileText className="mr-2 h-5 w-5 text-blue-400" />
+            Informações do Exame e Laudo
+          </CardTitle>
+          <CardDescription className="text-blue-300">
+            Forneça informações sobre o exame e laudo do exame de imagem para o pedido cirúrgico
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-6">
+            {/* Upload da imagem do exame (obrigatório) */}
+            <div>
+              <Label htmlFor="examImage" className="flex items-center text-white">
+                Imagem do Exame <span className="text-red-400 ml-1">*</span>
+              </Label>
+              
+              <div 
+                className={cn(
+                  "border-2 border-dashed border-blue-700 rounded-lg p-4 mt-1",
+                  "transition-all duration-200 hover:border-blue-500",
+                  examImagePreview ? "bg-blue-900/20" : "bg-blue-950/30 cursor-pointer"
+                )}
+                onClick={() => {
+                  if (!examImagePreview && examImageInputRef.current) {
+                    examImageInputRef.current.click();
+                  }
+                }}
+              >
+                {!examImagePreview ? (
+                  <div className="flex flex-col items-center justify-center gap-2 py-4">
+                    <input
+                      id="examImage"
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={handleExamImageChange}
+                      required
+                      ref={examImageInputRef}
+                      key={`exam-image-upload-${Date.now()}`}
+                    />
+                    <Upload className="h-8 w-8 text-blue-400" />
+                    <span className="text-sm text-blue-300 text-center block">
+                      Clique ou arraste para fazer upload da imagem do exame
+                    </span>
+                  </div>
+                ) : (
+                  <div className="relative">
+                    <div className="flex justify-end mb-1 absolute right-0 top-0">
+                      <Button
+                        size="sm"
+                        variant="destructive"
+                        className="h-6 w-6 rounded-full p-0"
+                        onClick={removeExamImage}
+                      >
+                        <X className="h-4 w-4" />
+                      </Button>
+                    </div>
+                    <div className="mt-4">
+                      <img
+                        src={examImagePreview}
+                        alt="Imagem do Exame"
+                        className="max-h-56 max-w-full mx-auto rounded"
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <p className="text-xs text-blue-300 mt-1">
+                Faça upload da radiografia, ressonância ou outro exame de imagem relevante
+              </p>
+            </div>
+
+            {/* Upload do laudo do exame (opcional) */}
+            <div>
+              <Label htmlFor="medicalReport" className="text-white">Laudo do Exame</Label>
+
+              {!medicalReport && !reportFromUrl ? (
+                <div 
+                  className={cn(
+                    "border-2 border-dashed border-blue-700 rounded-lg p-4 mt-1",
+                    "transition-all duration-200 hover:border-blue-500 cursor-pointer",
+                    "bg-blue-950/30"
+                  )}
+                  onClick={() => {
+                    if (medicalReportInputRef.current) {
+                      medicalReportInputRef.current.click();
+                    }
+                  }}
+                >
+                  <div className="flex flex-col items-center justify-center gap-2 py-4">
+                    <input
+                      id="medicalReport"
+                      type="file"
+                      accept=".pdf,image/*"
+                      className="hidden"
+                      onChange={handleMedicalReportChange}
+                      ref={medicalReportInputRef}
+                      key={`medical-report-upload-${Date.now()}`}
+                    />
+                    <FileText className="h-8 w-8 text-blue-400" />
+                    <span className="text-sm text-blue-300 text-center block">
+                      Clique ou arraste para fazer upload do laudo do exame
+                    </span>
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-blue-900/20 border-2 border-blue-700 rounded-lg p-4 mt-1 relative">
+                  {processingReport ? (
+                    <div className="flex items-center justify-center p-4">
+                      <div className="animate-pulse text-blue-300">Processando...</div>
+                    </div>
+                  ) : (
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center">
+                        <FileText className="h-6 w-6 text-blue-400 mr-2" />
+                        <p className="text-sm text-white">
+                          {medicalReport ? medicalReport.name : 'Laudo carregado'}
+                        </p>
+                        {medicalReport && (
+                          <p className="text-xs text-blue-300 ml-2">
+                            ({(medicalReport.size / 1024).toFixed(1)} KB)
+                          </p>
+                        )}
+                      </div>
+                      <Button 
+                        variant="destructive" 
+                        size="sm"
+                        className="ml-2"
+                        onClick={removeMedicalReport}
+                      >
+                        <X className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  )}
+                  
+                  {/* Botão de visualização (apenas se tivermos um laudo do servidor) */}
+                  {reportFromUrl && (
+                    <div className="mt-3 flex justify-between items-center">
+                      <div>
+                        <FileText className="h-5 w-5 text-blue-400 inline-block mr-1" />
+                        <p className="text-xs text-blue-300">{reportFromUrl.name}</p>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button 
+                          variant="outline" 
+                          size="sm"
+                          className="bg-blue-700 hover:bg-blue-600 border-blue-500"
+                          onClick={() => {
+                            if (medicalReportUrl) {
+                              // Abrir modal com o laudo
+                              setReportPreviewOpen(true);
+                            }
+                          }}
+                        >
+                          <Eye className="h-4 w-4 mr-1" />
+                          Visualizar
+                        </Button>
+                        <Button 
+                          variant="destructive" 
+                          size="sm"
+                          onClick={removeMedicalReport}
+                        >
+                          <X className="h-4 w-4" />
+                          Remover
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+              <p className="text-xs text-blue-300 mt-1">
+                Faça upload do laudo médico do exame (opcional)
+              </p>
+            </div>
+
+            {/* Upload de imagens adicionais (opcional) */}
+            <div>
+              <Label htmlFor="additionalImages" className="text-white">Imagens Adicionais</Label>
+              <div 
+                className={cn(
+                  "border-2 border-dashed border-blue-700 rounded-lg p-4 mt-1",
+                  "transition-all duration-200 hover:border-blue-500 cursor-pointer",
+                  "bg-blue-950/30"
+                )}
+                onClick={() => {
+                  if (additionalImagesInputRef.current) {
+                    additionalImagesInputRef.current.click();
+                  }
+                }}
+              >
+                <input
+                  id="additionalImages"
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  className="hidden"
+                  onChange={handleAdditionalImagesChange}
+                  ref={additionalImagesInputRef}
+                  key={`additional-images-upload-${Date.now()}`}
+                />
+                <div className="flex flex-col items-center justify-center gap-2 py-4">
+                  <FileImage className="h-8 w-8 text-blue-400" />
+                  <span className="text-sm text-blue-300 text-center block">
+                    Clique ou arraste para adicionar imagens complementares
+                  </span>
+                </div>
+              </div>
+              <p className="text-xs text-blue-300 mt-1">
+                Adicione mais imagens relacionadas ao exame (opcional)
+              </p>
+              
+              {/* Mostra as imagens adicionais */}
+              {additionalImages.length > 0 && (
+                <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {additionalImages.map((image, index) => (
+                    <div key={index} className="relative group">
+                      <img 
+                        src={image.preview} 
+                        alt={`Imagem adicional ${index + 1}`}
+                        className="w-full aspect-square object-cover rounded border border-blue-700"
+                      />
+                      <Button
+                        size="sm"
+                        variant="destructive"
+                        className="absolute top-1 right-1 h-6 w-6 rounded-full p-0 opacity-70 hover:opacity-100"
+                        onClick={() => removeAdditionalImage(index)}
+                      >
+                        <X className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            
+            {/* Indicação Clínica */}
+            <div>
+              <Label htmlFor="clinicalIndication" className="flex items-center text-white">
+                Indicação Clínica <span className="text-red-400 ml-1">*</span>
+              </Label>
+              <Textarea
+                id="clinicalIndication"
+                value={clinicalIndication}
+                onChange={(e) => setClinicalIndication(e.target.value)}
+                placeholder="Descreva de forma breve e sucinta a causa da lesão e/ou informações relevantes para o pedido"
+                className="mt-1 min-h-[100px] bg-[#1e293b] border-blue-800 text-white placeholder:text-blue-300"
+                required
+              />
+              <p className="text-xs text-blue-300 mt-1">
+                Informe detalhes sobre a condição clínica que justifica o procedimento
+              </p>
+            </div>
+            
+            {/* Observações Adicionais */}
+            <div>
+              <Label htmlFor="additionalNotes" className="text-white">Observações Adicionais</Label>
+              <Textarea
+                id="additionalNotes"
+                value={additionalNotes}
+                onChange={(e) => setAdditionalNotes(e.target.value)}
+                placeholder="Informações complementares importantes para o pedido"
+                className="mt-1 bg-[#1e293b] border-blue-800 text-white placeholder:text-blue-300"
+              />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}

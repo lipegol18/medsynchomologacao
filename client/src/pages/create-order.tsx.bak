@@ -1,0 +1,1224 @@
+import { useState, useEffect } from "react";
+import { useLocation } from "wouter";
+import { Header } from "@/components/layout/header";
+import { StepProgress } from "@/components/layout/step-progress";
+import { HospitalSelection } from "@/steps/hospital-selection";
+import { PatientSelection } from "@/steps/patient-selection";
+import { ExamInfo } from "@/steps/exam-info";
+import { SurgeryData } from "@/steps/surgery-data";
+import { OpmeSelection } from "@/steps/opme-selection";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight, Check, Save, FileText } from "lucide-react";
+import { type Hospital, type Patient, type MedicalOrder, type OpmeItem } from "@shared/schema";
+import { useToast } from "@/hooks/use-toast";
+
+// Interface local para procedimento compatível com o componente OpmeSelection
+interface LocalProcedure {
+  id: number;
+  code: string;
+  name: string;
+  description: string | null;
+  active: boolean | null;
+  porte?: string;
+  custoOperacional?: string;
+  porteAnestesista?: string;
+  numeroAuxiliares?: number;
+}
+
+// Interface para procedimentos secundários, estendendo LocalProcedure
+// Campo de lateralidade removido conforme solicitado
+interface SecondaryProcedure {
+  procedure: LocalProcedure;
+  quantity: number;
+}
+
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { apiRequest, queryClient } from "@/lib/queryClient";
+import { API_ENDPOINTS, ORDER_STATUS_VALUES, PROCEDURE_TYPE_VALUES } from "@shared/constants";
+import { useAuth } from "@/hooks/use-auth";
+import { uploadExamImage, uploadMedicalReport, getFileUrl } from "@/lib/file-upload";
+import { FileManager } from "@/lib/file-manager";
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogDescription, 
+  DialogHeader,
+  DialogTitle,
+  DialogFooter
+} from "@/components/ui/dialog";
+
+const steps = [
+  { number: 1, label: "Paciente e Hospital" },
+  { number: 2, label: "Exame e Laudo" },
+  { number: 3, label: "Dados da Cirurgia" },
+  { number: 4, label: "Visualização" },
+  { number: 5, label: "Confirmação" }
+];
+
+export default function CreateOrder() {
+  const [, navigate] = useLocation();
+  const [currentStep, setCurrentStep] = useState(1);
+  const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
+  const [selectedHospital, setSelectedHospital] = useState<Hospital | null>(null);
+  const [additionalNotes, setAdditionalNotes] = useState("");
+  // Usamos apenas examImages para gerenciar todas as imagens, seguindo a estrutura do banco (exam_images_url)
+  const [examImages, setExamImages] = useState<File[]>([]);
+  const [medicalReport, setMedicalReport] = useState<File | null>(null);
+  const [clinicalIndication, setClinicalIndication] = useState("");
+  
+  // Dados brutos do pedido atual em edição (para persistir URLs entre etapas)
+  const [currentOrderData, setCurrentOrderData] = useState<{
+    // Nomes de campos atualizados para corresponder exatamente ao banco de dados
+    exam_images_url?: string[] | null;
+    exam_image_count?: number | null;
+    medical_report_url?: string | null;
+  } | null>(null);
+  // Estados para o CID principal (mantido para compatibilidade)
+  const [cidCode, setCidCode] = useState("");
+  const [cidDescription, setCidDescription] = useState("");
+  const [selectedCidId, setSelectedCidId] = useState<number | null>(null);
+  // Estado para cidLaterality removido, mas mantendo referências para compatibilidade
+  const [cidLaterality, setCidLaterality] = useState<string | null>(null);
+  
+  // Novo estado para múltiplos CIDs (similar aos procedimentos secundários)
+  const [multipleCids, setMultipleCids] = useState<Array<{
+    cid: {
+      id: number;
+      code: string;
+      description: string;
+      category?: string;
+    }
+  }>>([]);
+  // Estado de lateralidade do procedimento principal removido, conforme solicitado
+  const [procedureLaterality, setProcedureLaterality] = useState<string | null>(null); // Mantido temporariamente para evitar erros de compilação
+  const [procedureType, setProcedureType] = useState(PROCEDURE_TYPE_VALUES.ELETIVA);
+  const [procedureQuantity, setProcedureQuantity] = useState(1);
+  const [selectedProcedure, setSelectedProcedure] = useState<LocalProcedure | null>(null);
+  // Estados para procedimentos secundários
+  const [secondaryProcedures, setSecondaryProcedures] = useState<SecondaryProcedure[]>([]);
+  const [orderId, setOrderId] = useState<number | null>(null);
+  // Estado para os itens OPME removido
+  
+  // Usando um valor temporário para procedureId (em produção isso seria uma seleção real)
+  const [procedureId] = useState<number>(1);
+  const { toast } = useToast();
+  const { user } = useAuth();
+  
+  // Efeito para verificar e carregar pedido em andamento ou limpar o formulário
+  useEffect(() => {
+    // Função para verificar se existe um pedido em preenchimento
+    const checkExistingOrder = async () => {
+      try {
+        if (user?.id) {
+          console.log(`Verificando pedido em andamento para usuário ID: ${user.id}`);
+          
+          // Buscar se há um pedido em andamento para o usuário atual
+          const res = await apiRequest('GET', API_ENDPOINTS.MEDICAL_ORDER_IN_PROGRESS);
+          console.log("Resposta da API:", res.status);
+          
+          if (res.status === 200) {
+            const orderData = await res.json();
+            // Se encontramos um pedido em andamento, carregamos seus dados
+            console.log("Pedido em andamento encontrado:", orderData);
+            await _loadExistingOrder(orderData);
+            
+            toast({
+              title: "Pedido em andamento recuperado",
+              description: "Você pode continuar de onde parou.",
+              duration: 4000,
+            });
+          } else if (res.status === 404) {
+            // Não encontramos um pedido em andamento, limpar o formulário
+            console.log("Nenhum pedido em andamento encontrado");
+            resetForm();
+          } else {
+            console.error(`Resposta inesperada da API: ${res.status}`);
+            const errorData = await res.json().catch(() => ({}));
+            console.error("Detalhes do erro:", errorData);
+            resetForm();
+          }
+        }
+      } catch (error) {
+        console.error("Erro ao verificar pedido em andamento:", error);
+        // Se houver erro, iniciamos com formulário limpo
+        resetForm();
+      }
+    };
+    
+    // Função para limpar o formulário
+    const resetForm = () => {
+      setSelectedPatient(null);
+      setSelectedHospital(null);
+      setAdditionalNotes("");
+      // Usando apenas setExamImages para gerenciar todas as imagens de exame
+      setExamImages([]);
+      setMedicalReport(null);
+      setClinicalIndication("");
+      setCidCode("");
+      setCidDescription("");
+      setSelectedCidId(null);
+      setProcedureType(PROCEDURE_TYPE_VALUES.ELETIVA);
+      setSelectedProcedure(null);
+      setProcedureQuantity(1);
+      setSecondaryProcedures([]);
+      setOrderId(null);
+      setCurrentOrderData(null);
+    };
+    
+  // Função simplificada para tratar a seleção do paciente
+  const handlePatientSelected = (patient: Patient) => {
+    // Definir o paciente selecionado no estado
+    setSelectedPatient(patient);
+    console.log(`Paciente selecionado: ${patient.fullName} (ID: ${patient.id})`);
+  };
+    
+    checkExistingOrder();
+  }, [user?.id]);
+
+  // Função removida - não usamos mais a continuação de pedidos
+  const _loadExistingOrder = async (order: MedicalOrder) => {
+    console.log("Carregando pedido existente:", order);
+    setOrderId(order.id);
+    
+    // Recuperar dados do paciente
+    if (order.patientId) {
+      try {
+        console.log(`Buscando paciente com ID ${order.patientId}`);
+        const res = await apiRequest('GET', API_ENDPOINTS.PATIENT_BY_ID(order.patientId));
+        if (res.ok) {
+          const patient = await res.json();
+          console.log("Paciente encontrado:", patient);
+          setSelectedPatient(patient);
+        } else {
+          console.error("Erro ao buscar paciente, status:", res.status);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar dados do paciente:", error);
+      }
+    }
+    
+    // Recuperar dados do hospital de forma robusta
+    if (order.hospitalId) {
+      try {
+        console.log(`Buscando hospital com ID ${order.hospitalId}`);
+        
+        // Primeiro tenta com a API dedicada
+        const res = await apiRequest('GET', API_ENDPOINTS.HOSPITAL_BY_ID(order.hospitalId));
+        
+        if (res.ok) {
+          const hospital = await res.json();
+          console.log("Hospital encontrado via API específica:", hospital);
+          if (hospital && hospital.id) {
+            setSelectedHospital(hospital);
+          } else {
+            console.warn("Hospital retornado sem ID:", hospital);
+            await buscarHospitalAlternativo(order.hospitalId);
+          }
+        } else {
+          console.warn("Falha na API específica, tentando busca alternativa");
+          await buscarHospitalAlternativo(order.hospitalId);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar dados do hospital:", error);
+        await buscarHospitalAlternativo(order.hospitalId);
+      }
+    }
+    
+    // Função auxiliar para buscar hospital por método alternativo
+    async function buscarHospitalAlternativo(hospitalId: number) {
+      try {
+        console.log("Buscando hospital via API de lista...");
+        // Buscar todos os hospitais e encontrar o correto por ID
+        const allHospitalsRes = await apiRequest('GET', API_ENDPOINTS.HOSPITALS);
+        
+        if (allHospitalsRes.ok) {
+          const hospitals = await allHospitalsRes.json();
+          const matchingHospital = hospitals.find((h: any) => h.id === hospitalId);
+          
+          if (matchingHospital) {
+            console.log("Hospital encontrado via lista:", matchingHospital);
+            setSelectedHospital(matchingHospital);
+          } else {
+            console.error(`Hospital com ID ${hospitalId} não encontrado na lista de hospitais`);
+          }
+        } else {
+          console.error("Erro ao buscar lista de hospitais, status:", allHospitalsRes.status);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar lista de hospitais:", error);
+      }
+    }
+
+    // Recuperar outros dados do pedido
+    setClinicalIndication(order.clinicalIndication || "");
+    setAdditionalNotes(order.additional_notes || "");
+    setProcedureType(order.procedureType || PROCEDURE_TYPE_VALUES.ELETIVA);
+    setProcedureQuantity(order.procedureCbhpmQuantity || 1);
+    
+    // Recuperar dados de lateralidade
+    console.log("Carregando lateralidade do procedimento do banco de dados:", { 
+      procedureLaterality: order.procedureLaterality,
+      procedureLateralityType: typeof order.procedureLaterality
+    });
+    
+    // Garantir que valores nulos ou undefined sejam tratados corretamente
+    // O PostgreSQL retorna null para valores nulos, então precisamos fazer essa verificação
+    // Campo cidLaterality foi removido conforme solicitado
+    setCidLaterality(null);
+    
+    if (order.procedureLaterality !== null && order.procedureLaterality !== undefined) {
+      setProcedureLaterality(order.procedureLaterality);
+    } else {
+      setProcedureLaterality(null);
+    }
+    
+    // Armazenar informações de imagens e documentos
+    const orderMediaData = {
+      // Usando nomes das colunas exatamente iguais ao banco de dados
+      exam_images_url: Array.isArray(order.exam_images_url) ? order.exam_images_url : [],
+      exam_image_count: order.exam_image_count || 0,
+      medical_report_url: order.medical_report_url || null
+    };
+    
+    console.log("Dados de mídia do pedido carregados:", orderMediaData);
+    setCurrentOrderData(orderMediaData);
+    
+    // Recuperar dados do CID
+    if (order.cidCodeId) {
+      try {
+        const cidRes = await apiRequest('GET', `/api/cid-codes/${order.cidCodeId}`);
+        if (cidRes.ok) {
+          const cidData = await cidRes.json();
+          setCidCode(cidData.code || "");
+          setCidDescription(cidData.description || "");
+          setSelectedCidId(cidData.id);
+        } else {
+          console.log("CID code não encontrado, usando dados do pedido");
+          // Usar CID code ID como último recurso
+          setSelectedCidId(order.cidCodeId);
+          
+          // Tenta buscar código e descrição do CID de outras formas
+          // @ts-ignore - O objeto pode ter estas propriedades em ambiente de runtime
+          if (order.cidCode) setCidCode(order.cidCode);
+          // @ts-ignore - O objeto pode ter estas propriedades em ambiente de runtime
+          else if (order.cidCodeFull?.code) setCidCode(order.cidCodeFull.code);
+          
+          // @ts-ignore - O objeto pode ter estas propriedades em ambiente de runtime
+          if (order.cidDescription) setCidDescription(order.cidDescription);
+          // @ts-ignore - O objeto pode ter estas propriedades em ambiente de runtime
+          else if (order.cidCodeFull?.description) setCidDescription(order.cidCodeFull.description);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar CID:", error);
+        setSelectedCidId(order.cidCodeId);
+      }
+    }
+    
+    // Removido carregamento da lateralidade do CID conforme solicitado
+    // Valor padrão será null
+    
+    // Carregar a lateralidade do procedimento principal
+    if (order.procedureLaterality) {
+      setProcedureLaterality(order.procedureLaterality);
+    }
+    
+    // Recuperar dados do procedimento CBHPM
+    if (order.procedureCbhpmId) {
+      try {
+        const procRes = await apiRequest('GET', API_ENDPOINTS.PROCEDURE_BY_ID(order.procedureCbhpmId));
+        if (procRes.ok) {
+          const procedureData = await procRes.json();
+          setSelectedProcedure({
+            id: procedureData.id,
+            code: procedureData.code,
+            name: procedureData.name,
+            description: procedureData.description,
+            active: procedureData.active,
+            porte: procedureData.porte,
+            custoOperacional: procedureData.custoOperacional,
+            porteAnestesista: procedureData.porteAnestesista
+          });
+        }
+      } catch (error) {
+        console.error("Erro ao buscar procedimento CBHPM:", error);
+      }
+    }
+    
+    // Carregar procedimentos secundários a partir de secondaryProcedureIds, secondaryProcedureQuantities e secondaryProcedureLateralities
+    if (order.secondaryProcedureIds && Array.isArray(order.secondaryProcedureIds) && 
+        order.secondaryProcedureQuantities && Array.isArray(order.secondaryProcedureQuantities) &&
+        order.secondaryProcedureIds.length === order.secondaryProcedureQuantities.length) {
+        
+      console.log("Procedimentos secundários encontrados:", order.secondaryProcedureIds);
+      
+      // Processar procedimentos secundários
+      const secondaryProcs: SecondaryProcedure[] = [];
+      
+      // Processar todos os procedimentos secundários
+      for (let i = 0; i < order.secondaryProcedureIds.length; i++) {
+        try {
+          const procedureId = order.secondaryProcedureIds[i];
+          const quantity = order.secondaryProcedureQuantities[i];
+          // Lateralidade dos procedimentos secundários removida conforme solicitado
+          
+          // Buscar os dados do procedimento CBHPM
+          const procRes = await apiRequest('GET', API_ENDPOINTS.PROCEDURE_BY_ID(procedureId));
+          if (procRes.ok) {
+            const procedureData = await procRes.json();
+            secondaryProcs.push({
+              procedure: {
+                id: procedureData.id,
+                code: procedureData.code,
+                name: procedureData.name,
+                description: procedureData.description,
+                active: procedureData.active,
+                porte: procedureData.porte,
+                custoOperacional: procedureData.custoOperacional,
+                porteAnestesista: procedureData.porteAnestesista,
+                numeroAuxiliares: procedureData.numeroAuxiliares
+              },
+              quantity: quantity || 1
+              // lateralidade removida conforme solicitado
+            });
+          }
+        } catch (error) {
+          console.error(`Erro ao processar procedimento secundário:`, error);
+        }
+      }
+      
+      // Atualizar o estado com os procedimentos secundários recuperados
+      if (secondaryProcs.length > 0) {
+        console.log("Procedimentos secundários carregados:", secondaryProcs);
+        setSecondaryProcedures(secondaryProcs);
+      }
+    } else {
+      console.log("Nenhum procedimento secundário encontrado para o pedido");
+    }
+    
+    // Carregar itens OPME se existirem
+    // @ts-ignore - Tratando possível propriedade order.items para compatibilidade
+    if (order.items && Array.isArray(order.items)) {
+      const opmeItemsList: Array<{item: any, quantity: number}> = [];
+      
+      // Processar todos os itens OPME
+      // @ts-ignore - Tratando possível item.opmeItemId para compatibilidade
+      for (const item of order.items) {
+        try {
+          // Buscar os dados do item OPME
+          const opmeRes = await apiRequest('GET', API_ENDPOINTS.OPME_ITEM_BY_ID(item.opmeItemId));
+          if (opmeRes.ok) {
+            const opmeData = await opmeRes.json();
+            opmeItemsList.push({
+              item: opmeData,
+              quantity: item.quantity || 1
+            });
+          }
+        } catch (error) {
+          console.error(`Erro ao processar item OPME ${item.id}:`, error);
+        }
+      }
+      
+      // Atualizar o estado com os itens OPME recuperados
+      if (opmeItemsList.length > 0) {
+        console.log("Itens OPME carregados:", opmeItemsList);
+        setSelectedOpmeItems(opmeItemsList);
+      }
+    } else {
+      console.log("Nenhum item OPME associado encontrado para o pedido");
+    }
+    
+    // Armazenar as URLs das imagens e documentos no estado para exibição
+    setCurrentOrderData({
+      // Usando nomes das colunas exatamente iguais ao banco de dados
+      exam_images_url: Array.isArray(order.exam_images_url) ? order.exam_images_url : [],
+      exam_image_count: order.exam_image_count || 0,
+      medical_report_url: order.medical_report_url || null
+    });
+  };
+
+  // Função para salvar o progresso atual
+  const saveProgress = async () => {
+    // Só tentamos salvar se pelo menos o paciente for selecionado
+    if (!selectedPatient) {
+      return;
+    }
+    
+    try {
+      // Preparar objeto base de dados do pedido
+      const secondaryProcedureIds = secondaryProcedures.map(item => item.procedure.id);
+      const secondaryProcedureQuantities = secondaryProcedures.map(item => item.quantity);
+      // Lateralidade dos procedimentos secundários removida conforme solicitado
+      
+      // Referências a OPME removidas
+      const opmeItemIds: number[] = [];
+      const opmeItemQuantities: number[] = [];
+      
+      // Objeto para armazenar os dados do pedido
+      let orderData: any = {
+        patientId: selectedPatient.id,
+        userId: user?.id,
+        hospitalId: selectedHospital?.id,
+        procedureId: procedureId,
+        clinicalIndication: clinicalIndication,
+        additionalNotes: additionalNotes,
+        cidCodeId: selectedCidId,
+        // Campo cidLaterality removido completamente
+        procedureType: procedureType,
+        procedureCbhpmId: selectedProcedure?.id || null,
+        procedureCbhpmQuantity: procedureQuantity,
+        // Tratamento aprimorado para procedureLaterality
+        procedureLaterality: procedureLaterality === 'null' || procedureLaterality === '' ? null : procedureLaterality,
+        secondaryProcedureIds: secondaryProcedureIds,
+        secondaryProcedureQuantities: secondaryProcedureQuantities,
+        // Lateralidade dos procedimentos secundários removida conforme solicitado
+        opmeItemIds: opmeItemIds,
+        opmeItemQuantities: opmeItemQuantities
+      };
+      
+      // Se o pedido já existir, adicionar ID
+      if (orderId) {
+        orderData.id = orderId;
+      }
+      
+      // Log detalhado dos dados sendo enviados
+      console.log("Dados de lateralidade sendo enviados ao backend:", {
+        // cidLaterality removido conforme solicitado
+        // Apenas mantemos a lateralidade do procedimento principal
+        procedureLaterality
+      });
+      
+      // 1. Upload das imagens de exame (se houver)
+      // Agora apenas gerenciamos um único array de imagens, não há mais imagem "principal"
+      let newExamImagesUrls: string[] = [];
+      
+      // Se há imagens existentes no pedido atual, mantemos suas URLs
+      if (currentOrderData?.exam_images_url && currentOrderData.exam_images_url.length > 0) {
+        newExamImagesUrls = [...currentOrderData.exam_images_url];
+      }
+      
+      // Processar novas imagens se houver
+      if (examImages && examImages.length > 0) {
+        try {
+          console.log(`Enviando ${examImages.length} imagens para o servidor...`);
+          
+          // Fazer upload de cada imagem
+          for (const image of examImages) {
+            const uploadResult = await uploadExamImage(
+              image, 
+              selectedPatient.id, 
+              orderId || undefined
+            );
+            
+            // Adicionar URL da nova imagem ao array
+            newExamImagesUrls.push(uploadResult.url);
+          }
+          
+          orderData.exam_images_url = newExamImagesUrls;
+          orderData.exam_image_count = newExamImagesUrls.length;
+          console.log("Imagem do exame enviada com sucesso:", uploadResult.url);
+        } catch (error) {
+          console.error("Erro ao fazer upload da imagem do exame:", error);
+        }
+      } else if (currentOrderData?.exam_images_url?.length) {
+        // Manter URLs das imagens existentes
+        orderData.exam_images_url = currentOrderData.exam_images_url;
+        orderData.exam_image_count = currentOrderData.exam_images_url.length;
+      }
+      
+      // 2. Upload do laudo médico (se houver)
+      if (medicalReport) {
+        try {
+          console.log("Enviando laudo médico para o servidor...");
+          const uploadResult = await uploadMedicalReport(
+            medicalReport, 
+            selectedPatient.id, 
+            orderId || undefined,
+            currentOrderData?.medical_report_url
+          );
+          
+          // Adicionar URL do laudo aos dados do pedido
+          orderData.medical_report_url = uploadResult.url;
+          console.log("Laudo médico enviado com sucesso:", uploadResult.url);
+        } catch (error) {
+          console.error("Erro ao fazer upload do laudo médico:", error);
+        }
+      } else if (currentOrderData?.medical_report_url) {
+        // Manter URL do laudo existente se não houver novo laudo
+        orderData.medical_report_url = currentOrderData.medical_report_url;
+      }
+      
+      // 3. Upload de imagens de exame (se houver)
+      if (examImages && examImages.length > 0) {
+        try {
+          console.log(`Enviando ${examImages.length} imagens para o servidor...`);
+          
+          // Obter as URLs existentes, se houver
+          const existingUrls = currentOrderData?.exam_images_url || [];
+          
+          // Atualizar directamente com imagens existentes por enquanto (upload será implementado depois)
+          orderData.exam_images_url = existingUrls;
+          orderData.exam_image_count = existingUrls.length;
+          console.log("URLs de imagens:", existingUrls);
+          
+          // Limpar o array de arquivos após o upload
+          setExamImages([]);
+        } catch (error) {
+          console.error("Erro ao processar imagens:", error);
+        }
+      } else if (currentOrderData?.exam_images_url?.length) {
+        // Manter URLs das imagens existentes se não houver novas
+        orderData.exam_images_url = currentOrderData.exam_images_url;
+        orderData.exam_image_count = currentOrderData.exam_images_url.length;
+        console.log("Preservando URLs de imagens existentes:", currentOrderData.exam_images_url);
+      } else {
+        // Inicialize como array vazio para evitar erros de null/undefined
+        orderData.exam_images_url = [];
+        orderData.exam_image_count = 0;
+      }
+      
+      // Atualizar o pedido no banco de dados
+      saveProgressMutation.mutate(orderData);
+      
+    } catch (error) {
+      console.error("Erro ao salvar progresso:", error);
+      toast({
+        title: "Erro ao salvar",
+        description: "Ocorreu um erro ao salvar o pedido. Tente novamente.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  // Mutação para salvar/atualizar o pedido em preenchimento
+  const saveProgressMutation = useMutation({
+    mutationFn: async (orderData: any) => {
+      // Se já temos um ID, atualizamos o pedido existente
+      if (orderId) {
+        // Log detalhado para rastrear valores de lateralidade
+        console.log("saveProgressMutation - Enviando dados de lateralidade:", {
+          // Apenas procedureLaterality é mantido - lateralidade de CID e procedimentos secundários foi removida
+          procedureLaterality: orderData.procedureLaterality
+        });
+        
+        const res = await apiRequest("PUT", API_ENDPOINTS.MEDICAL_ORDER_BY_ID(orderId), {
+          ...orderData,
+          statusCode: ORDER_STATUS_VALUES.EM_PREENCHIMENTO,
+        });
+        
+        const updatedData = await res.json();
+        
+        // Verificar se a lateralidade foi salva corretamente
+        console.log("saveProgressMutation - Dados retornados após salvamento:", {
+          cidLateralitySalvo: updatedData.cidLaterality,
+          procedureLateralitySalvo: updatedData.procedureLaterality
+        });
+        
+        return updatedData;
+      } 
+      // Senão criamos um novo pedido em preenchimento
+      else {
+        // Usar um endpoint totalmente diferente para evitar o problema com exam_image_url
+        const res = await apiRequest("POST", "/api/medical-orders-direct", {
+          ...orderData,
+          statusCode: ORDER_STATUS_VALUES.EM_PREENCHIMENTO,
+        });
+        return await res.json();
+      }
+    },
+    onSuccess: (data) => {
+      setOrderId(data.id);
+      
+      // Mostrar toast de confirmação de salvamento automático
+      toast({
+        title: "Progresso salvo automaticamente",
+        description: "Dados preenchidos até o momento foram salvos.",
+        duration: 2000,
+      });
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Erro ao salvar progresso",
+        description: error.message,
+        variant: "destructive",
+      });
+    }
+  });
+  
+  // Função para atualizar campos específicos do pedido no banco de dados
+  const updateOrderField = async (fieldName: string, value: any) => {
+    if (!orderId) {
+      console.error("Não há pedido para atualizar");
+      return false;
+    }
+    
+    try {
+      // Criamos um objeto com apenas o campo a ser atualizado
+      const updateData = {
+        [fieldName]: value
+      };
+      
+      // Logar campos de lateralidade se estiverem sendo atualizados
+      if (fieldName === 'cidLaterality' || fieldName === 'procedureLaterality') {
+        console.log(`updateOrderField - Atualizando campo de lateralidade: ${fieldName}`, value);
+      }
+      
+      const res = await apiRequest("PUT", API_ENDPOINTS.MEDICAL_ORDER_BY_ID(orderId), {
+        ...updateData,
+        statusCode: ORDER_STATUS_VALUES.EM_PREENCHIMENTO,
+      });
+      
+      const updatedOrder = await res.json();
+      console.log(`Campo ${fieldName} atualizado com sucesso:`, updatedOrder);
+      
+      // Verificar se as lateralidades foram preservadas na resposta
+      if (fieldName === 'cidLaterality' || fieldName === 'procedureLaterality') {
+        console.log("updateOrderField - Lateralidades após atualização:", {
+          cidLaterality: updatedOrder.cidLaterality,
+          procedureLaterality: updatedOrder.procedureLaterality
+        });
+      }
+      
+      // Atualizar o estado local currentOrderData para refletir a mudança no banco de dados
+      if (currentOrderData) {
+        setCurrentOrderData({
+          ...currentOrderData,
+          [fieldName]: value
+        });
+      }
+      
+      return true;
+    } catch (error) {
+      console.error(`Erro ao atualizar campo ${fieldName}:`, error);
+      return false;
+    }
+  };
+  
+  // Função para finalizar o pedido
+  const handleComplete = async () => {
+    // Validar dados obrigatórios
+    if (!selectedPatient || !selectedHospital || !clinicalIndication.trim() || multipleCids.length === 0) {
+      toast({
+        title: "Dados incompletos",
+        description: "Por favor, preencha todos os campos obrigatórios e adicione pelo menos um código CID-10.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    try {
+      // Preparar o objeto base de dados do pedido
+      let orderData: any = {
+        id: orderId,
+        patientId: selectedPatient.id,
+        userId: user?.id,
+        hospitalId: selectedHospital.id,
+        procedureId: procedureId,
+        clinicalIndication: clinicalIndication,
+        additionalNotes: additionalNotes,
+        // Mantemos os campos do CID principal para compatibilidade, mas usamos o primeiro CID da lista múltipla
+        cidCodeId: multipleCids.length > 0 ? multipleCids[0].cid.id : selectedCidId,
+        cidCode: multipleCids.length > 0 ? multipleCids[0].cid.code : cidCode,
+        cidDescription: multipleCids.length > 0 ? multipleCids[0].cid.description : cidDescription,
+        cidLaterality: cidLaterality,
+        // Adicionando múltiplos CIDs
+        multipleCidIds: multipleCids.map(item => item.cid.id),
+        multipleCidCodes: multipleCids.map(item => item.cid.code),
+        multipleCidDescriptions: multipleCids.map(item => item.cid.description),
+        // Campo procedureLaterality removido conforme solicitado
+        procedureType: procedureType,
+        procedureCbhpmId: selectedProcedure?.id,
+        statusCode: ORDER_STATUS_VALUES.EM_AVALIACAO, // Usando statusCode em vez de status
+      };
+      
+      // Incluir dados dos procedimentos secundários
+      if (secondaryProcedures.length > 0) {
+        orderData.secondaryProcedureIds = secondaryProcedures.map(item => item.procedure.id);
+        orderData.secondaryProcedureQuantities = secondaryProcedures.map(item => item.quantity);
+        // Campo secondaryProcedureLateralities removido conforme solicitado
+      }
+      
+      // Seção de itens OPME removida
+      
+      // Manter URLs de imagens existentes
+      // Este trecho foi removido porque o campo examImageUrl foi substituído por exam_images_url
+      // Não é necessário tratar uma única imagem separadamente, pois usamos um array agora
+      
+      if (currentOrderData?.medical_report_url) {
+        orderData.medical_report_url = currentOrderData.medical_report_url;
+      }
+      
+      if (currentOrderData?.exam_images_url?.length) {
+        orderData.exam_images_url = currentOrderData.exam_images_url;
+        orderData.exam_image_count = currentOrderData.exam_images_url.length;
+      }
+      
+      console.log("Enviando pedido para avaliação:", orderData);
+      
+      // Utilizar o endpoint de update com o ID do pedido
+      const response = await apiRequest(
+        "PUT", 
+        API_ENDPOINTS.MEDICAL_ORDER_BY_ID(orderId), 
+        orderData
+      );
+      
+      if (!response.ok) {
+        const errorData = await response.text();
+        throw new Error(`Erro ao finalizar pedido: ${errorData}`);
+      }
+      
+      const data = await response.json();
+      
+      toast({
+        title: "Pedido enviado com sucesso",
+        description: `Pedido para ${selectedPatient?.fullName} no hospital ${selectedHospital?.name} foi enviado para avaliação.`,
+        duration: 3000,
+      });
+      
+      queryClient.invalidateQueries({ queryKey: [API_ENDPOINTS.MEDICAL_ORDERS] });
+      
+      // Avançar para o último passo (confirmação)
+      setCurrentStep(5);
+    } catch (error) {
+      console.error("Erro ao finalizar pedido:", error);
+      toast({
+        title: "Erro ao finalizar pedido",
+        description: error instanceof Error ? error.message : "Erro desconhecido",
+        variant: "destructive",
+        duration: 5000,
+      });
+    }
+  };
+
+  // Função para navegar para o próximo passo
+  const goToNextStep = async () => {
+    if (currentStep < 5) {
+      // Se estamos no passo 4 (Visualização), então finalizamos o pedido
+      if (currentStep === 4) {
+        await handleComplete();
+        return;
+      }
+      if (currentStep === 1) {
+        // Se estamos no passo 1 (paciente e hospital), garantir que um pedido seja criado no banco
+        try {
+          // Verificar se temos paciente e hospital selecionados
+          if (!selectedPatient?.id) {
+            toast({
+              title: "Paciente não selecionado",
+              description: "Por favor, selecione um paciente para continuar",
+              variant: "destructive",
+              duration: 5000,
+            });
+            return;
+          }
+          
+          if (!selectedHospital?.id) {
+            toast({
+              title: "Hospital não selecionado",
+              description: "Por favor, selecione um hospital para continuar",
+              variant: "destructive",
+              duration: 5000,
+            });
+            return;
+          }
+
+          // Preparar objeto base com dados mínimos necessários
+          // Somente incluindo campos que realmente existem na tabela do banco de dados
+          const initialOrderData = {
+            patientId: selectedPatient.id,
+            userId: user?.id,
+            hospitalId: selectedHospital.id,
+            statusCode: ORDER_STATUS_VALUES.EM_PREENCHIMENTO, // Alterado de 'status' para 'statusCode'
+            procedureType: PROCEDURE_TYPE_VALUES.ELETIVA, // Valor padrão
+            procedureId: 1, // Valor temporário, será atualizado posteriormente
+            clinicalIndication: "A ser preenchido", // Campo obrigatório deve ter valor não vazio
+            // Valor de lateralidade do procedimento (possivelmente null neste ponto, será atualizado depois)
+            procedureLaterality: procedureLaterality || null,
+            // Arrays vazios inicializados corretamente para PostgreSQL
+            secondaryProcedureIds: [] as number[], 
+            secondaryProcedureQuantities: [] as number[],
+            opmeItemIds: [] as number[], 
+            opmeItemQuantities: [] as number[],
+            // Usar nomes exatos das colunas do banco de dados
+            exam_images_url: [] as string[],
+            exam_image_count: 0
+          };
+          
+          console.log("Dados do pedido sendo enviados:", JSON.stringify(initialOrderData, null, 2));
+          
+          // Se não temos um ID de pedido ainda, criar um novo
+          if (!orderId) {
+            console.log("Criando novo pedido cirúrgico com paciente:", selectedPatient.fullName);
+            
+            const res = await apiRequest("POST", API_ENDPOINTS.MEDICAL_ORDERS, initialOrderData);
+            
+            if (!res.ok) {
+              const errorText = await res.text();
+              console.error("Resposta de erro:", errorText);
+              throw new Error(`Falha ao criar pedido cirúrgico: ${errorText}`);
+            }
+            
+            const data = await res.json();
+            setOrderId(data.id);
+            
+            console.log("Pedido criado com sucesso, ID:", data.id);
+            
+            toast({
+              title: "Pedido iniciado",
+              description: `Pedido cirúrgico #${data.id} foi iniciado com sucesso`,
+              duration: 2000,
+            });
+          } else {
+            // Se já temos um ID, apenas atualizar os dados básicos
+            await saveProgress();
+          }
+          
+          // Avançar para o próximo passo após a criação bem-sucedida
+          setCurrentStep(currentStep + 1);
+        } catch (error) {
+          console.error("Erro ao criar pedido:", error);
+          toast({
+            title: "Erro ao iniciar pedido",
+            description: "Não foi possível iniciar o pedido cirúrgico. Tente novamente.",
+            variant: "destructive",
+            duration: 5000,
+          });
+        }
+      } else {
+        // Para outros passos, salvar o progresso e avançar
+        // Lateralidade dos procedimentos secundários removida conforme solicitado
+        console.log("Dados de lateralidade ANTES de salvar (próximo passo):", {
+          cidLaterality,
+          procedureLaterality,
+          // Não incluir mais as lateralidades dos procedimentos secundários
+        });
+        
+        await saveProgress();
+        
+        console.log("Próximo passo: Valores de lateralidade salvos com sucesso");
+        setCurrentStep(currentStep + 1);
+      }
+    }
+  };
+  
+  // Função para navegar para o passo anterior
+  const goToPreviousStep = async () => {
+    if (currentStep > 1) {
+      console.log("Dados de lateralidade ANTES de salvar (passo anterior):", {
+        cidLaterality,
+        procedureLaterality
+        // Lateralidade dos procedimentos secundários removida conforme solicitado
+      });
+      
+      // Salvar progresso antes de voltar para a etapa anterior
+      await saveProgress();
+      
+      console.log("Passo anterior: Valores de lateralidade salvos com sucesso");
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  // Função para voltar para a home e salvar o progresso
+  const saveAndExit = async () => {
+    await saveProgress();
+    navigate("/");
+  };
+
+  // Função para lidar com a seleção de paciente
+  const handlePatientSelected = async (patient: Patient) => {
+    // Primeiro, definimos o paciente selecionado
+    setSelectedPatient(patient);
+    
+    // Verificar se existe um pedido em preenchimento para este paciente
+    try {
+      console.log(`Verificando pedidos em preenchimento para o paciente ID: ${patient.id}`);
+      
+      // Buscar se há um pedido em andamento para este paciente
+      const res = await apiRequest('GET', API_ENDPOINTS.MEDICAL_ORDER_IN_PROGRESS_BY_PATIENT(patient.id));
+      
+      if (res.status === 200) {
+        const orderData = await res.json();
+        // Se encontramos um pedido em andamento, mostramos o diálogo de confirmação
+        console.log("Pedido em andamento encontrado para o paciente:", orderData);
+        
+        // Código relacionado a guardar pedido existente removido
+        console.log("Pedido existente encontrado, mas diálogo foi removido");
+      } else {
+        console.log("Nenhum pedido em andamento encontrado para este paciente");
+      }
+    } catch (error) {
+      console.error("Erro ao verificar pedido em andamento para o paciente:", error);
+    }
+  };
+
+  // Funções de continuação de pedido removidas
+
+  return (
+    <div className="min-h-screen flex flex-col bg-[#1a2332]">
+      {/* Diálogo para continuação de pedido existente removido */}
+      
+      <main className="flex-grow overflow-auto">
+        <div className="container mx-auto px-4 py-6">
+          <div className="mb-6">
+            <h2 className="text-3xl font-bold text-white">Novo Pedido Cirúrgico</h2>
+            <p className="text-blue-200 text-sm mt-2">
+              Selecione o paciente e o hospital para o pedido cirúrgico
+            </p>
+          </div>
+          
+          <div className="flex justify-between items-center mb-8 overflow-x-auto pb-2">
+            <div className="flex items-center space-x-8 md:space-x-10 lg:space-x-12">
+              <div className={`flex items-center ${currentStep >= 1 ? 'text-white' : 'text-blue-300/70'}`}>
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium ${currentStep >= 1 ? 'bg-blue-700 border border-blue-500 shadow-md' : 'border border-blue-500/50'}`}>
+                  1
+                </div>
+                <span className="ml-2 text-sm whitespace-nowrap font-medium">Paciente e Hospital</span>
+              </div>
+              
+              <div className={`flex items-center ${currentStep >= 2 ? 'text-white' : 'text-blue-300/70'}`}>
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium ${currentStep >= 2 ? 'bg-blue-700 border border-blue-500 shadow-md' : 'border border-blue-500/50'}`}>
+                  2
+                </div>
+                <span className="ml-2 text-sm whitespace-nowrap font-medium">Exame e Laudo</span>
+              </div>
+              
+              <div className={`flex items-center ${currentStep >= 3 ? 'text-white' : 'text-blue-300/70'}`}>
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium ${currentStep >= 3 ? 'bg-blue-700 border border-blue-500 shadow-md' : 'border border-blue-500/50'}`}>
+                  3
+                </div>
+                <span className="ml-2 text-sm whitespace-nowrap font-medium">Dados da Cirurgia</span>
+              </div>
+              
+              <div className={`flex items-center ${currentStep >= 4 ? 'text-white' : 'text-blue-300/70'}`}>
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium ${currentStep >= 4 ? 'bg-blue-700 border border-blue-500 shadow-md' : 'border border-blue-500/50'}`}>
+                  4
+                </div>
+                <span className="ml-2 text-sm whitespace-nowrap font-medium">Visualização</span>
+              </div>
+              
+              <div className={`flex items-center ${currentStep >= 5 ? 'text-white' : 'text-blue-300/70'}`}>
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium ${currentStep >= 5 ? 'bg-blue-700 border border-blue-500 shadow-md' : 'border border-blue-500/50'}`}>
+                  5
+                </div>
+                <span className="ml-2 text-sm whitespace-nowrap font-medium">Confirmação</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Container principal com estilo do formulário de login */}
+          <div className="w-full bg-[#1a2332] border border-blue-800 shadow-lg rounded-lg mb-8">
+            {currentStep === 1 && (
+              <div className="p-6">
+                <PatientSelection
+                  selectedPatient={selectedPatient}
+                  setSelectedPatient={(patient) => {
+                    if (patient) {
+                      handlePatientSelected(patient);
+                    } else {
+                      setSelectedPatient(null);
+                    }
+                  }}
+                />
+                
+                {/* Dialog de pedido existente removido */}
+                
+                <HospitalSelection 
+                  selectedHospital={selectedHospital}
+                  setSelectedHospital={setSelectedHospital}
+                />
+              </div>
+            )}
+            
+            {currentStep === 2 && (
+              <div className="p-6">
+                <ExamInfo
+                  clinicalIndication={clinicalIndication}
+                  setClinicalIndication={setClinicalIndication}
+                  examImages={examImages}
+                  setExamImages={(files) => {
+                    setExamImages(files);
+                    // Se o array for vazio e tínhamos URLs de imagens, resetamos no currentOrderData
+                    if (files.length === 0 && currentOrderData?.exam_images_url?.length) {
+                      setCurrentOrderData({
+                        ...currentOrderData,
+                        exam_images_url: [],
+                        exam_image_count: 0
+                      });
+                    }
+                  }}
+                  medicalReport={medicalReport}
+                  setMedicalReport={(file) => {
+                    setMedicalReport(file);
+                    // Se o arquivo for null e tínhamos um URL de laudo, também atualizamos o currentOrderData
+                    if (file === null && currentOrderData?.medical_report_url) {
+                      setCurrentOrderData({
+                        ...currentOrderData,
+                        medical_report_url: null
+                      });
+                    }
+                  }}
+                  additionalNotes={additionalNotes}
+                  setAdditionalNotes={setAdditionalNotes}
+                  updateOrderField={updateOrderField}
+                  orderId={orderId}
+                  // Agora usamos apenas exam_images_url para todas as imagens
+                  imageUrls={currentOrderData?.exam_images_url || []}
+                  medicalReportUrl={currentOrderData?.medical_report_url}
+                />
+              </div>
+            )}
+            
+            {currentStep === 3 && (
+              <div className="p-6">
+                <SurgeryData
+                  cidCode={cidCode}
+                  setCidCode={setCidCode}
+                  cidDescription={cidDescription}
+                  setCidDescription={setCidDescription}
+                  selectedCidId={selectedCidId}
+                  setSelectedCidId={setSelectedCidId}
+                  cidLaterality={cidLaterality}
+                  setCidLaterality={setCidLaterality}
+                  multipleCids={multipleCids}
+                  setMultipleCids={setMultipleCids}
+                  procedureLaterality={procedureLaterality}
+                  setProcedureLaterality={setProcedureLaterality}
+                  procedureType={procedureType}
+                  setProcedureType={setProcedureType}
+                  procedureQuantity={procedureQuantity}
+                  setProcedureQuantity={setProcedureQuantity}
+                  selectedProcedure={selectedProcedure}
+                  setSelectedProcedure={setSelectedProcedure}
+                  secondaryProcedures={secondaryProcedures}
+                  setSecondaryProcedures={setSecondaryProcedures}
+                />
+              </div>
+            )}
+            
+            {currentStep === 4 && (
+              <div className="p-6">
+                <div className="mb-6 text-white">
+                  <h3 className="text-lg font-medium text-white">Visualização do Pedido</h3>
+                  <p className="text-sm text-blue-200">
+                    Revise os dados do pedido antes de finalizar
+                  </p>
+                  
+                  <div className="mt-4 space-y-4">
+                    {selectedPatient && (
+                      <div className="bg-[#1a2332]/70 border border-blue-800 p-4 rounded-md">
+                        <h4 className="font-medium text-white">Dados do Paciente</h4>
+                        <p className="text-blue-200">
+                          {selectedPatient.fullName} - CPF: {selectedPatient.cpf}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {selectedHospital && (
+                      <div className="bg-[#1a2332]/70 border border-blue-800 p-4 rounded-md">
+                        <h4 className="font-medium text-white">Hospital</h4>
+                        <p className="text-blue-200">{selectedHospital.name}</p>
+                      </div>
+                    )}
+                    
+                    {selectedCidId && (
+                      <div className="bg-[#1a2332]/70 border border-blue-800 p-4 rounded-md">
+                        <h4 className="font-medium text-white">Código CID</h4>
+                        <p className="text-blue-200">{cidCode} - {cidDescription}</p>
+                      </div>
+                    )}
+                    
+                    {selectedProcedure && (
+                      <div className="bg-[#1a2332]/70 border border-blue-800 p-4 rounded-md">
+                        <h4 className="font-medium text-white">Procedimento CBHPM</h4>
+                        <p className="text-blue-200">
+                          {selectedProcedure.code} - {selectedProcedure.name}
+                          {procedureQuantity > 1 && ` (${procedureQuantity}x)`}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {currentStep === 5 && (
+              <div className="p-6">
+                <div className="text-center mt-4 mb-8">
+                  <Check className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white">Pedido Finalizado com Sucesso!</h3>
+                  <p className="text-blue-200 mt-2">
+                    Seu pedido cirúrgico foi enviado e está aguardando aprovação.
+                  </p>
+                </div>
+                
+                <div className="flex justify-center mt-6">
+                  <Button 
+                    className="bg-blue-600 hover:bg-blue-700 mr-4"
+                    onClick={() => navigate("/")}
+                  >
+                    Voltar para Início
+                  </Button>
+                </div>
+              </div>
+            )}
+            
+            {/* Botões de navegação */}
+            {currentStep < 5 && (
+              <div className="px-6 py-4 border-t border-blue-800 grid grid-cols-3 items-center">
+                {/* Área esquerda - Botão Voltar */}
+                <div className="flex items-center">
+                  {currentStep > 1 && (
+                    <Button 
+                      variant="outline"
+                      onClick={goToPreviousStep}
+                      className="border-blue-600 text-white hover:bg-blue-900 h-10"
+                    >
+                      <ArrowLeft className="mr-2 h-4 w-4" />
+                      Voltar
+                    </Button>
+                  )}
+                </div>
+                
+                {/* Área central - Botão Salvar e Sair */}
+                <div className="flex items-center justify-center">
+                  <Button 
+                    variant="outline"
+                    onClick={saveAndExit}
+                    className="border-blue-600 text-white hover:bg-blue-900 h-10"
+                  >
+                    <Save className="mr-2 h-4 w-4" />
+                    Salvar e Sair
+                  </Button>
+                </div>
+                
+                {/* Área direita - Botão Próximo/Finalizar */}
+                <div className="flex items-center justify-end">
+                  <Button 
+                    onClick={goToNextStep}
+                    className="bg-blue-600 hover:bg-blue-700 h-10"
+                    disabled={
+                      (currentStep === 1 && (!selectedPatient || !selectedHospital)) ||
+                      (currentStep === 2 && !clinicalIndication) || // Apenas indicação clínica é obrigatória no passo 2
+                      (currentStep === 3 && (!selectedProcedure || procedureLaterality === null)) // Validação atualizada
+                    }
+                  >
+                    {currentStep < 4 ? (
+                      <>
+                        Próximo
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </>
+                    ) : (
+                      <>
+                        Finalizar
+                        <Check className="ml-2 h-4 w-4" />
+                      </>
+                    )}
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}

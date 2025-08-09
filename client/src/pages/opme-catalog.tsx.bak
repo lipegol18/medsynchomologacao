@@ -1,0 +1,1331 @@
+import React, { useState } from "react";
+import { useQuery, useMutation } from "@tanstack/react-query";
+import { queryClient } from "@/lib/queryClient";
+import { OpmeItemForm, OpmeItemFormValues } from "@/components/opme/opme-item-form";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { Loader2, Plus, Search, Edit, Trash, Check, X, ExternalLink, Pencil, AlertCircle } from "lucide-react";
+import { format } from "date-fns";
+
+// Definição dos tipos baseados no schema.ts
+type OpmeItem = {
+  id: number;
+  anvisaRegistrationNumber: string | null;
+  processNumber: string | null;
+  technicalName: string;
+  commercialName: string;
+  riskClass: string | null;
+  holderCnpj: string | null;
+  registrationHolder: string | null;
+  manufacturerName: string;
+  countryOfManufacture: string | null;
+  registrationDate: string | null;
+  expirationDate: string | null;
+  isValid: boolean;
+  createdAt: string;
+  updatedAt: string;
+};
+
+type Supplier = {
+  id: number;
+  companyName: string;
+  tradeName: string;
+  cnpj: string;
+  municipalityId: number;
+  active: boolean;
+};
+
+type OpmeSupplier = {
+  id: number;
+  opmeItemId: number;
+  supplierId: number;
+  registrationAnvisa: string | null;
+  commercialDescription: string | null;
+  isPreferred: boolean;
+  active: boolean;
+  unitPrice: number | null;
+  lastPriceUpdate: string | null;
+  deliveryTimeDays: number | null;
+  minimumQuantity: number | null;
+  notes: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
+type OpmeWithSuppliers = {
+  opmeItem: OpmeItem;
+  suppliers: OpmeSupplier[];
+};
+
+// Esquemas de validação com Zod
+const OpmeItemFormSchema = z.object({
+  technicalName: z.string().min(1, "Nome técnico é obrigatório"),
+  commercialName: z.string().min(1, "Nome comercial é obrigatório"),
+  manufacturerName: z.string().min(1, "Fabricante é obrigatório"),
+  anvisaRegistrationNumber: z.string().nullable().optional(),
+  processNumber: z.string().nullable().optional(),
+  riskClass: z.string().nullable().optional(),
+  holderCnpj: z.string().nullable().optional(),
+  registrationHolder: z.string().nullable().optional(),
+  countryOfManufacture: z.string().nullable().optional(),
+  registrationDate: z.string().nullable().optional(),
+  expirationDate: z.string().nullable().optional(),
+  isValid: z.boolean().default(true),
+});
+
+const OpmeSupplierFormSchema = z.object({
+  opmeItemId: z.number().min(1, "Item OPME é obrigatório"),
+  supplierId: z.number().min(1, "Fornecedor é obrigatório"),
+  registrationAnvisa: z.string().nullable().optional(),
+  commercialDescription: z.string().nullable().optional(),
+  isPreferred: z.boolean().default(false),
+  unitPrice: z.number().nullable().optional(),
+  deliveryTimeDays: z.number().nullable().optional(),
+  minimumQuantity: z.number().nullable().optional(),
+  notes: z.string().nullable().optional(),
+  active: z.boolean().default(true),
+});
+
+const formatCurrency = (value: number | null) => {
+  if (value === null) return "-";
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(value);
+};
+
+const OpmeItem = ({ item, onEdit, onViewSuppliers }: { 
+  item: OpmeItem, 
+  onEdit: (item: OpmeItem) => void,
+  onViewSuppliers: (itemId: number) => void 
+}) => {
+  return (
+    <Card className="mb-4 shadow-sm hover:shadow-md transition-shadow duration-200">
+      <CardHeader>
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-lg">{item.technicalName}</CardTitle>
+            <CardDescription className="text-md">{item.commercialName}</CardDescription>
+          </div>
+          <div className="flex gap-2">
+            <Button variant="outline" size="sm" onClick={() => onEdit(item)}>
+              <Pencil className="h-4 w-4 mr-2" />
+              Editar
+            </Button>
+            <Button variant="secondary" size="sm" onClick={() => onViewSuppliers(item.id)}>
+              <ExternalLink className="h-4 w-4 mr-2" />
+              Fornecedores
+            </Button>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <p className="text-sm font-medium">Fabricante:</p>
+            <p className="text-sm">{item.manufacturerName}</p>
+          </div>
+          <div>
+            <p className="text-sm font-medium">Origem:</p>
+            <p className="text-sm">{item.countryOfManufacture || "-"}</p>
+          </div>
+          <div>
+            <p className="text-sm font-medium">Registro ANVISA:</p>
+            <p className="text-sm">{item.anvisaRegistrationNumber || "-"}</p>
+          </div>
+          <div>
+            <p className="text-sm font-medium">Classe de Risco:</p>
+            <p className="text-sm">{item.riskClass || "-"}</p>
+          </div>
+          <div>
+            <p className="text-sm font-medium">Validade do Registro:</p>
+            <p className="text-sm">{item.expirationDate ? format(new Date(item.expirationDate), 'dd/MM/yyyy') : "-"}</p>
+          </div>
+          <div>
+            <p className="text-sm font-medium">Status:</p>
+            <Badge variant={item.isValid ? "default" : "destructive"}>
+              {item.isValid ? "Válido" : "Inválido"}
+            </Badge>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
+
+const OpmeItemForm = ({ 
+  isOpen, 
+  onClose, 
+  initialData, 
+  onSave 
+}: { 
+  isOpen: boolean, 
+  onClose: () => void, 
+  initialData?: OpmeItem | undefined,
+  onSave: (data: z.infer<typeof OpmeItemFormSchema>) => void
+}) => {
+  const { toast } = useToast();
+  const form = useForm<z.infer<typeof OpmeItemFormSchema>>({
+    resolver: zodResolver(OpmeItemFormSchema),
+    defaultValues: initialData || {
+      technicalName: "",
+      commercialName: "",
+      manufacturerName: "",
+      anvisaRegistrationNumber: "",
+      processNumber: "",
+      riskClass: "",
+      holderCnpj: "",
+      registrationHolder: "",
+      countryOfManufacture: "",
+      registrationDate: "",
+      expirationDate: "",
+      isValid: true,
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof OpmeItemFormSchema>) {
+    onSave(values);
+  }
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-2xl">
+        <DialogHeader>
+          <DialogTitle>{initialData ? "Editar" : "Adicionar"} Item OPME</DialogTitle>
+          <DialogDescription>
+            {initialData 
+              ? "Atualize as informações do item OPME abaixo." 
+              : "Preencha as informações para adicionar um novo item OPME."}
+          </DialogDescription>
+        </DialogHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="technicalName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nome Técnico*</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="commercialName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nome Comercial*</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="manufacturerName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Fabricante*</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="countryOfManufacture"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>País de Origem</FormLabel>
+                    <FormControl>
+                      <Input {...field} value={field.value || ""} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="anvisaRegistrationNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Registro ANVISA</FormLabel>
+                    <FormControl>
+                      <Input {...field} value={field.value || ""} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="processNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Número do Processo</FormLabel>
+                    <FormControl>
+                      <Input {...field} value={field.value || ""} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="registrationHolder"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Detentor do Registro</FormLabel>
+                    <FormControl>
+                      <Input {...field} value={field.value || ""} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="holderCnpj"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>CNPJ do Detentor</FormLabel>
+                    <FormControl>
+                      <Input {...field} value={field.value || ""} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              <FormField
+                control={form.control}
+                name="riskClass"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Classe de Risco</FormLabel>
+                    <Select 
+                      onValueChange={field.onChange} 
+                      defaultValue={field.value || ""}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Selecione" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="">-</SelectItem>
+                        <SelectItem value="I">I</SelectItem>
+                        <SelectItem value="II">II</SelectItem>
+                        <SelectItem value="III">III</SelectItem>
+                        <SelectItem value="IV">IV</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="registrationDate"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Data de Registro</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="date" 
+                        {...field}
+                        value={field.value || ""} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="expirationDate"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Data de Validade</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="date" 
+                        {...field}
+                        value={field.value || ""} 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <FormField
+              control={form.control}
+              name="isValid"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-center space-x-3 space-y-0 rounded-md border p-4">
+                  <FormControl>
+                    <input
+                      type="checkbox"
+                      checked={field.value}
+                      onChange={field.onChange}
+                      className="w-4 h-4"
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>Material Válido</FormLabel>
+                    <p className="text-sm text-muted-foreground">
+                      Desmarque esta opção se o material foi descontinuado ou o registro venceu.
+                    </p>
+                  </div>
+                </FormItem>
+              )}
+            />
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={onClose}>
+                Cancelar
+              </Button>
+              <Button type="submit">Salvar</Button>
+            </DialogFooter>
+          </form>
+        </Form>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+const SuppliersList = ({ suppliers, opmeItem, allSuppliers, onAddSupplier, onUpdateSupplier, onRemoveSupplier }: {
+  suppliers: OpmeSupplier[],
+  opmeItem: OpmeItem,
+  allSuppliers: Supplier[],
+  onAddSupplier: (data: z.infer<typeof OpmeSupplierFormSchema>) => void,
+  onUpdateSupplier: (id: number, data: Partial<z.infer<typeof OpmeSupplierFormSchema>>) => void,
+  onRemoveSupplier: (id: number) => void
+}) => {
+  const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
+  const [currentSupplier, setCurrentSupplier] = useState<OpmeSupplier | null>(null);
+  const { toast } = useToast();
+
+  // Mapeando o id do fornecedor para o nome comercial
+  const supplierNames = new Map(allSuppliers.map(s => [s.id, s.tradeName]));
+
+  const availableSuppliers = allSuppliers.filter(s => 
+    !suppliers.some(os => os.supplierId === s.id)
+  );
+
+  const handleSetPreferred = async (id: number) => {
+    try {
+      await onUpdateSupplier(id, { isPreferred: true });
+      toast({
+        title: "Fornecedor atualizado",
+        description: "Fornecedor definido como preferencial com sucesso",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Não foi possível atualizar o fornecedor",
+      });
+    }
+  };
+
+  const handleToggleActive = async (id: number, active: boolean) => {
+    try {
+      await onUpdateSupplier(id, { active });
+      toast({
+        title: "Fornecedor atualizado",
+        description: `Fornecedor ${active ? 'ativado' : 'desativado'} com sucesso`,
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Não foi possível atualizar o fornecedor",
+      });
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold">Fornecedores para {opmeItem.commercialName}</h3>
+        <Button 
+          onClick={() => setIsAddDialogOpen(true)}
+          disabled={availableSuppliers.length === 0}
+        >
+          <Plus className="h-4 w-4 mr-2" />
+          {availableSuppliers.length === 0 
+            ? "Sem fornecedores disponíveis" 
+            : "Adicionar Fornecedor"}
+        </Button>
+      </div>
+
+      {suppliers.length === 0 ? (
+        <div className="p-8 text-center border rounded-md">
+          <AlertCircle className="h-12 w-12 mx-auto text-muted-foreground mb-2" />
+          <p className="text-muted-foreground">Nenhum fornecedor associado a este item OPME.</p>
+          <p className="text-sm text-muted-foreground mt-1">
+            Clique em "Adicionar Fornecedor" para associar um fornecedor.
+          </p>
+        </div>
+      ) : (
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Fornecedor</TableHead>
+              <TableHead>Descrição Comercial</TableHead>
+              <TableHead>Registro</TableHead>
+              <TableHead>Preço</TableHead>
+              <TableHead>Prazo</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>Ações</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {suppliers.map((supplier) => (
+              <TableRow key={supplier.id}>
+                <TableCell>
+                  <div className="flex items-center">
+                    {supplier.isPreferred && (
+                      <Badge className="mr-2" variant="default">Preferencial</Badge>
+                    )}
+                    {supplierNames.get(supplier.supplierId) || `Fornecedor ${supplier.supplierId}`}
+                  </div>
+                </TableCell>
+                <TableCell>{supplier.commercialDescription || "-"}</TableCell>
+                <TableCell>{supplier.registrationAnvisa || "-"}</TableCell>
+                <TableCell>{supplier.unitPrice ? formatCurrency(supplier.unitPrice) : "-"}</TableCell>
+                <TableCell>{supplier.deliveryTimeDays ? `${supplier.deliveryTimeDays} dias` : "-"}</TableCell>
+                <TableCell>
+                  <Badge variant={supplier.active ? "outline" : "secondary"}>
+                    {supplier.active ? "Ativo" : "Inativo"}
+                  </Badge>
+                </TableCell>
+                <TableCell>
+                  <div className="flex items-center space-x-2">
+                    {!supplier.isPreferred && (
+                      <Button 
+                        variant="ghost" 
+                        size="sm" 
+                        onClick={() => handleSetPreferred(supplier.id)}
+                      >
+                        <Check className="h-4 w-4" />
+                      </Button>
+                    )}
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      onClick={() => {
+                        setCurrentSupplier(supplier);
+                        setIsAddDialogOpen(true);
+                      }}
+                    >
+                      <Edit className="h-4 w-4" />
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      onClick={() => handleToggleActive(supplier.id, !supplier.active)}
+                    >
+                      {supplier.active 
+                        ? <X className="h-4 w-4 text-destructive" /> 
+                        : <Check className="h-4 w-4 text-green-500" />}
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      onClick={() => onRemoveSupplier(supplier.id)}
+                    >
+                      <Trash className="h-4 w-4 text-destructive" />
+                    </Button>
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      )}
+
+      <OpmeSupplierForm 
+        isOpen={isAddDialogOpen}
+        onClose={() => {
+          setIsAddDialogOpen(false);
+          setCurrentSupplier(null);
+        }}
+        onSave={(data) => {
+          if (currentSupplier) {
+            onUpdateSupplier(currentSupplier.id, data);
+          } else {
+            onAddSupplier({...data, opmeItemId: opmeItem.id});
+          }
+          setIsAddDialogOpen(false);
+          setCurrentSupplier(null);
+        }}
+        initialData={currentSupplier}
+        opmeItem={opmeItem}
+        availableSuppliers={currentSupplier ? allSuppliers : availableSuppliers}
+      />
+    </div>
+  );
+};
+
+const OpmeSupplierForm = ({ 
+  isOpen, 
+  onClose, 
+  onSave, 
+  initialData, 
+  opmeItem,
+  availableSuppliers
+}: { 
+  isOpen: boolean, 
+  onClose: () => void, 
+  onSave: (data: z.infer<typeof OpmeSupplierFormSchema>) => void,
+  initialData?: OpmeSupplier | null,
+  opmeItem: OpmeItem,
+  availableSuppliers: Supplier[]
+}) => {
+  const defaultValues = initialData ? {
+    ...initialData,
+    unitPrice: initialData.unitPrice || undefined,
+    deliveryTimeDays: initialData.deliveryTimeDays || undefined,
+    minimumQuantity: initialData.minimumQuantity || undefined,
+  } : {
+    opmeItemId: opmeItem.id,
+    supplierId: availableSuppliers.length > 0 ? availableSuppliers[0].id : 0,
+    registrationAnvisa: "",
+    commercialDescription: "",
+    isPreferred: false,
+    unitPrice: undefined,
+    deliveryTimeDays: undefined,
+    minimumQuantity: undefined,
+    notes: "",
+    active: true,
+  };
+
+  const form = useForm<z.infer<typeof OpmeSupplierFormSchema>>({
+    resolver: zodResolver(OpmeSupplierFormSchema),
+    defaultValues,
+  });
+
+  function onSubmit(values: z.infer<typeof OpmeSupplierFormSchema>) {
+    onSave(values);
+  }
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-2xl">
+        <DialogHeader>
+          <DialogTitle>{initialData ? "Editar" : "Adicionar"} Fornecedor</DialogTitle>
+          <DialogDescription>
+            {initialData 
+              ? "Atualize as informações do fornecedor para este item OPME." 
+              : "Associe um novo fornecedor a este item OPME."}
+          </DialogDescription>
+        </DialogHeader>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="supplierId"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Fornecedor*</FormLabel>
+                    <Select 
+                      onValueChange={(value) => field.onChange(parseInt(value))} 
+                      defaultValue={String(field.value)}
+                      disabled={!!initialData}
+                    >
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="Selecione um fornecedor" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {availableSuppliers.map((supplier) => (
+                          <SelectItem key={supplier.id} value={String(supplier.id)}>
+                            {supplier.tradeName}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="registrationAnvisa"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Registro ANVISA</FormLabel>
+                    <FormControl>
+                      <Input {...field} value={field.value || ""} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <FormField
+              control={form.control}
+              name="commercialDescription"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Descrição Comercial</FormLabel>
+                  <FormControl>
+                    <Input {...field} value={field.value || ""} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="grid grid-cols-3 gap-4">
+              <FormField
+                control={form.control}
+                name="unitPrice"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Preço Unitário (R$)</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="number"
+                        {...field}
+                        value={field.value ?? ""}
+                        onChange={(e) => {
+                          const value = e.target.value 
+                            ? parseFloat(e.target.value)
+                            : undefined;
+                          field.onChange(value);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="deliveryTimeDays"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Prazo de Entrega (dias)</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="number"
+                        {...field}
+                        value={field.value ?? ""}
+                        onChange={(e) => {
+                          const value = e.target.value 
+                            ? parseInt(e.target.value)
+                            : undefined;
+                          field.onChange(value);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="minimumQuantity"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Quantidade Mínima</FormLabel>
+                    <FormControl>
+                      <Input 
+                        type="number"
+                        {...field}
+                        value={field.value ?? ""}
+                        onChange={(e) => {
+                          const value = e.target.value 
+                            ? parseInt(e.target.value)
+                            : undefined;
+                          field.onChange(value);
+                        }}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <FormField
+              control={form.control}
+              name="notes"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Observações</FormLabel>
+                  <FormControl>
+                    <Textarea 
+                      {...field}
+                      value={field.value || ""}
+                      className="min-h-[80px]"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <div className="grid grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="isPreferred"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-center space-x-3 space-y-0 rounded-md border p-4">
+                    <FormControl>
+                      <input
+                        type="checkbox"
+                        checked={field.value}
+                        onChange={field.onChange}
+                        className="w-4 h-4"
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormLabel>Fornecedor Preferencial</FormLabel>
+                      <p className="text-xs text-muted-foreground">
+                        Marque esta opção para definir este fornecedor como preferencial
+                      </p>
+                    </div>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="active"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-center space-x-3 space-y-0 rounded-md border p-4">
+                    <FormControl>
+                      <input
+                        type="checkbox"
+                        checked={field.value}
+                        onChange={field.onChange}
+                        className="w-4 h-4"
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormLabel>Fornecedor Ativo</FormLabel>
+                      <p className="text-xs text-muted-foreground">
+                        Desmarque esta opção para desativar temporariamente este fornecedor
+                      </p>
+                    </div>
+                  </FormItem>
+                )}
+              />
+            </div>
+            <DialogFooter>
+              <Button type="button" variant="outline" onClick={onClose}>
+                Cancelar
+              </Button>
+              <Button type="submit">Salvar</Button>
+            </DialogFooter>
+          </form>
+        </Form>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+export default function OpmeCatalog() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [activeTab, setActiveTab] = useState("opme-items");
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [currentItem, setCurrentItem] = useState<OpmeItem | null>(null);
+  const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
+  const { toast } = useToast();
+
+  // Queries
+  const { 
+    data: opmeItems = [], 
+    isLoading: isLoadingItems,
+    refetch: refetchItems
+  } = useQuery<OpmeItem[]>({
+    queryKey: ["/api/opme-items"],
+    queryFn: async () => {
+      try {
+        let url = "/api/opme-items";
+        if (searchTerm) {
+          url += `?search=${encodeURIComponent(searchTerm)}`;
+        }
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error("Failed to fetch OPME items");
+        }
+        return response.json();
+      } catch (error) {
+        console.error("Error fetching OPME items:", error);
+        return [];
+      }
+    },
+  });
+
+  const { 
+    data: suppliers = [], 
+    isLoading: isLoadingSuppliers 
+  } = useQuery<Supplier[]>({
+    queryKey: ["/api/suppliers"],
+    queryFn: async () => {
+      try {
+        const response = await fetch("/api/suppliers?active=true");
+        if (!response.ok) {
+          throw new Error("Failed to fetch suppliers");
+        }
+        return response.json();
+      } catch (error) {
+        console.error("Error fetching suppliers:", error);
+        return [];
+      }
+    },
+  });
+
+  const { 
+    data: selectedItemWithSuppliers,
+    isLoading: isLoadingSupplierDetails,
+    refetch: refetchSupplierDetails
+  } = useQuery<OpmeWithSuppliers>({
+    queryKey: ["/api/opme-items", selectedItemId, "suppliers"],
+    queryFn: async () => {
+      if (!selectedItemId) return null;
+      const response = await fetch(`/api/opme-items/${selectedItemId}/suppliers`);
+      if (!response.ok) {
+        throw new Error("Failed to fetch OPME item with suppliers");
+      }
+      return response.json();
+    },
+    enabled: !!selectedItemId,
+  });
+
+  // Mutations
+  const createItemMutation = useMutation({
+    mutationFn: async (data: OpmeItemFormValues) => {
+      try {
+        console.log("Tentando criar item OPME:", data);
+        
+        const response = await fetch("/api/opme-items", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+          const errorData = await response.json();
+          console.error("Erro ao criar item OPME:", errorData);
+          throw new Error(errorData.message || "Falha ao criar item OPME");
+        }
+
+        const result = await response.json();
+        console.log("Item OPME criado com sucesso:", result);
+        return result;
+      } catch (error) {
+        console.error("Exceção ao criar item OPME:", error);
+        throw error;
+      }
+    },
+    onSuccess: (data) => {
+      console.log("Mutation concluída com sucesso:", data);
+      queryClient.invalidateQueries({ queryKey: ["/api/opme-items"] });
+      toast({
+        title: "Item OPME adicionado",
+        description: "O item OPME foi adicionado com sucesso.",
+      });
+      setIsFormOpen(false);
+    },
+    onError: (error) => {
+      console.error("Mutation falhou:", error);
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: error.message || "Não foi possível adicionar o item OPME.",
+      });
+    },
+  });
+
+  const updateItemMutation = useMutation({
+    mutationFn: async (data: { id: number; updates: z.infer<typeof OpmeItemFormSchema> }) => {
+      const response = await fetch(`/api/opme-items/${data.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data.updates),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to update OPME item");
+      }
+
+      return await response.json();
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["/api/opme-items"] });
+      if (selectedItemId) {
+        queryClient.invalidateQueries({ queryKey: ["/api/opme-items", selectedItemId, "suppliers"] });
+      }
+      toast({
+        title: "Item OPME atualizado",
+        description: "O item OPME foi atualizado com sucesso.",
+      });
+      setIsFormOpen(false);
+      setCurrentItem(null);
+    },
+    onError: (error) => {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: error.message || "Não foi possível atualizar o item OPME.",
+      });
+    },
+  });
+
+  const addSupplierMutation = useMutation({
+    mutationFn: async (data: z.infer<typeof OpmeSupplierFormSchema>) => {
+      const response = await fetch("/api/opme-suppliers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to add supplier");
+      }
+
+      return await response.json();
+    },
+    onSuccess: () => {
+      if (selectedItemId) {
+        queryClient.invalidateQueries({ queryKey: ["/api/opme-items", selectedItemId, "suppliers"] });
+      }
+      toast({
+        title: "Fornecedor adicionado",
+        description: "O fornecedor foi associado ao item OPME com sucesso.",
+      });
+    },
+    onError: (error) => {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: error.message || "Não foi possível adicionar o fornecedor ao item OPME.",
+      });
+    },
+  });
+
+  const updateSupplierMutation = useMutation({
+    mutationFn: async (data: { id: number; updates: Partial<z.infer<typeof OpmeSupplierFormSchema>> }) => {
+      const response = await fetch(`/api/opme-suppliers/${data.id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data.updates),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to update supplier");
+      }
+
+      return await response.json();
+    },
+    onSuccess: () => {
+      if (selectedItemId) {
+        queryClient.invalidateQueries({ queryKey: ["/api/opme-items", selectedItemId, "suppliers"] });
+      }
+      toast({
+        title: "Fornecedor atualizado",
+        description: "As informações do fornecedor foram atualizadas com sucesso.",
+      });
+    },
+    onError: (error) => {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: error.message || "Não foi possível atualizar o fornecedor.",
+      });
+    },
+  });
+
+  const removeSupplierMutation = useMutation({
+    mutationFn: async (id: number) => {
+      const response = await fetch(`/api/opme-suppliers/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to remove supplier");
+      }
+
+      return true;
+    },
+    onSuccess: () => {
+      if (selectedItemId) {
+        queryClient.invalidateQueries({ queryKey: ["/api/opme-items", selectedItemId, "suppliers"] });
+      }
+      toast({
+        title: "Fornecedor removido",
+        description: "O fornecedor foi desassociado do item OPME com sucesso.",
+      });
+    },
+    onError: () => {
+      toast({
+        variant: "destructive",
+        title: "Erro",
+        description: "Não foi possível remover o fornecedor do item OPME.",
+      });
+    },
+  });
+
+  // Handlers
+  const handleCreateItem = (data: z.infer<typeof OpmeItemFormSchema>) => {
+    createItemMutation.mutate(data);
+  };
+
+  const handleUpdateItem = (data: z.infer<typeof OpmeItemFormSchema>) => {
+    if (currentItem) {
+      updateItemMutation.mutate({ id: currentItem.id, updates: data });
+    }
+  };
+
+  const handleEditItem = (item: OpmeItem) => {
+    setCurrentItem(item);
+    setIsFormOpen(true);
+  };
+
+  const handleViewSuppliers = (itemId: number) => {
+    setSelectedItemId(itemId);
+    setActiveTab("suppliers");
+  };
+
+  const handleAddSupplier = (data: z.infer<typeof OpmeSupplierFormSchema>) => {
+    addSupplierMutation.mutate(data);
+  };
+
+  const handleUpdateSupplier = (id: number, updates: Partial<z.infer<typeof OpmeSupplierFormSchema>>) => {
+    updateSupplierMutation.mutate({ id, updates });
+  };
+
+  const handleRemoveSupplier = (id: number) => {
+    removeSupplierMutation.mutate(id);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    refetchItems();
+  };
+
+  // Content rendering
+  const renderContent = () => {
+    if (activeTab === "opme-items") {
+      if (isLoadingItems) {
+        return (
+          <div className="flex justify-center items-center h-40">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          </div>
+        );
+      }
+
+      if (opmeItems.length === 0) {
+        return (
+          <div className="text-center p-8">
+            <div className="mx-auto h-12 w-12 text-muted-foreground mb-4">
+              <AlertCircle className="h-12 w-12" />
+            </div>
+            <h3 className="mt-2 text-sm font-semibold">Nenhum item OPME encontrado</h3>
+            <p className="mt-1 text-sm text-muted-foreground">
+              {searchTerm 
+                ? "Tente alterar os termos da busca ou limpar os filtros." 
+                : "Comece adicionando um novo item ao catálogo."}
+            </p>
+            <div className="mt-6">
+              <Button onClick={() => setIsFormOpen(true)}>
+                <Plus className="h-4 w-4 mr-2" />
+                Adicionar Item OPME
+              </Button>
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <div className="grid gap-4">
+          {opmeItems.map((item) => (
+            <OpmeItem 
+              key={item.id} 
+              item={item} 
+              onEdit={handleEditItem}
+              onViewSuppliers={handleViewSuppliers}
+            />
+          ))}
+        </div>
+      );
+    } else if (activeTab === "suppliers") {
+      if (!selectedItemId) {
+        return (
+          <div className="text-center p-8">
+            <p className="text-muted-foreground">
+              Selecione um item OPME para visualizar seus fornecedores.
+            </p>
+          </div>
+        );
+      }
+
+      if (isLoadingSupplierDetails) {
+        return (
+          <div className="flex justify-center items-center h-40">
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          </div>
+        );
+      }
+
+      if (!selectedItemWithSuppliers) {
+        return (
+          <div className="text-center p-8">
+            <p className="text-muted-foreground">
+              Erro ao carregar detalhes do item OPME.
+            </p>
+          </div>
+        );
+      }
+
+      return (
+        <SuppliersList 
+          suppliers={selectedItemWithSuppliers.suppliers || []}
+          opmeItem={selectedItemWithSuppliers.opmeItem}
+          allSuppliers={suppliers}
+          onAddSupplier={handleAddSupplier}
+          onUpdateSupplier={handleUpdateSupplier}
+          onRemoveSupplier={handleRemoveSupplier}
+        />
+      );
+    }
+  };
+
+  return (
+    <div className="container mx-auto py-6">
+      <div className="flex justify-between items-center mb-6">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight">Catálogo OPME</h1>
+          <p className="text-muted-foreground">
+            Gerencie os materiais OPME e seus fornecedores.
+          </p>
+        </div>
+        <Button onClick={() => setIsFormOpen(true)}>
+          <Plus className="h-4 w-4 mr-2" />
+          Adicionar Item OPME
+        </Button>
+      </div>
+
+      <div className="mb-6">
+        <form onSubmit={handleSearch} className="flex gap-2">
+          <div className="flex-1">
+            <Input
+              placeholder="Buscar por nome técnico, comercial, fabricante ou registro ANVISA..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full"
+            />
+          </div>
+          <Button type="submit">
+            <Search className="h-4 w-4 mr-2" />
+            Buscar
+          </Button>
+        </form>
+      </div>
+
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="opme-items" onClick={() => setActiveTab("opme-items")}>
+            Materiais OPME
+          </TabsTrigger>
+          <TabsTrigger 
+            value="suppliers" 
+            onClick={() => setActiveTab("suppliers")}
+            disabled={!selectedItemId}
+          >
+            Fornecedores
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value={activeTab} className="mt-6">
+          {renderContent()}
+        </TabsContent>
+      </Tabs>
+
+      <OpmeItemForm
+        isOpen={isFormOpen}
+        onClose={() => {
+          setIsFormOpen(false);
+          setCurrentItem(null);
+        }}
+        initialData={currentItem}
+        onSave={currentItem ? handleUpdateItem : handleCreateItem}
+      />
+    </div>
+  );
+}

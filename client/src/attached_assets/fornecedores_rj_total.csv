@@ -1,0 +1,7 @@
+company_name,trade_name,cnpj,municipality_id,address,neighborhood,postal_code,phone,email,website,anvisa_code,active
+Per Prima Comércio Importação e Exportação Ltda,Per Prima,40.179.558/0001-09,1,"Rua Conde de Lages, 44 – Sala 1304 – Glória",Glória,20061-080,(21) 2221-1244,contato@perprima.com.br,https://perprima.com.br,,True
+Porto Surgical Ltda,Porto Surgical,00.000.000/0001-00,1,"Rua José Silva de Azevedo Neto, 200 – Bloco 3 – Sala 301 – Barra da Tijuca",Barra da Tijuca,22631-170,(21) 99127-1142,marcio.bueno@portosurgical.com.br,https://portosurgical.com.br,25351.435423/2023-92,True
+BlueSynthes Produtos Hospitalares Ltda,BlueSynthes,00.000.000/0001-01,2,"Estrada Caetano Monteiro, 4550 / 203 – Pendotiba",Pendotiba,24342-560,(21) 99999-9999,contato@bluesynthes.com.br,,,True
+DMO – Distribuidora de Materiais Ortopédicos,DMO,,1,"Rua Maurício da Costa Faria, 190 – Recreio dos Bandeirantes",Recreio dos Bandeirantes,22790-285,(21) 3289-8900,,https://www.dmorj.com.br/,,True
+Axiste Comércio de Produtos Médicos Hospitalares Ltda,Axiste,09.409.545/0001-20,1,"Rua General André Chaves, 134 – Anil",Anil,22755-100,(21) 3094-9750,cotacao@axiste.com.br,https://axiste.com.br/,,True
+Endo RJ Distribuidora,Endo RJ,,1,"Rua Victor Civita, 66 – Bloco 2, Edifício 4, Conjuntos 301 a 305 – Barra da Tijuca",Barra da Tijuca,22775-044,(21) 3976-0189 / (21) 99704-5655,cotacao@endorj.com.br,https://endorj.com.br/,,True

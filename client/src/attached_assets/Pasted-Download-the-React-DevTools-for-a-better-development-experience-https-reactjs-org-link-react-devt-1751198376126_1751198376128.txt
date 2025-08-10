@@ -1,0 +1,422 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+theme-provider.tsx:57 Aplicando tema: dark
+orders.tsx:97 Buscando pedidos para o usuário ID: 41
+orders.tsx:97 Buscando pedidos para o usuário ID: 41
+orders.tsx:111 Pedidos carregados da API: (51) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+orders.tsx:115 DEBUG STATUS FRONTEND - Primeiros 3 pedidos:
+orders.tsx:117   Pedido #168: status="não_especificado", statusId=undefined
+orders.tsx:117   Pedido #129: status="não_especificado", statusId=undefined
+orders.tsx:117   Pedido #116: status="não_especificado", statusId=undefined
+orders.tsx:124 Pedido #168:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #129:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #116:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #121:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #75:
+orders.tsx:125   Paciente: Felipe Santos Correa, Telefone: 21987364871
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #169:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: (2) [{…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #81:
+orders.tsx:125   Paciente: Felipe Santos Correa, Telefone: 21987364871
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #120:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #154:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #132:
+orders.tsx:125   Paciente: Nemo Manuel , Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #114:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #115:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #107:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #97:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #151:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: (3) [{…}, {…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #167:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #174:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: [{…}]
+orders.tsx:124 Pedido #113:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #112:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #158:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #139:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #152:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: (3) [{…}, {…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #155:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #124:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #156:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #64:
+orders.tsx:125   Paciente: Maria Silva Santos, Telefone: 21987364870
+orders.tsx:126   CIDs: (2) [{…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #153:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: (3) [{…}, {…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #157:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #128:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #117:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #80:
+orders.tsx:125   Paciente: Felipe Santos Correa, Telefone: 21987364871
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #92:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #93:
+orders.tsx:125   Paciente: Maria João Ribeiro, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #130:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #141:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #142:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #143:
+orders.tsx:125   Paciente: Nemo Manuel , Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #140:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #94:
+orders.tsx:125   Paciente: DANIEL TESTE, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #146:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #150:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #148:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #147:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #145:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #144:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #149:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #171:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: (2) [{…}, {…}]
+orders.tsx:124 Pedido #170:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: (2) [{…}, {…}]
+orders.tsx:124 Pedido #172:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: [{…}]
+orders.tsx:124 Pedido #72:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #131:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:111 Pedidos carregados da API: (51) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+orders.tsx:115 DEBUG STATUS FRONTEND - Primeiros 3 pedidos:
+orders.tsx:117   Pedido #168: status="não_especificado", statusId=undefined
+orders.tsx:117   Pedido #129: status="não_especificado", statusId=undefined
+orders.tsx:117   Pedido #116: status="não_especificado", statusId=undefined
+orders.tsx:124 Pedido #168:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #129:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #116:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #121:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #75:
+orders.tsx:125   Paciente: Felipe Santos Correa, Telefone: 21987364871
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #169:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: (2) [{…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #81:
+orders.tsx:125   Paciente: Felipe Santos Correa, Telefone: 21987364871
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #120:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #154:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #132:
+orders.tsx:125   Paciente: Nemo Manuel , Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #114:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #115:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #107:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #97:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #151:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: (3) [{…}, {…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #167:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #174:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: [{…}]
+orders.tsx:124 Pedido #113:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #112:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #158:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #139:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #152:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: (3) [{…}, {…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #155:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #124:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #156:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #64:
+orders.tsx:125   Paciente: Maria Silva Santos, Telefone: 21987364870
+orders.tsx:126   CIDs: (2) [{…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #153:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: (3) [{…}, {…}, {…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #157:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #128:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #117:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #80:
+orders.tsx:125   Paciente: Felipe Santos Correa, Telefone: 21987364871
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #92:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #93:
+orders.tsx:125   Paciente: Maria João Ribeiro, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #130:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #141:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #142:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #143:
+orders.tsx:125   Paciente: Nemo Manuel , Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #140:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #94:
+orders.tsx:125   Paciente: DANIEL TESTE, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #146:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #150:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #148:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #147:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #145:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #144:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #149:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #171:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: (2) [{…}, {…}]
+orders.tsx:124 Pedido #170:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: (2) [{…}, {…}]
+orders.tsx:124 Pedido #172:
+orders.tsx:125   Paciente: LUIS MARCELO DE AZEVEDO MALTA, Telefone: 
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: [{…}]
+orders.tsx:124 Pedido #72:
+orders.tsx:125   Paciente: João do pé de Feijão1, Telefone: 21987364870
+orders.tsx:126   CIDs: [{…}]
+orders.tsx:127   Condutas: []
+orders.tsx:124 Pedido #131:
+orders.tsx:125   Paciente: Netuno joao, Telefone: null
+orders.tsx:126   CIDs: []
+orders.tsx:127   Condutas: []

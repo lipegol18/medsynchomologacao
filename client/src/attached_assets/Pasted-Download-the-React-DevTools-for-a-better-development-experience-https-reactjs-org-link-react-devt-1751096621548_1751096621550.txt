@@ -1,0 +1,208 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+theme-provider.tsx:57 Aplicando tema: dark
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 0, multipleCidsData: Array(0), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 0, multipleCidsData: Array(0), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 0, multipleCidsData: Array(0), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:361 🔍 useEffect EXECUTADO - editOrderId: 170 user.id: 41
+create-order.tsx:365 🚀 INÍCIO useEffect - Carregando pedido para edição: 170
+create-order.tsx:368 🔍 Fazendo requisição para: /api/medical-orders/170
+create-order.tsx:370 📡 Response status: 200
+create-order.tsx:374 📋 Dados do pedido carregados para edição: {id: 170, patientId: 24, userId: 41, hospitalId: 21, procedureDate: null, …}
+create-order.tsx:376 🔄 INICIANDO loadExistingOrder...
+create-order.tsx:714 🔄 INICIANDO loadExistingOrder para pedido 170
+create-order.tsx:715 Carregando pedido existente: {id: 170, patientId: 24, userId: 41, hospitalId: 21, procedureDate: null, …}
+create-order.tsx:723 === MODO EDIÇÃO: Carregando dados relacionais para pedido 170 ===
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 0, multipleCidsData: Array(0), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 0, multipleCidsData: Array(0), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 0, multipleCidsData: Array(0), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:729 MODO EDIÇÃO: CIDs salvos encontrados: 1 CIDs
+create-order.tsx:730 MODO EDIÇÃO: Dados dos CIDs recebidos: [{…}]
+create-order.tsx:738 MODO EDIÇÃO: CID principal carregado: M75.1
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: undefined, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:747 MODO EDIÇÃO FUNÇÃO 1: Response from /api/orders/170/procedures: (5) [{…}, {…}, {…}, {…}, {…}]
+create-order.tsx:750 MODO EDIÇÃO: Procedimentos salvos encontrados: 5 procedimentos
+create-order.tsx:755 MODO EDIÇÃO: mainProcedure: {id: 465, orderId: 170, procedureId: 1, quantityRequested: 1, quantityApproved: null, …}
+create-order.tsx:756 MODO EDIÇÃO: secondaryProcedures: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:759 MODO EDIÇÃO: Definindo procedimento principal: {id: 1, code: '1.01.01.01-2', name: 'CONSULTA EM CONSULTÓRIO (NO HORÁRIO NORMAL OU PREESTABELECIDO)', porte: '02B', custoOperacional: null, …}
+create-order.tsx:762 MODO EDIÇÃO: Procedimento principal carregado: 1.01.01.01-2
+create-order.tsx:770 MODO EDIÇÃO: Definindo procedimentos secundários: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:772 MODO EDIÇÃO: Procedimentos secundários carregados: 4 procedimentos
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:785 MODO EDIÇÃO: Fornecedores salvos encontrados: 3 fornecedores
+create-order.tsx:786 MODO EDIÇÃO: Dados dos fornecedores recebidos: (3) [{…}, {…}, {…}]
+create-order.tsx:798 MODO EDIÇÃO: Fornecedores carregados: Arthrex Brasil, Axiste - Comércio de Produtos Médicos Hospitalares Ltda, BlueSynthes
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:808 MODO EDIÇÃO: Itens OPME salvos encontrados: 3 itens
+create-order.tsx:812 MODO EDIÇÃO: Itens OPME carregados: 3 itens
+create-order.tsx:818 MODO EDIÇÃO: Carregamento de dados relacionais concluído
+create-order.tsx:826 Buscando paciente com ID 24
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:831 Paciente encontrado: {id: 24, fullName: 'Netuno joao', cpf: '675.983.620-09', birthDate: '1979-11-11', gender: 'M', …}
+create-order.tsx:841 Buscando hospital com ID 21
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: false, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:850 Hospital encontrado via API específica: {id: 21, name: 'HOSPITAL COPA STAR', businessName: "Rede D'or", cnpj: '06047087002697', cnes: '9065946', …}
+create-order.tsx:905 Carregando lateralidade do procedimento do banco de dados: {procedureLaterality: 'direito', procedureLateralityType: 'string'}
+create-order.tsx:927 Carregadas 0 URLs de imagens de exame
+create-order.tsx:932 Carregadas 0 URLs de laudos médicos
+create-order.tsx:947 === Carregando dados relacionais para pedido 170 ===
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:953 CIDs salvos encontrados: 1 CIDs
+create-order.tsx:961 CID principal carregado: M75.1
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:970 DEBUG: Response from /api/orders/170/procedures: (5) [{…}, {…}, {…}, {…}, {…}]
+create-order.tsx:973 Procedimentos salvos encontrados: 5 procedimentos
+create-order.tsx:985 DEBUG: mainProcedure formatado: {item: {…}, quantity: 1, isMain: true}
+create-order.tsx:986 DEBUG: secondaryProcedures formatados: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:989 DEBUG: Definindo procedimento principal: {id: 1, code: '1.01.01.01-2', name: 'CONSULTA EM CONSULTÓRIO (NO HORÁRIO NORMAL OU PREESTABELECIDO)', porte: '02B', custoOperacional: null, …}
+create-order.tsx:992 Procedimento principal carregado: 1.01.01.01-2 - Quantidade: 1
+create-order.tsx:1002 DEBUG: Definindo procedimentos secundários: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1004 Procedimentos secundários carregados: 4 procedimentos
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1017 Fornecedores salvos encontrados: 3 fornecedores
+create-order.tsx:1025 DEBUG: Fornecedores formatados: (3) [{…}, {…}, {…}]
+create-order.tsx:1033 DEBUG: IDs dos fornecedores sendo definidos: {supplier1: 17, supplier2: 5, supplier3: 3}
+create-order.tsx:1035 Fornecedores carregados: Arthrex Brasil, Axiste - Comércio de Produtos Médicos Hospitalares Ltda, BlueSynthes
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1045 Itens OPME salvos encontrados: 3 itens
+create-order.tsx:1049 Itens OPME carregados: 3 itens
+create-order.tsx:1055 === Carregamento de dados relacionais concluído ===
+create-order.tsx:1075 ✅ Dados relacionais carregados com sucesso - procedimentos e fornecedores já processados via API relacional
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1082 Itens OPME encontrados via API relacional: (3) [{…}, {…}, {…}]
+create-order.tsx:1086 Itens OPME carregados: (3) [{…}, {…}, {…}]
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1103 Fornecedores encontrados via API relacional: (3) [{…}, {…}, {…}]
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 0, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1125 CIDs encontrados via API relacional: [{…}]
+create-order.tsx:1146 Justificativa clínica encontrada no pedido: Paciente portador de gonartrose severa (grau IV de Kellgren-Lawrence), com dor incapacitante e limitação funcional importante que compromete significativamente as atividades de vida diária. Falha do tratamento conservador com analgésicos, anti-inflamatórios, fisioterapia e infiltrações. Indicada artroplastia total de joelho para alívio da dor e restauração da função.
+create-order.tsx:1157 🔍 LOAD - order.attachments: (2) [{…}, {…}]
+create-order.tsx:1158 🔍 LOAD - order.examImagesUrl: undefined
+create-order.tsx:1159 🔍 LOAD - order.medicalReportUrl: undefined
+create-order.tsx:1163 ✅ Anexos unificados encontrados: (2) [{…}, {…}]
+create-order.tsx:1185 🔍 FINAL - orderMediaData.attachments: (2) [{…}, {…}]
+create-order.tsx:1186 🔍 FINAL - attachments length: 2
+create-order.tsx:1189 ✅ _loadExistingOrder concluído para pedido 170
+create-order.tsx:379 ✅ loadExistingOrder CONCLUÍDO
+create-order.tsx:381 🔄 MODO EDIÇÃO: Dados relacionais já carregados em loadExistingOrder
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1241 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1242 📋 3 procedimentos definidos como secundários
+create-order.tsx:1261 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (3) [{…}, {…}, {…}]
+create-order.tsx:1265 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (3) [80, 92, 95] Quantidades: (3) [4, 1, 1]
+create-order.tsx:1273 CIDs a serem enviados: [26]
+create-order.tsx:1324 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1376 Preservando attachments existentes: (2) [{…}, {…}]
+create-order.tsx:1415 saveProgress - Salvando 1 CIDs relacionais para pedido 170: [26]
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1427 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1461 saveProgress - Salvando 5 procedimentos CBHPM relacionais para pedido 170: (5) [{…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1473 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1490 saveProgress - Salvando 3 itens OPME relacionais para pedido 170: (3) [{…}, {…}, {…}]
+create-order.tsx:1502 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1526 saveProgressMutation - Dados a serem enviados: {patientId: 24, userId: 41, hospitalId: 21, id: 170, attachments: Array(2)}
+create-order.tsx:1538 saveProgressMutation - Dados válidos após limpeza: {patientId: 24, userId: 41, hospitalId: 21, id: 170, attachments: Array(2)}
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+surgery-data.tsx:333 SurgeryData: useEffect fornecedores executado {supplierDetails: 3, suppliers: {…}, suppliers.supplier1: null, suppliers.supplier2: null, suppliers.supplier3: null, …}
+surgery-data.tsx:349 SurgeryData: Fornecedores completos recebidos: (3) [{…}, {…}, {…}]
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:1550 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}
+create-order.tsx:2167 🔍 VALIDAÇÃO STEP 3 DEBUG: {step2Valid: true, selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, …}

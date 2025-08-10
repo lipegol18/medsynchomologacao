@@ -1,0 +1,93 @@
+chunk-XQLYTHWV.js?v=a9b161df:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+theme-provider.tsx:57 Aplicando tema: dark
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+patient-search.tsx:96 Encontrados 1 pacientes para a consulta "joao"
+patient-search.tsx:96 Encontrados 0 pacientes para a consulta "19"
+patient-search.tsx:96 Encontrados 1 pacientes para a consulta "102"
+patient-search.tsx:96 Encontrados 0 pacientes para a consulta "10"
+create-order.tsx:281 Paciente selecionado: Maria Silva Santos (ID: 2)
+create-order.tsx:288 Verificando pedidos em preenchimento para o paciente ID: 2
+create-order.tsx:294 URL construída para verificação: /api/medical-orders/in-progress/patient/2
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:301 Status da resposta: 200
+create-order.tsx:302 Headers da resposta: {access-control-allow-origin: '*', cache-control: 'no-cache, no-store, must-revalidate', content-length: '992', content-type: 'application/json; charset=utf-8', date: 'Tue, 03 Jun 2025 07:15:08 GMT', …}
+create-order.tsx:306 Pedidos em andamento encontrados para o paciente: [{…}]
+create-order.tsx:314 Pedido existente encontrado, mostrando diálogo: {id: 64, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:350 Usuário escolheu continuar o pedido existente: {id: 64, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+create-order.tsx:486 Carregando pedido existente: {id: 64, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+create-order.tsx:492 Buscando paciente com ID 2
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:497 Paciente encontrado: {id: 2, fullName: 'Maria Silva Santos', cpf: '123.456.789-00', birthDate: '1979-12-31', gender: '', …}
+create-order.tsx:507 Buscando hospital com ID 1
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:516 Hospital encontrado via API específica: {id: 1, name: 'CHN - Complexo Hospitalar de Niterói', businessName: ' Rede Américas', cnpj: '60884855001207', cnes: '3065634', …}
+create-order.tsx:571 Carregando lateralidade do procedimento do banco de dados: {procedureLaterality: 'direito', procedureLateralityType: 'string'}
+create-order.tsx:600 Dados de mídia do pedido carregados: {exam_images_url: Array(2), exam_image_count: 2, medical_report_url: '/uploads/reports/report_1748081257905.jpeg'}
+create-order.tsx:611 Carregando múltiplos CIDs: (2) [26, 29]
+create-order.tsx:730 Adicionando procedimentos secundários à lista: (2) [2, 3]
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CHN - Complexo Hospitalar de Niterói
+create-order.tsx:760 ✅ Procedimento secundário adicionado: CONSULTA EM DOMICILIO (Porte: 03A)
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CHN - Complexo Hospitalar de Niterói
+create-order.tsx:760 ✅ Procedimento secundário adicionado: CONSULTA EM PRONTO SOCORRO (Porte: 02B)
+create-order.tsx:792 📋 Total de 2 procedimentos carregados e ordenados por porte:
+create-order.tsx:794   1. CONSULTA EM DOMICILIO (Porte: 03A)
+create-order.tsx:794   2. CONSULTA EM PRONTO SOCORRO (Porte: 02B)
+create-order.tsx:810 Itens OPME encontrados: (2) [1, 4]
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CHN - Complexo Hospitalar de Niterói
+create-order.tsx:844 Itens OPME carregados: (2) [{…}, {…}]
+create-order.tsx:869 Nenhum fornecedor encontrado para o pedido
+create-order.tsx:876 Justificativa clínica encontrada no pedido: Sugestão de Justificativa Clínica
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CHN - Complexo Hospitalar de Niterói
+create-order.tsx:1753 Dados do pedido sendo enviados: {
+  "patientId": 2,
+  "userId": 41,
+  "hospitalId": 1,
+  "statusCode": "em_preenchimento",
+  "procedureType": "eletiva",
+  "procedureId": 1,
+  "clinicalIndication": "A ser preenchido",
+  "procedureLaterality": "direito",
+  "secondaryProcedureIds": [],
+  "secondaryProcedureQuantities": [],
+  "opmeItemIds": [],
+  "opmeItemQuantities": [],
+  "exam_images_url": [],
+  "exam_image_count": 0
+}
+create-order.tsx:946 🏆 Procedimento de maior porte definido como principal: 1.01.01.02-0 - CONSULTA EM DOMICILIO (Porte: 03A)
+create-order.tsx:947 📋 1 procedimentos definidos como secundários
+create-order.tsx:966 Itens OPME a serem enviados: (2) [1, 4] (2) [1, 1]
+create-order.tsx:974 Múltiplos CIDs a serem enviados: (2) [26, 29]
+create-order.tsx:1014 🏭 FORNECEDORES DEBUG: {suppliersObject: {…}, collectedSuppliers: Array(0), hasSuppliers: false}
+create-order.tsx:1030 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1082 🖼️ Preservando URLs de imagens existentes: (2) ['/uploads/images/1748081785244.jpeg', '/uploads/images/1748081786281.jpeg']
+create-order.tsx:1174 saveProgressMutation - Enviando dados de lateralidade: {procedureLaterality: 'direito'}
+exam-info.tsx:61 🖼️ ExamInfo: Atualizando previews com imageUrls: (2) ['/uploads/images/1748081785244.jpeg', '/uploads/images/1748081786281.jpeg']
+exam-info.tsx:72 ✅ Carregados 2 previews de imagens do servidor
+create-order.tsx:1189 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: null, procedureLateralitySalvo: 'direito'}
+create-order.tsx:1218 🖼️ currentOrderData atualizado com URLs do servidor: {exam_images_url: Array(2), medical_report_url: '/uploads/reports/report_1748081257905.jpeg'}
+exam-info.tsx:61 🖼️ ExamInfo: Atualizando previews com imageUrls: (2) ['/uploads/images/1748081785244.jpeg', '/uploads/images/1748081786281.jpeg']
+exam-info.tsx:72 ✅ Carregados 2 previews de imagens do servidor
+create-order.tsx:1802 Dados de lateralidade ANTES de salvar (próximo passo): {cidLaterality: null, procedureLaterality: 'direito'}
+create-order.tsx:946 🏆 Procedimento de maior porte definido como principal: 1.01.01.02-0 - CONSULTA EM DOMICILIO (Porte: 03A)
+create-order.tsx:947 📋 1 procedimentos definidos como secundários
+create-order.tsx:966 Itens OPME a serem enviados: (2) [1, 4] (2) [1, 1]
+create-order.tsx:974 Múltiplos CIDs a serem enviados: (2) [26, 29]
+create-order.tsx:1014 🏭 FORNECEDORES DEBUG: {suppliersObject: {…}, collectedSuppliers: Array(0), hasSuppliers: false}
+create-order.tsx:1030 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1082 🖼️ Preservando URLs de imagens existentes: (2) ['/uploads/images/1748081785244.jpeg', '/uploads/images/1748081786281.jpeg']
+create-order.tsx:1810 Próximo passo: Valores de lateralidade salvos com sucesso
+create-order.tsx:1174 saveProgressMutation - Enviando dados de lateralidade: {procedureLaterality: 'direito'}
+create-order.tsx:1189 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: null, procedureLateralitySalvo: 'direito'}
+create-order.tsx:1218 🖼️ currentOrderData atualizado com URLs do servidor: {exam_images_url: Array(2), medical_report_url: '/uploads/reports/report_1748081257905.jpeg'}
+surgery-data.tsx:423 Encontrados 30 procedimentos para a consulta "art"
+surgery-data.tsx:367 Encontrados 30 códigos CID-10 para a consulta "m7": (30) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+surgery-data.tsx:367 Encontrados 9 códigos CID-10 para a consulta "m75": (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+surgery-data.tsx:846 Buscando associações para CID ID: 1030
+surgery-data.tsx:862 Encontradas 0 associações para CID 1030: []
+surgery-data.tsx:869 Procedimentos associados extraídos: []
+surgery-data.tsx:910 Frontend - Procedimentos associados recebidos: []
+surgery-data.tsx:974 CID-10 adicionado: M75

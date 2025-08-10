@@ -1,0 +1,128 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+use-auth.tsx:35 🔐 Frontend - Verificando usuário autenticado
+theme-provider.tsx:57 Aplicando tema: dark
+use-auth.tsx:41 🔐 Frontend - Response status: 200
+use-auth.tsx:53 🔐 Frontend - Dados do usuário obtidos: {id: 41, username: 'danielpozzatti', email: 'danielroitman@ualg.com', name: 'daniel pozzatti', phone: null, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:289 🔍 useEffect EXECUTADO - editOrderId: 205 user.id: 41
+create-order.tsx:293 🚀 INÍCIO useEffect - Carregando pedido para edição: 205
+create-order.tsx:296 🔍 Fazendo requisição para: /api/medical-orders/205
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:298 📡 Response status: 200
+create-order.tsx:302 📋 Dados do pedido carregados para edição: {id: 205, patientId: 25, userId: 41, hospitalId: 3, procedureDate: null, …}
+create-order.tsx:304 🔄 INICIANDO loadExistingOrderOptimized...
+create-order.tsx:640 🚀 OTIMIZADO: Carregando TODOS os dados para pedido 205 em uma única operação
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:666 ✅ OTIMIZADO: Todas as 8 consultas carregadas em paralelo
+create-order.tsx:694 ✅ OTIMIZADO: 2 CIDs carregados COM condutas cirúrgicas
+create-order.tsx:699 ✅ OTIMIZADO: 6 procedimentos encontrados - aplicando sistema unificado
+create-order.tsx:724 ✅ OTIMIZADO: 6 procedimentos carregados em lista unificada ordenada por porte
+create-order.tsx:734 ✅ OTIMIZADO: 8 itens OPME carregados
+create-order.tsx:745 ✅ OTIMIZADO: 3 fornecedores carregados
+create-order.tsx:757 ✅ OTIMIZADO: 1 procedimentos cirúrgicos carregados
+create-order.tsx:763 ✅ OTIMIZADO: Paciente carregado: LUIS MARCELO DE AZEVEDO MALTA
+create-order.tsx:769 ✅ OTIMIZADO: Hospital carregado: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:793 🎉 OTIMIZADO: TODOS os dados carregados com sucesso para pedido 205
+create-order.tsx:307 ✅ loadExistingOrderOptimized CONCLUÍDO - TODOS os dados carregados
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1376 🏆 Procedimento de maior porte definido como principal: 3.07.35.06-8 - REPARO ARTROSCÓPICO DA RUPTURA MANGUITO ROTADOR (Porte: 10C)
+create-order.tsx:1377 📋 5 procedimentos definidos como secundários
+create-order.tsx:1396 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1400 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (8) [3, 25, 77, 78, 114, 139, 185, 186] Quantidades: (8) [1, 3, 1, 1, 1, 1, 4, 2]
+create-order.tsx:1415 CIDs a serem enviados: (2) [3240, 26]
+create-order.tsx:1426 🔍 PRESERVANDO ATTACHMENTS: 1 anexos existentes
+create-order.tsx:1485 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: null}
+create-order.tsx:1537 Preservando attachments existentes: [{…}]
+create-order.tsx:1789 saveProgressMutation - Dados a serem enviados: {patientId: 25, userId: 41, hospitalId: 3, attachments: Array(1), id: 205}
+create-order.tsx:1801 saveProgressMutation - Dados válidos após limpeza: {patientId: 25, userId: 41, hospitalId: 3, attachments: Array(1), id: 205}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:1039 SurgeryData: Carregando fornecedores do supplierDetails: 3
+surgery-data.tsx:1046 SurgeryData: Aplicando fornecedores: (3) ['BlueSynthes', 'CONMED DO BRASIL COMERCIO, IMPORTACAO E EXPORTACAO DE PRODUTOS MEDICOS HOSPITALARES LTDA', 'SMITH & NEPHEW COMÉRCIO DE PRODUTOS MÉDICOS LTDA.']
+surgery-data.tsx:1051 ✅ Fornecedor 1 aplicado: BlueSynthes
+surgery-data.tsx:1056 ✅ Fornecedor 2 aplicado: CONMED DO BRASIL COMERCIO, IMPORTACAO E EXPORTACAO DE PRODUTOS MEDICOS HOSPITALARES LTDA
+surgery-data.tsx:1061 ✅ Fornecedor 3 aplicado: SMITH & NEPHEW COMÉRCIO DE PRODUTOS MÉDICOS LTDA.
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:428 Condutas carregadas para procedimento 1: (2) [{…}, {…}]
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+create-order.tsx:1813 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: null}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:4141 Região Ombro: 11 procedimentos disponíveis para seleção manual
+create-order.tsx:184 Região anatômica selecionada: {id: 1, name: 'Ombro', iconUrl: '/assets/icons/anatomy/shoulder.png', title: 'Ombro', description: 'Articulação do ombro, manguito rotador, clavícula e procedimentos do membro superior'}
+surgery-data.tsx:934 Carregados 20 procedimentos cirúrgicos
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:428 Condutas carregadas para procedimento 1: (2) [{…}, {…}]
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:457 🔍 Buscando CIDs para procedimento 1 + conduta 1
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:465 📋 CIDs encontrados para a conduta: (2) [{…}, {…}]
+surgery-data.tsx:520 🔍 Buscando procedimentos CBHPM para procedimento 1 + conduta 1
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:528 🏥 Procedimentos CBHPM encontrados: (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+surgery-data.tsx:533 ✅ 6 procedimentos CBHPM disponíveis para auto-preenchimento
+surgery-data.tsx:176 🔄 REORGANIZAÇÃO POR PORTE:
+surgery-data.tsx:177    Principal: 3.07.35.06-8 - REPARO ARTROSCÓPICO DA RUPTURA MANGUITO ROTADOR (Porte: 10C)
+surgery-data.tsx:178    Secundários: 5
+surgery-data.tsx:180       1. 3.07.35.16-5 - OSTEOCONDROPLASTIA (Porte: 10A)
+surgery-data.tsx:180       2. 3.07.35.01-7 - SINOVECTOMIA TOTAL (Porte: 09C)
+surgery-data.tsx:180       3. 3.07.35.03-3 - ACROMIOPLASTIA (Porte: 09C)
+surgery-data.tsx:180       4. 3.07.35.08-4 - RESSECÇÃO LATERAL DA CLAVÍCULA (Porte: 09C)
+surgery-data.tsx:180       5. 3.07.35.09-2 - TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS (Porte: 09C)
+surgery-data.tsx:564 🎯 AUTO-PREENCHIMENTO POR PORTE APLICADO:
+surgery-data.tsx:565    Procedimento Principal: 3.07.35.06-8 - REPARO ARTROSCÓPICO DA RUPTURA MANGUITO ROTADOR (Porte: 10C)
+surgery-data.tsx:566    Procedimentos Secundários: 5
+surgery-data.tsx:585 🔄 Iniciando auto-preenchimento completo para conduta cirúrgica ID: 1, Procedimento Cirúrgico ID: 1
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:593 📋 Dados completos da conduta cirúrgica: {approach: {…}, procedures: Array(16), opmeItems: Array(8), suppliers: Array(5), justifications: Array(1)}
+surgery-data.tsx:610 📦 Auto-preenchendo 8 itens OPME
+surgery-data.tsx:624 🏢 Auto-preenchendo 3 fornecedores
+surgery-data.tsx:679 📝 Auto-preenchendo justificativa clínica: undefined
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}procedureId: 1procedureName: "Reparo do manguito rotador"setSelectedSurgicalApproaches: "function"setSelectedSurgicalApproachesValue: (newApproaches) => {…}[[Prototype]]: Object
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}procedureId: 1procedureName: "Reparo do manguito rotador"setSelectedSurgicalApproaches: "function"setSelectedSurgicalApproachesValue: (newApproaches) => {…}length: 1name: "debugSetSelectedSurgicalApproaches"arguments: (...)caller: (...)[[FunctionLocation]]: create-order.tsx:162[[Prototype]]: ƒ ()[[Scopes]]: Scopes[3][[Prototype]]: Object
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}procedureId: 1procedureName: "Reparo do manguito rotador"setSelectedSurgicalApproaches: "function"setSelectedSurgicalApproachesValue: (newApproaches) => {…}length: 1name: "debugSetSelectedSurgicalApproaches"arguments: (...)caller: (...)[[FunctionLocation]]: create-order.tsx:162[[Prototype]]: ƒ ()[[Scopes]]: Scopes[3][[Prototype]]: Object
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+create-order.tsx:3013 🔍 VALIDAÇÃO STEP 3 - Dados atuais: {selectedProcedureId: 704, selectedProcedureExists: true, secondaryProceduresLength: 5, totalProcedures: 6, multipleCidsLength: 2, …}
+create-order.tsx:1376 🏆 Procedimento de maior porte definido como principal: 3.07.35.16-5 - OSTEOCONDROPLASTIA (Porte: 10A)
+create-order.tsx:1377 📋 4 procedimentos definidos como secundários
+create-order.tsx:1396 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1400 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (8) [3, 25, 77, 78, 114, 139, 185, 186] Quantidades: (8) [1, 3, 1, 1, 1, 1, 4, 2]
+create-order.tsx:1415 CIDs a serem enviados: (2) [3240, 26]
+create-order.tsx:1426 🔍 PRESERVANDO ATTACHMENTS: 1 anexos existentes
+create-order.tsx:1485 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: null}
+create-order.tsx:1537 Preservando attachments existentes: [{…}]
+create-order.tsx:1574 🔄 PASSO 3 - Salvando dados relacionais específicos do passo de cirurgia
+create-order.tsx:1586 saveProgress - Salvando 2 CIDs relacionais para pedido 205: (2) [3240, 26]
+create-order.tsx:1598 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1630 saveProgress - Salvando 6 procedimentos CBHPM relacionais para pedido 205: (6) [{…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1642 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1658 saveProgress - Salvando 1 procedimentos cirúrgicos relacionais para pedido 205: [{…}]
+create-order.tsx:1670 saveProgress - Procedimentos cirúrgicos relacionais salvos com sucesso
+create-order.tsx:1686 saveProgress - Salvando 8 itens OPME relacionais para pedido 205: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1698 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1715 saveProgress - Salvando 3 fornecedores relacionais para pedido 205: (3) [3, 51, 48]
+create-order.tsx:1727 saveProgress - Fornecedores relacionais salvos com sucesso
+create-order.tsx:1738 🔍 DEBUG CONDUTAS - Estado selectedSurgicalApproaches no saveProgress: []
+create-order.tsx:1739 🔍 DEBUG CONDUTAS - Tipo e tamanho: object 0
+create-order.tsx:1767 saveProgress - Nenhuma conduta cirúrgica selecionada para salvar
+create-order.tsx:1789 saveProgressMutation - Dados a serem enviados: {clinicalJustification: 'Paciente com dor intensa e limitação funcional no …tração tendínea e atrofia muscular irreversíveis.', procedureType: 'eletiva', procedureLaterality: null, attachments: Array(1), id: 205}
+create-order.tsx:1801 saveProgressMutation - Dados válidos após limpeza: {clinicalJustification: 'Paciente com dor intensa e limitação funcional no …tração tendínea e atrofia muscular irreversíveis.', procedureType: 'eletiva', procedureLaterality: null, attachments: Array(1), id: 205}
+surgery-data.tsx:389 🔧 ConductSelector - Props recebidas: {procedureId: 1, procedureName: 'Reparo do manguito rotador', setSelectedSurgicalApproaches: 'function', setSelectedSurgicalApproachesValue: ƒ}
+create-order.tsx:1813 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: null}

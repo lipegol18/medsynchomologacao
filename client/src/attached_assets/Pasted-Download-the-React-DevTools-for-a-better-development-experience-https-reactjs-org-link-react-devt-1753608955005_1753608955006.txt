@@ -1,0 +1,28 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+use-auth.tsx:35 🔐 Frontend - Verificando usuário autenticado
+theme-provider.tsx:57 Aplicando tema: dark
+use-auth.tsx:41 🔐 Frontend - Response status: 200
+use-auth.tsx:53 🔐 Frontend - Dados do usuário obtidos: {id: 41, username: 'danielpozzatti', email: 'danielroitman@ualg.com', name: 'daniel pozzatti', phone: null, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:289 🔍 useEffect EXECUTADO - editOrderId: 205 user.id: 41
+create-order.tsx:293 🚀 INÍCIO useEffect - Carregando pedido para edição: 205
+create-order.tsx:296 🔍 Fazendo requisição para: /api/medical-orders/205
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:298 📡 Response status: 200
+create-order.tsx:302 📋 Dados do pedido carregados para edição: {id: 205, patientId: 25, userId: 41, hospitalId: 3, procedureDate: null, …}
+create-order.tsx:304 🔄 INICIANDO loadExistingOrderOptimized...
+create-order.tsx:640 🚀 OTIMIZADO: Carregando TODOS os dados para pedido 205 em uma única operação
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:666 ✅ OTIMIZADO: Todas as 8 consultas carregadas em paralelo
+create-order.tsx:694 ✅ OTIMIZADO: 2 CIDs carregados COM condutas cirúrgicas
+create-order.tsx:699 ✅ OTIMIZADO: 6 procedimentos encontrados - aplicando sistema unificado
+create-order.tsx:724 ✅ OTIMIZADO: 6 procedimentos carregados em lista unificada ordenada por porte
+create-order.tsx:734 ✅ OTIMIZADO: 8 itens OPME carregados
+create-order.tsx:745 ✅ OTIMIZADO: 3 fornecedores carregados
+create-order.tsx:757 ✅ OTIMIZADO: 1 procedimentos cirúrgicos carregados
+create-order.tsx:763 ✅ OTIMIZADO: Paciente carregado: LUIS MARCELO DE AZEVEDO MALTA
+create-order.tsx:769 ✅ OTIMIZADO: Hospital carregado: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:793 🎉 OTIMIZADO: TODOS os dados carregados com sucesso para pedido 205
+create-order.tsx:307 ✅ loadExistingOrderOptimized CONCLUÍDO - TODOS os dados carregados
+3hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS

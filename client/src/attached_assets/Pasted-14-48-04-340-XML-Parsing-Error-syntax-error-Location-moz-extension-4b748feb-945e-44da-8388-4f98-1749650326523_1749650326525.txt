@@ -1,0 +1,64 @@
+14:48:04.340 XML Parsing Error: syntax error
+Location: moz-extension://4b748feb-945e-44da-8388-4f983380d481/content.css
+Line Number 1, Column 1: content.css:1:1
+14:48:12.586
+SES_UNCAUGHT_EXCEPTION: Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+    React 3
+    ref presence.tsx:157
+    setRef compose-refs.tsx:11
+lockdown-install.js:1:138390
+14:48:12.608
+Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn't have a dependency array, or one of the dependencies changes on every render. react-dom.development.js:86:29
+14:48:12.614
+Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+    React 3
+    ref presence.tsx:157
+    setRef compose-refs.tsx:11
+react-dom.development.js:18683:16
+14:48:12.616
+The above error occurred in the <div> component:
+
+div
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventForPluginEventSystem@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:7173:25
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+div
+div
+batchedUpdates@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:3579:20
+main
+div
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+Router
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:5478:46
+dispatchEventForPluginEventSystem@https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XQLYTHWV.js?v=2a2a9c1a:7173:25
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. react-dom.development.js:18704:14
+14:48:12.617
+SES_UNCAUGHT_EXCEPTION: Error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
+    React 3
+    ref presence.tsx:157
+    setRef compose-refs.tsx:11

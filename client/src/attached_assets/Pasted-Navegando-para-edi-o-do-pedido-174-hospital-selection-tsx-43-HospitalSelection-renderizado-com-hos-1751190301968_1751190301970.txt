@@ -1,0 +1,130 @@
+Navegando para edição do pedido: 174
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:247 🔍 useEffect EXECUTADO - editOrderId: 174 user.id: 41
+create-order.tsx:251 🚀 INÍCIO useEffect - Carregando pedido para edição: 174
+create-order.tsx:254 🔍 Fazendo requisição para: /api/medical-orders/174
+create-order.tsx:256 📡 Response status: 200
+create-order.tsx:260 📋 Dados do pedido carregados para edição: {id: 174, patientId: 24, userId: 41, hospitalId: 21, procedureDate: null, …}
+create-order.tsx:262 🔄 INICIANDO loadExistingOrderOptimized...
+create-order.tsx:598 🚀 OTIMIZADO: Carregando TODOS os dados para pedido 174 em uma única operação
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:622 ✅ OTIMIZADO: Todas as 7 consultas carregadas em paralelo
+create-order.tsx:650 ✅ OTIMIZADO: 1 CIDs carregados COM condutas cirúrgicas
+create-order.tsx:661 ✅ OTIMIZADO: Procedimento principal carregado: 1.01.01.01-2
+create-order.tsx:670 ✅ OTIMIZADO: 7 procedimentos secundários carregados
+create-order.tsx:677 ✅ OTIMIZADO: 4 itens OPME carregados
+create-order.tsx:694 ✅ OTIMIZADO: Paciente carregado: Netuno joao
+create-order.tsx:700 ✅ OTIMIZADO: Hospital carregado: HOSPITAL COPA STAR
+create-order.tsx:724 🎉 OTIMIZADO: TODOS os dados carregados com sucesso para pedido 174
+create-order.tsx:265 ✅ loadExistingOrderOptimized CONCLUÍDO - TODOS os dados carregados
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:2281 🔍 Dados do pedido sendo enviados: {
+  "patientId": 24,
+  "userId": 41,
+  "hospitalId": 21,
+  "statusId": 1,
+  "procedureType": "eletiva",
+  "clinicalIndication": "A ser preenchido",
+  "procedureLaterality": "direito",
+  "additionalNotes": null,
+  "clinicalJustification": null,
+  "attachments": []
+}
+create-order.tsx:2282 🔍 Validação frontend antes do envio: {selectedPatientId: 24, userId: 41, selectedHospitalId: 21, initialOrderDataPatientId: 24, initialOrderDataUserId: 41, …}
+create-order.tsx:1299 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1300 📋 6 procedimentos definidos como secundários
+create-order.tsx:1319 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1323 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (4) [43, 80, 92, 95] Quantidades: (4) [1, 4, 1, 1]
+create-order.tsx:1331 CIDs a serem enviados: [26]
+create-order.tsx:1382 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1434 Preservando attachments existentes: (2) [{…}, {…}]
+create-order.tsx:1473 saveProgress - Salvando 1 CIDs relacionais para pedido 174: [26]
+create-order.tsx:1485 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1519 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 174: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1531 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1548 saveProgress - Salvando 4 itens OPME relacionais para pedido 174: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1560 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1584 saveProgressMutation - Dados a serem enviados: {patientId: 24, userId: 41, hospitalId: 21, id: 174, attachments: Array(2)}
+create-order.tsx:1596 saveProgressMutation - Dados válidos após limpeza: {patientId: 24, userId: 41, hospitalId: 21, id: 174, attachments: Array(2)}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1608 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}
+create-order.tsx:1299 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1300 📋 6 procedimentos definidos como secundários
+create-order.tsx:1319 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1323 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (4) [43, 80, 92, 95] Quantidades: (4) [1, 4, 1, 1]
+create-order.tsx:1331 CIDs a serem enviados: [26]
+create-order.tsx:1351 🔍 PASSO 2 - Enviando dados: {clinicalIndication: 'Indicação Clínica *\n', additionalNotes: 'Observações Adicionais\n', clinicalIndicationLength: 20, additionalNotesLength: 23, orderId: 174, …}
+create-order.tsx:1382 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1434 Preservando attachments existentes: (2) [{…}, {…}]
+create-order.tsx:1473 saveProgress - Salvando 1 CIDs relacionais para pedido 174: [26]
+create-order.tsx:1485 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1519 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 174: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1531 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1548 saveProgress - Salvando 4 itens OPME relacionais para pedido 174: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1560 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1584 saveProgressMutation - Dados a serem enviados: {clinicalIndication: 'Indicação Clínica *\n', additionalNotes: 'Observações Adicionais\n', id: 174, attachments: Array(2)}
+create-order.tsx:1596 saveProgressMutation - Dados válidos após limpeza: {clinicalIndication: 'Indicação Clínica *\n', additionalNotes: 'Observações Adicionais\n', id: 174, attachments: Array(2)}
+surgery-data.tsx:333 SurgeryData: Carregando fornecedores do supplierDetails: 0
+surgery-data.tsx:336 SurgeryData: Nenhum fornecedor recebido
+create-order.tsx:1608 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}
+create-order.tsx:2354 🔍 VALIDAÇÃO STEP 3 - Dados atuais: {selectedProcedureId: 1, multipleCidsLength: 1, multipleCidsData: Array(1), clinicalJustificationLength: 369, clinicalJustification: 'Paciente portador de gonartrose severa (grau IV de…lgren-Lawrence), com dor incapacitante e limit...'}
+create-order.tsx:1299 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1300 📋 6 procedimentos definidos como secundários
+create-order.tsx:1319 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1323 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (4) [43, 80, 92, 95] Quantidades: (4) [1, 4, 1, 1]
+create-order.tsx:1331 CIDs a serem enviados: [26]
+create-order.tsx:1382 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1434 Preservando attachments existentes: (2) [{…}, {…}]
+create-order.tsx:1473 saveProgress - Salvando 1 CIDs relacionais para pedido 174: [26]
+create-order.tsx:1485 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1519 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 174: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1531 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1548 saveProgress - Salvando 4 itens OPME relacionais para pedido 174: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1560 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1584 saveProgressMutation - Dados a serem enviados: {clinicalJustification: 'Paciente portador de gonartrose severa (grau IV de…oelho para alívio da dor e restauração da função.', procedureType: 'eletiva', procedureLaterality: 'direito', id: 174, attachments: Array(2)}
+create-order.tsx:1596 saveProgressMutation - Dados válidos após limpeza: {clinicalJustification: 'Paciente portador de gonartrose severa (grau IV de…oelho para alívio da dor e restauração da função.', procedureType: 'eletiva', procedureLaterality: 'direito', id: 174, attachments: Array(2)}
+create-order.tsx:1608 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}
+create-order.tsx:2043 🔄 Iniciando finalização - Gerando PDF...
+create-order.tsx:1786 🔄 INÍCIO - Geração de PDF vetorial com quebra automática
+create-order.tsx:1787 OrderID: 174
+create-order.tsx:1788 Paciente: Netuno joao
+create-order.tsx:1837 📄 Gerando PDF com react-pdf/renderer (quebra automática)...
+create-order.tsx:1838 Dados enviados para PDF: {orderId: 174, patientName: 'Netuno joao', hospitalName: 'HOSPITAL COPA STAR', procedureName: 'CONSULTA EM CONSULTÓRIO (NO HORÁRIO NORMAL OU PREESTABELECIDO)', justificationLength: 369, …}
+6create-order.tsx:1849 Buffer is not defined
+fetchImage @ @react-pdf_renderer.js?v=2a2a9c1a:96345
+await in fetchImage
+fetchAssets @ @react-pdf_renderer.js?v=2a2a9c1a:96357
+resolveAssets @ @react-pdf_renderer.js?v=2a2a9c1a:96382
+(anonymous) @ @react-pdf_renderer.js?v=2a2a9c1a:87048
+await in (anonymous)
+render3 @ @react-pdf_renderer.js?v=2a2a9c1a:108624
+toBlob @ @react-pdf_renderer.js?v=2a2a9c1a:108644
+generateHighQualityPDF @ create-order.tsx:1849
+await in generateHighQualityPDF
+handleComplete @ create-order.tsx:2046
+goToNextStep @ create-order.tsx:2219
+callCallback2 @ chunk-XQLYTHWV.js?v=2a2a9c1a:3674
+invokeGuardedCallbackDev @ chunk-XQLYTHWV.js?v=2a2a9c1a:3699
+invokeGuardedCallback @ chunk-XQLYTHWV.js?v=2a2a9c1a:3733
+invokeGuardedCallbackAndCatchFirstError @ chunk-XQLYTHWV.js?v=2a2a9c1a:3736
+executeDispatch @ chunk-XQLYTHWV.js?v=2a2a9c1a:7014
+processDispatchQueueItemsInOrder @ chunk-XQLYTHWV.js?v=2a2a9c1a:7034
+processDispatchQueue @ chunk-XQLYTHWV.js?v=2a2a9c1a:7043
+dispatchEventsForPlugins @ chunk-XQLYTHWV.js?v=2a2a9c1a:7051
+(anonymous) @ chunk-XQLYTHWV.js?v=2a2a9c1a:7174
+batchedUpdates$1 @ chunk-XQLYTHWV.js?v=2a2a9c1a:18913
+batchedUpdates @ chunk-XQLYTHWV.js?v=2a2a9c1a:3579
+dispatchEventForPluginEventSystem @ chunk-XQLYTHWV.js?v=2a2a9c1a:7173
+dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay @ chunk-XQLYTHWV.js?v=2a2a9c1a:5478
+dispatchEvent @ chunk-XQLYTHWV.js?v=2a2a9c1a:5472
+dispatchDiscreteEvent @ chunk-XQLYTHWV.js?v=2a2a9c1a:5449Understand this warning
+create-order.tsx:1851 ✅ PDF vetorial com quebra automática gerado! Tamanho: 34339 bytes
+create-order.tsx:1855 📁 Nome do arquivo gerado: pedido_174_Netuno_joao_2025-06-29.pdf
+create-order.tsx:1863 📤 Enviando PDF vetorial para servidor...
+create-order.tsx:1877 ✅ Upload concluído: {url: '/uploads/orders/174/documentos/1751190223032.pdf', originalName: 'pedido_174_Netuno_joao_2025-06-29.pdf', size: 34339}
+create-order.tsx:1695 Campo statusId atualizado com sucesso: {id: 174, patientId: 24, userId: 41, hospitalId: 21, procedureDate: null, …}
+create-order.tsx:1710 🔍 updateOrderField - Preservando attachments: (2) [{…}, {…}]
+create-order.tsx:2048 📄 PDF gerado com sucesso: undefined
+create-order.tsx:2055 🔄 Atualizando status do pedido para 'Aguardando Envio'...

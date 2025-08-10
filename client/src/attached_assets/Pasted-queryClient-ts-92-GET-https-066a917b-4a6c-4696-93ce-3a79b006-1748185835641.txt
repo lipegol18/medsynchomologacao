@@ -1,0 +1,60 @@
+queryClient.ts:92 
+            
+            
+           GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/users/41/hospitals 500 (Internal Server Error)
+apiRequest @ queryClient.ts:92
+queryFn @ profile.tsx:63
+fetchFn @ @tanstack_react-query.js?v=c644dfd2:840
+run @ @tanstack_react-query.js?v=c644dfd2:494
+start @ @tanstack_react-query.js?v=c644dfd2:536
+fetch @ @tanstack_react-query.js?v=c644dfd2:926
+executeFetch_fn @ @tanstack_react-query.js?v=c644dfd2:2211
+onSubscribe @ @tanstack_react-query.js?v=c644dfd2:1898
+subscribe @ @tanstack_react-query.js?v=c644dfd2:24
+(anonymous) @ @tanstack_react-query.js?v=c644dfd2:3022
+subscribeToStore @ chunk-XQLYTHWV.js?v=c644dfd2:11984
+commitHookEffectListMount @ chunk-XQLYTHWV.js?v=c644dfd2:16915
+commitPassiveMountOnFiber @ chunk-XQLYTHWV.js?v=c644dfd2:18156
+commitPassiveMountEffects_complete @ chunk-XQLYTHWV.js?v=c644dfd2:18129
+commitPassiveMountEffects_begin @ chunk-XQLYTHWV.js?v=c644dfd2:18119
+commitPassiveMountEffects @ chunk-XQLYTHWV.js?v=c644dfd2:18109
+flushPassiveEffectsImpl @ chunk-XQLYTHWV.js?v=c644dfd2:19490
+flushPassiveEffects @ chunk-XQLYTHWV.js?v=c644dfd2:19447
+commitRootImpl @ chunk-XQLYTHWV.js?v=c644dfd2:19416
+commitRoot @ chunk-XQLYTHWV.js?v=c644dfd2:19277
+performSyncWorkOnRoot @ chunk-XQLYTHWV.js?v=c644dfd2:18895
+flushSyncCallbacks @ chunk-XQLYTHWV.js?v=c644dfd2:9119
+(anonymous) @ chunk-XQLYTHWV.js?v=c644dfd2:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=c644dfd2:555
+flush @ @tanstack_react-query.js?v=c644dfd2:569
+batch @ @tanstack_react-query.js?v=c644dfd2:587
+dispatch_fn @ @tanstack_react-query.js?v=c644dfd2:996
+setData @ @tanstack_react-query.js?v=c644dfd2:696
+onSuccess @ @tanstack_react-query.js?v=c644dfd2:897
+resolve @ @tanstack_react-query.js?v=c644dfd2:456
+Promise.then
+run @ @tanstack_react-query.js?v=c644dfd2:498
+start @ @tanstack_react-query.js?v=c644dfd2:536
+fetch @ @tanstack_react-query.js?v=c644dfd2:926
+executeFetch_fn @ @tanstack_react-query.js?v=c644dfd2:2211
+onSubscribe @ @tanstack_react-query.js?v=c644dfd2:1898
+subscribe @ @tanstack_react-query.js?v=c644dfd2:24
+(anonymous) @ @tanstack_react-query.js?v=c644dfd2:3022
+subscribeToStore @ chunk-XQLYTHWV.js?v=c644dfd2:11984
+commitHookEffectListMount @ chunk-XQLYTHWV.js?v=c644dfd2:16915
+commitPassiveMountOnFiber @ chunk-XQLYTHWV.js?v=c644dfd2:18156
+commitPassiveMountEffects_complete @ chunk-XQLYTHWV.js?v=c644dfd2:18129
+commitPassiveMountEffects_begin @ chunk-XQLYTHWV.js?v=c644dfd2:18119
+commitPassiveMountEffects @ chunk-XQLYTHWV.js?v=c644dfd2:18109
+flushPassiveEffectsImpl @ chunk-XQLYTHWV.js?v=c644dfd2:19490
+flushPassiveEffects @ chunk-XQLYTHWV.js?v=c644dfd2:19447
+performSyncWorkOnRoot @ chunk-XQLYTHWV.js?v=c644dfd2:18868
+flushSyncCallbacks @ chunk-XQLYTHWV.js?v=c644dfd2:9119
+commitRootImpl @ chunk-XQLYTHWV.js?v=c644dfd2:19432
+commitRoot @ chunk-XQLYTHWV.js?v=c644dfd2:19277
+finishConcurrentRender @ chunk-XQLYTHWV.js?v=c644dfd2:18805
+performConcurrentWorkOnRoot @ chunk-XQLYTHWV.js?v=c644dfd2:18718
+workLoop @ chunk-XQLYTHWV.js?v=c644dfd2:197
+flushWork @ chunk-XQLYTHWV.js?v=c644dfd2:176
+performWorkUntilDeadline @ chunk-XQLYTHWV.js?v=c644dfd2:384Understand this error

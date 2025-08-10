@@ -1,0 +1,55 @@
+HospitalSelection renderizado com hospital: undefined
+patient-search.tsx:74 Encontrados 1 pacientes para a consulta "mari"
+create-order.tsx:194 Paciente selecionado: Maria Silva Santos (ID: 2)
+create-order.tsx:199 Verificando pedidos em preenchimento para o paciente ID: 2
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:206 Pedidos em andamento encontrados para o paciente: (2) [{…}, {…}]
+create-order.tsx:211 Pedido existente encontrado, mostrando diálogo: {id: 63, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:237 Usuário escolheu continuar o pedido existente: {id: 63, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+create-order.tsx:362 Carregando pedido existente: {id: 63, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+create-order.tsx:368 Buscando paciente com ID 2
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:374 Paciente encontrado: {id: 2, fullName: 'Maria Silva Santos', cpf: '123.456.789-00', birthDate: '1979-12-31', gender: '', …}
+create-order.tsx:391 Buscando hospital com ID 1
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:398 Hospital encontrado via API específica: {id: 1, name: 'CHN - COMPLEXO HOSPITALAR DE NITERÓI', businessName: null, cnpj: '60884855001207', cnes: null, …}
+create-order.tsx:447 Carregando lateralidade do procedimento do banco de dados: {procedureLaterality: 'esquerdo', procedureLateralityType: 'string'}
+create-order.tsx:471 Dados de mídia do pedido carregados: {exam_images_url: Array(0), exam_image_count: 0, medical_report_url: null}
+create-order.tsx:478 Carregando múltiplos CIDs: [26]
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CHN - COMPLEXO HOSPITALAR DE NITERÓI
+create-order.tsx:566 Procedimentos secundários encontrados: []
+create-order.tsx:617 Itens OPME encontrados: []
+create-order.tsx:660 Fornecedores encontrados no pedido: (3) [5, 3, 4]
+create-order.tsx:669 Carregando fornecedores no estado: {supplier1: 5, supplier2: 3, supplier3: 4}
+3hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CHN - COMPLEXO HOSPITALAR DE NITERÓI
+create-order.tsx:1161 Dados do pedido sendo enviados: {
+  "patientId": 2,
+  "userId": 41,
+  "hospitalId": 1,
+  "statusCode": "em_preenchimento",
+  "procedureType": "eletiva",
+  "procedureId": 1,
+  "clinicalIndication": "A ser preenchido",
+  "procedureLaterality": "esquerdo",
+  "secondaryProcedureIds": [],
+  "secondaryProcedureQuantities": [],
+  "opmeItemIds": [],
+  "opmeItemQuantities": [],
+  "exam_images_url": [],
+  "exam_image_count": 0
+}
+create-order.tsx:703 Itens OPME a serem enviados: [] []
+create-order.tsx:707 Múltiplos CIDs a serem enviados: [26]
+create-order.tsx:741 🏭 FORNECEDORES DEBUG: {suppliersObject: {…}, collectedSuppliers: Array(3), hasSuppliers: true}collectedSuppliers: (3) [5, 3, 4]hasSuppliers: truesuppliersObject: {supplier1: 5, supplier2: 3, supplier3: 4}[[Prototype]]: Object
+create-order.tsx:757 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'esquerdo'}
+create-order.tsx:896 saveProgressMutation - Enviando dados de lateralidade: {procedureLaterality: 'esquerdo'}
+create-order.tsx:909 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: null, procedureLateralitySalvo: 'esquerdo'}
+create-order.tsx:1204 Dados de lateralidade ANTES de salvar (próximo passo): {cidLaterality: null, procedureLaterality: 'esquerdo'}
+create-order.tsx:703 Itens OPME a serem enviados: [] []
+create-order.tsx:707 Múltiplos CIDs a serem enviados: [26]
+create-order.tsx:741 🏭 FORNECEDORES DEBUG: {suppliersObject: {…}, collectedSuppliers: Array(3), hasSuppliers: true}collectedSuppliers: (3) [5, 3, 4]hasSuppliers: truesuppliersObject: {supplier1: 5, supplier2: 3, supplier3: 4}[[Prototype]]: Object
+create-order.tsx:757 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'esquerdo'}
+create-order.tsx:1212 Próximo passo: Valores de lateralidade salvos com sucesso
+create-order.tsx:896 saveProgressMutation - Enviando dados de lateralidade: {procedureLaterality: 'esquerdo'}
+create-order.tsx:909 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: null, procedureLateralitySalvo: 'esquerdo'}

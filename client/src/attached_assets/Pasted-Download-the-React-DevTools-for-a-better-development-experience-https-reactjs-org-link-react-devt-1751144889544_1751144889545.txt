@@ -1,0 +1,69 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+theme-provider.tsx:57 Aplicando tema: dark
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:247 🔍 useEffect EXECUTADO - editOrderId: 172 user.id: 41
+create-order.tsx:251 🚀 INÍCIO useEffect - Carregando pedido para edição: 172
+create-order.tsx:254 🔍 Fazendo requisição para: /api/medical-orders/172
+create-order.tsx:256 📡 Response status: 200
+create-order.tsx:260 📋 Dados do pedido carregados para edição: {id: 172, patientId: 25, userId: 41, hospitalId: 3, procedureDate: null, …}
+create-order.tsx:262 🔄 INICIANDO loadExistingOrderOptimized...
+create-order.tsx:598 🚀 OTIMIZADO: Carregando TODOS os dados para pedido 172 em uma única operação
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:622 ✅ OTIMIZADO: Todas as 7 consultas carregadas em paralelo
+create-order.tsx:623 🔍 DEBUG API BRUTA: surgicalApproaches: [
+  {
+    "id": 9,
+    "surgicalApproachId": 2,
+    "isPrimary": false,
+    "justificationUsed": "Conduta selecionada para CID-10 M75.1",
+    "additionalNotes": "Cirurgia aberta para casos complexos ou quando há necessidade de reparo extenso",
+    "surgicalApproachName": "Cirurgia Aberta",
+    "surgicalApproachDescription": "Procedimento cirúrgico convencional com incisão direta para acesso à área a ser tratada"
+  }
+]
+create-order.tsx:651 ✅ OTIMIZADO: 1 CIDs carregados COM condutas cirúrgicas
+create-order.tsx:652 🔍 DEBUG ESTRUTURA: CIDs com condutas: [
+  {
+    "cid": {
+      "id": 26,
+      "code": "M75.1",
+      "description": "Síndrome do manguito rotador",
+      "category": "Ombro"
+    },
+    "surgicalApproach": {
+      "id": 2,
+      "name": "Cirurgia Aberta",
+      "description": "Procedimento cirúrgico convencional com incisão direta para acesso à área a ser tratada",
+      "isPrimary": false
+    }
+  }
+]
+create-order.tsx:663 ✅ OTIMIZADO: Procedimento principal carregado: 1.01.01.01-2
+create-order.tsx:672 ✅ OTIMIZADO: 7 procedimentos secundários carregados
+create-order.tsx:679 ✅ OTIMIZADO: 4 itens OPME carregados
+create-order.tsx:696 ✅ OTIMIZADO: Paciente carregado: LUIS MARCELO DE AZEVEDO MALTA
+create-order.tsx:702 ✅ OTIMIZADO: Hospital carregado: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:726 🎉 OTIMIZADO: TODOS os dados carregados com sucesso para pedido 172
+create-order.tsx:265 ✅ loadExistingOrderOptimized CONCLUÍDO - TODOS os dados carregados
+3hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1301 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1302 📋 6 procedimentos definidos como secundários
+create-order.tsx:1321 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1325 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (4) [43, 80, 92, 95] Quantidades: (4) [1, 4, 1, 1]
+create-order.tsx:1333 CIDs a serem enviados: [26]
+create-order.tsx:1384 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1436 Preservando attachments existentes: (2) [{…}, {…}]
+create-order.tsx:1475 saveProgress - Salvando 1 CIDs relacionais para pedido 172: [26]
+create-order.tsx:1487 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1521 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 172: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1533 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1550 saveProgress - Salvando 4 itens OPME relacionais para pedido 172: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1562 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1586 saveProgressMutation - Dados a serem enviados: {patientId: 25, userId: 41, hospitalId: 3, id: 172, attachments: Array(2)}
+create-order.tsx:1598 saveProgressMutation - Dados válidos após limpeza: {patientId: 25, userId: 41, hospitalId: 3, id: 172, attachments: Array(2)}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+surgery-data.tsx:333 SurgeryData: Carregando fornecedores do supplierDetails: 0
+surgery-data.tsx:336 SurgeryData: Nenhum fornecedor recebido
+create-order.tsx:1610 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}

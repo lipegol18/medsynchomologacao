@@ -1,0 +1,79 @@
+C43;Melanoma maligno da pele
+C43.0;Melanoma maligno do lábio
+C43.1;Melanoma maligno da pálpebra, incluindo as comissuras palpebrais
+C43.2;Melanoma maligno da orelha e do conduto auditivo externo
+C43.3;Melanoma maligno de outras partes e partes não especificadas da face
+C43.4;Melanoma maligno do couro cabeludo e do pescoço
+C43.5;Melanoma maligno do tronco
+C43.6;Melanoma maligno do membro superior, incluindo ombro
+C43.7;Melanoma maligno do membro inferior, incluindo quadril
+C43.8;Melanoma maligno invasivo da pele
+C43.9;Melanoma maligno de pele, não especificado
+C44;Outras neoplasias malignas da pele
+C44.0;Neoplasia maligna da pele do lábio
+C44.1;Neoplasia maligna da pele da pálpebra, incluindo o canto
+C44.2;Neoplasia maligna da pele da orelha e do conduto auditivo externo
+C44.3;Neoplasia maligna da pele de outras partes e de partes não especificadas da face
+C44.4;Neoplasia maligna da pele do couro cabeludo e do pescoço
+C44.5;Neoplasia maligna da pele do tronco
+C44.6;Neoplasia maligna da pele do membro superior, incluindo ombro
+C44.7;Neoplasia maligna da pele do membro inferior, incluindo quadril
+C44.8;Neoplasia maligna da pele com lesão invasiva
+C44.9;Neoplasia maligna da pele, não especificada
+D03;Melanoma in situ
+D03.0;Melanoma in situ do lábio
+D03.1;Melanoma in situ da pálpebra, incluindo o canto
+D03.2;Melanoma in situ da orelha e do conduto auditivo externo
+D03.3;Melanoma in situ de outras partes, e de partes não especificadas da face
+D03.4;Melanoma in situ do couro cabeludo e do pescoço
+D03.5;Melanoma in situ do tronco
+D03.6;Melanoma in situ dos membros superiores, incluindo ombro
+D03.7;Melanoma in situ dos membros inferiores, incluindo quadril
+D03.8;Melanoma in situ de outras localizações
+D03.9;Melanoma in situ, não especificado
+D04;Carcinoma in situ da pele
+D04.0;Carcinoma in situ da pele do lábio
+D04.1;Carcinoma in situ da pele da pálpebra, incluindo o canto
+D04.2;Carcinoma in situ da pele da orelha e do conduto auditivo externo
+D04.3;Carcinoma in situ da pele de outras partes e de partes não especificadas da face
+D04.4;Carcinoma in situ da pele do couro cabeludo e do pescoço
+D04.5;Carcinoma in situ da pele do tronco
+D04.6;Carcinoma in situ da pele dos membros superiores, incluindo ombro
+D04.7;Carcinoma in situ da pele dos membros inferiores, incluindo quadril
+D04.8;Carcinoma in situ da pele de outras localizações
+D04.9;Carcinoma in situ da pele, não especificada
+L72.0;Cisto epidérmico
+L72,1;Cisto triquilemal
+L72.2;Esteatocistoma múltiplo
+L72.8;Outras formas de cistos foliculares da pele e do tecido subcutâneo
+L72.9;Cisto folicular, não especificado da pele e do tecido subcutâneo
+L02.0;Abscesso cutâneo, furúnculo e antraz da face
+L02.1;Abscesso cutâneo, furúnculo e antraz do pescoço
+L02.2;Abscesso cutâneo, furúnculo e antraz do tronco
+L02.3;Abscesso cutâneo, furúnculo e antraz da nádega
+L02.4;Abscesso cutâneo, furúnculo e antraz do(s) membro(s)
+L02.8;Abscesso cutâneo, furúnculo e antraz de outras localizações
+L02.9;Abscesso cutâneo, furúnculo e antraz de localização não especificada
+L78.1;Nevo não-neoplásico
+D22;Nevos melanocíticos
+D22.0;Nevo melanocítico do lábio
+D22.1;Nevo melanocítico da pálpebra, incluindo o canto
+D22.2;Nevo melanocítico da orelha e do conduto auditivo externo
+D22.3;Nevo melanocítico de outras partes e de partes não especificadas da face
+D22.4;Nevo melanocítico do couro cabeludo e do pescoço
+D22.5;Nevo melanocítico do tronco
+D22.6;Nevo melanocítico dos membros superiores, incluindo ombro
+D22.7;Nevo melanocítico dos membros inferiores, incluindo quadril
+D22.9;Nevo melanocítico, não especificado
+L82;Ceratose seborréica
+B07;Verrugas de origem viral
+L98;Outras afecções da pele e do tecido subcutâneo não classificadas em outra parte
+L98.0;Granuloma piogênico
+L98.1;Dermatite factícia
+L98.2;Dermatose neutrofílica febril [Sweet]
+L98.3;Celulite eosinofílica [Wells]
+L98.4;Úlcera crônica da pele, não classificada em outra parte
+L98.5;Mucinose da pele
+L98.6;Outras afecções infiltrativas da pele e do tecido subcutâneo
+L98.8;Outras afecções especificadas da pele e do tecido subcutâneo
+L98.9;Afecções da pele e do tecido subcutâneo, não especificados

@@ -1,0 +1,101 @@
+12:26:23.185 Itens OPME a serem enviados: 
+Array []
+ 
+Array []
+create-order.tsx:963:14
+12:26:23.185 Múltiplos CIDs a serem enviados: 
+Array []
+create-order.tsx:971:14
+12:26:23.186 🏭 FORNECEDORES DEBUG: 
+Object { suppliersObject: {…}, collectedSuppliers: [], hasSuppliers: false }
+create-order.tsx:1011:18
+12:26:23.186 Dados de lateralidade sendo enviados ao backend: 
+Object { procedureLaterality: null }
+create-order.tsx:1027:14
+12:26:23.186 🖼️ Sem dados locais de imagens - deixando backend preservar URLs existentes create-order.tsx:1085:16
+12:26:23.186 Próximo passo: Valores de lateralidade salvos com sucesso create-order.tsx:1807:16
+12:26:23.187 saveProgressMutation - Enviando dados de lateralidade: 
+Object { procedureLaterality: null }
+create-order.tsx:1171:16
+12:26:23.634 saveProgressMutation - Dados retornados após salvamento: 
+Object { cidLateralitySalvo: null, procedureLateralitySalvo: null }
+create-order.tsx:1186:16
+12:26:23.639 🖼️ currentOrderData atualizado com URLs do servidor: 
+Object { exam_images_url: [], medical_report_url: null }
+create-order.tsx:1215:16
+12:26:27.102 Encontrados 24 códigos CID-10 para a consulta "man": 
+Array(24) [ {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, … ]
+surgery-data.tsx:367:16
+12:26:29.091 Buscando associações para CID ID: 26 surgery-data.tsx:846:14
+12:26:29.424 Encontradas 5 associações para CID 26: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+surgery-data.tsx:862:14
+12:26:29.425 Procedimentos associados extraídos: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+surgery-data.tsx:869:14
+12:26:29.425 Frontend - Procedimentos associados recebidos: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+surgery-data.tsx:910:14
+12:26:29.426 Frontend - Processando procedimento: 
+Object { id: 699, code: "3.07.35.01-7", name: "SINOVECTOMIA TOTAL", porte: "09C" }
+surgery-data.tsx:917:18
+12:26:29.426 Frontend - Verificações para SINOVECTOMIA TOTAL: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0 }
+surgery-data.tsx:924:18
+12:26:29.426 Frontend - Definindo como procedimento principal: 
+Object { id: 699, code: "3.07.35.01-7", name: "SINOVECTOMIA TOTAL", porte: "09C" }
+surgery-data.tsx:934:22
+12:26:29.426 Frontend - Processando procedimento: 
+Object { id: 701, code: "3.07.35.03-3", name: "ACROMIOPLASTIA", porte: "09C" }
+surgery-data.tsx:917:18
+12:26:29.426 Frontend - Verificações para ACROMIOPLASTIA: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0 }
+surgery-data.tsx:924:18
+12:26:29.427 Frontend - Definindo como procedimento principal: 
+Object { id: 701, code: "3.07.35.03-3", name: "ACROMIOPLASTIA", porte: "09C" }
+surgery-data.tsx:934:22
+12:26:29.427 Frontend - Processando procedimento: 
+Object { id: 704, code: "3.07.35.06-8", name: "RUPTURA DO MANGUITO ROTADOR", porte: "10C" }
+surgery-data.tsx:917:18
+12:26:29.427 Frontend - Verificações para RUPTURA DO MANGUITO ROTADOR: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0 }
+surgery-data.tsx:924:18
+12:26:29.427 Frontend - Definindo como procedimento principal: 
+Object { id: 704, code: "3.07.35.06-8", name: "RUPTURA DO MANGUITO ROTADOR", porte: "10C" }
+surgery-data.tsx:934:22
+12:26:29.428 Frontend - Processando procedimento: 
+Object { id: 706, code: "3.07.35.08-4", name: "RESSECÇÃO LATERAL DA CLAVÍCULA", porte: "09C" }
+surgery-data.tsx:917:18
+12:26:29.428 Frontend - Verificações para RESSECÇÃO LATERAL DA CLAVÍCULA: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0 }
+surgery-data.tsx:924:18
+12:26:29.428 Frontend - Definindo como procedimento principal: 
+Object { id: 706, code: "3.07.35.08-4", name: "RESSECÇÃO LATERAL DA CLAVÍCULA", porte: "09C" }
+surgery-data.tsx:934:22
+12:26:29.428 Frontend - Processando procedimento: 
+Object { id: 707, code: "3.07.35.09-2", name: "TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS", porte: "09C" }
+surgery-data.tsx:917:18
+12:26:29.428 Frontend - Verificações para TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0 }
+surgery-data.tsx:924:18
+12:26:29.428 Frontend - Definindo como procedimento principal: 
+Object { id: 707, code: "3.07.35.09-2", name: "TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS", porte: "09C" }
+​
+code: "3.07.35.09-2"
+​
+id: 707
+​
+name: "TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS"
+​
+porte: "09C"
+​
+<prototype>: Object { … }
+surgery-data.tsx:934:22
+12:26:29.428 Frontend - Novos procedimentos a serem adicionados: 
+Array []
+​
+length: 0
+​
+<prototype>: Array []
+surgery-data.tsx:950:16
+12:26:29.428 CID-10 e procedimentos adicionados: M75.1 com 5 procedimento(s)

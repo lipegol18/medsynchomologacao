@@ -1,0 +1,871 @@
+﻿3.01.01.97-2;Abdominoplastia pós-bariátrica;10A;–;2;5
+3.01.01.01-8;Abrasão cirúrgica (por sessão);3C;–;–;2
+3.01.01.93-0;Abscesso de unha (drenagem) – tratamento cirúrgico;2B;–;–;0
+3.01.01.02-6;Alopecia parcial – exérese e sutura;4C;–;1;3
+3.01.01.03-4;Alopecia parcial – rotação de retalho;5B;–;1;3
+3.01.01.04-2;Alopecia parcial – rotação múltipla de retalhos;8C;–;2;3
+3.01.01.05-0;Apêndice pré-auricular – ressecção;4A;–;1;4
+3.01.01.06-9;Autonomização de retalho – por estágio;5B;–;1;2
+3.01.01.07-7;Biópsia de pele, tumores superficiais, tecido celular subcutâneo, linfonodo superficial, etc.;2B;–;1;0
+3.01.01.08-5;Biópsia de unha;2B;–;–;0
+3.01.01.09-3;Calosidade e/ou mal perfurante – desbastamento (por lesão);1B;–;–;0
+3.01.01.94-8;Cantoplastia ungueal;3A;–;1;2
+3.01.01.10-7;Cauterização química (por grupo de até 5 lesões);2A;–;–;0
+3.01.01.11-5;Cirurgia da hidrosadenite (por região);5B;–;1;3
+3.01.01.14-0;Correção cirúrgica de linfedema (por estágio);9C;–;2;4
+3.01.01.15-8;Correção cirúrgica de sequelas de alopecia traumática com microenxertos pilosos (por região);6A;–;1;5
+3.01.01.16-6;Correção de deformidades nos membros com utilização de implantes;9B;–;2;6
+3.01.01.17-4;Correção de deformidades por exérese de tumores, cicatrizes ou ferimentos com o emprego de expansores em retalhos musculares ou miocutâneos (por estágio);9B;–;2;4
+3.01.01.18-2;Correção de deformidades por exérese de tumores, cicatrizes ou ferimentos, com o emprego de expansores de tecido, em retalhos cutâneos (por estágio);9B;–;2;4
+3.01.01.19-0;Correção de lipodistrofia braquial, crural ou trocantérica de membros superiores e inferiores;9A;–;2;4
+3.01.01.20-4;Criocirurgia (nitrogênio líquido) de neoplasias cutâneas;3B;–;–;2
+3.01.01.21-2;Curativo de queimaduras – por unidade topográfica (UT) ambulatorial;1C;–;–;1
+3.01.01.22-0;Curativo de queimaduras – por unidade topográfica (UT) hospitalar;2C;–;–;1
+3.01.01.23-9;Curativo especial sob anestesia – por unidade topográfica (UT);2C;–;–;1
+3.01.01.24-7;Curetagem e eletrocoagulação de CA de pele (por lesão);3A;–;–;0
+3.01.01.25-5;Curetagem simples de lesões de pele (por grupo de até 5 lesões);2A;–;–;0
+3.01.01.26-3;Dermoabrasão de lesões cutâneas;4C;–;–;0
+3.01.01.99-9;Dermolipectomia dos membros inferiores – coxoplastia pós-bariátrica;9B;–;2;5
+3.01.01.98-0;Dermolipectomia dos membros superiores – braquioplastia pós-bariátrica;9B;–;2;5
+3.01.01.27-1;Dermolipectomia para correção de abdome em avental;9C;–;2;5
+3.01.01.28-0;Desbridamento cirúrgico – por unidade topográfica (UT);3C;–;–;2
+3.01.01.29-8;Eletrocoagulação de lesões de pele e mucosas – com ou sem curetagem (por grupo de até 5 lesões);2C;–;–;0
+3.01.01.30-1;Enxerto cartilaginoso;5B;–;1;2
+3.01.01.31-0;Enxerto composto;5B;–;1;2
+3.01.01.32-8;Enxerto de mucosa;5B;–;1;2
+3.01.01.33-6;Enxerto de pele (homoenxerto inclusive);5B;–;2;2
+3.01.01.34-4;Enxerto de pele múltiplo – por unidade topográfica (UT);5B;–;2;2
+3.01.01.35-2;Epilação por eletrólise (por sessão);2A;–;–;0
+3.01.01.36-0;Escalpo parcial – tratamento cirúrgico;6A;–;2;4
+3.01.01.37-9;Escalpo total – tratamento cirúrgico;9B;–;2;5
+3.01.01.38-7;"Escarectomia descompressiva – (pele e estruturas profundas) –
+por unidade topográfica (UT)";3B;–;–;2
+3.01.01.39-5;Esfoliação química média (por sessão);3C;–;–;0
+3.01.01.40-9;Esfoliação química profunda (por sessão);4A;–;–;0
+3.01.01.41-7;Esfoliação química superficial (por sessão);3A;–;–;0
+3.01.01.42-5;Exérese de higroma cístico;9A;–;1;3
+3.01.01.43-3;Exérese de higroma cístico no RN e lactente;11C;–;2;5
+3.01.01.46-8;Exérese de lesão/tumor de pele e mucosas;3C;–;1;0
+3.01.01.44-1;Exérese de lesão com autoenxertia;5C;–;1;2
+3.01.01.47-6;Exérese de tumor e rotação de retalho músculo-cutâneo;5B;–;1;2
+3.01.01.48-4;Exérese de unha;2B;–;–;0
+3.01.01.92-1;Exérese e sutura de hemangioma, linfangioma ou nevus (por grupo de até 5 lesões);3B;–;1;0
+3.01.01.45-0;Exérese e sutura de lesões (circulares ou não) com rotação de retalhos cutâneos;5A;–;1;2
+3.01.01.49-2;Exérese e sutura simples de pequenas lesões (por grupo de até 5 lesões);3B;–;–;0
+3.01.01.50-6;Exérese tangencial (shaving) – (por grupo de até 5 lesões);2C;–;–;2
+3.01.01.51-4;Expansão tissular (por sessão);1C;–;–;2
+3.01.01.52-2;Extensos ferimentos, cicatrizes ou tumores – excisão e retalhos cutâneos da região;8B;–;1;3
+3.01.01.53-0;Extensos ferimentos, cicatrizes ou tumores – exérese e emprego de retalhos cutâneos ou musculares cruzados (por estágio);9B;–;1;4
+3.01.01.54-9;Extensos ferimentos, cicatrizes ou tumores – exérese e retalhos cutâneos a distância;9B;–;1;4
+3.01.01.55-7;Extensos ferimentos, cicatrizes ou tumores – exérese e rotação de retalho fasciocutâneo ou axial;9B;–;1;4
+3.01.01.56-5;Extensos ferimentos, cicatrizes ou tumores – exérese e rotação de retalhos miocutâneos;9A;–;1;4
+3.01.01.57-3;Extensos ferimentos, cicatrizes ou tumores – exérese e rotação de retalhos musculares;9A;–;1;4
+3.01.01.58-1;Extensos ferimentos, cicatrizes ou tumores – exérese e enxerto cutâneo;8A;–;1;3
+3.01.01.59-0;Face – biópsia;3B;–;–;0
+3.01.01.60-3;Ferimentos infectados e mordidas de animais (desbridamento);2B;–;1;2
+3.01.01.62-0;Incisão e drenagem de abscesso, hematoma ou panarício;2B;–;–;0
+3.01.01.63-8;Incisão e drenagem de flegmão;3A;–;–;0
+3.01.01.61-1;Incisão e drenagem de tenossinovites purulentas;3B;–;1;2
+3.01.01.64-6;Infiltração intralesional, cicatricial e hemangiomas – por sessão;1C;–;–;0
+3.01.01.65-4;Lasercirurgia (por sessão);4B;–;–;2
+3.01.01.66-2;Matricectomia por dobra ungueal;3A;–;–;0
+3.01.01.67-0;Plástica em Z ou W;4A;–;1;2
+3.01.01.68-9;Reconstrução com retalhos de gálea aponeurótica;8C;–;2;5
+3.01.01.69-7;Retalho composto (incluindo cartilagem ou osso);8C;–;2;5
+3.01.01.71-9;Retalho muscular ou miocutâneo;10A;–;2;5
+3.01.01.73-5;Retirada de corpo estranho subcutâneo;2C;–;–;0
+3.01.01.74-3;Retração cicatricial de axila – tratamento cirúrgico;5B;–;2;3
+3.01.01.75-1;Retração cicatricial de zona de flexão e extensão de membros superiores e inferiores;5B;–;1;3
+3.01.01.76-0;Retração cicatricial do cotovelo – tratamento cirúrgico;5B;–;2;3
+3.01.01.77-8;Retração de aponevrose palmar (Dupuytren);5B;–;1;3
+3.01.01.78-6;Sutura de extensos ferimentos com ou sem desbridamento;5B;–;1;3
+3.01.01.79-4;Sutura de pequenos ferimentos com ou sem desbridamento;2B;–;–;0
+3.01.02.01-4;Terapia de pressão negativa – cirúrgica;5A;–;1;2
+3.01.01.80-8;Transecção de retalho;5B;–;1;3
+3.01.01.81-6;Transferência intermediária de retalho;5B;–;1;3
+3.01.01.82-4;Tratamento cirúrgico de bridas constritivas;9A;–;1;3
+3.01.01.83-2;Tratamento cirúrgico de grandes hemangiomas;9C;–;2;4
+3.01.01.84-0;Tratamento da miíase furunculoide (por lesão);2C;–;–;0
+3.01.01.85-9;Tratamento de anomalias pilosas a laser/photoderm – por sessão;2A;–;–;2
+3.01.01.86-7;Tratamento de escaras ou ulcerações com enxerto de pele;9A;–;1;4
+3.01.01.87-5;Tratamento de escaras ou ulcerações com retalhos cutâneos locais;9A;–;1;4
+3.01.01.88-3;Tratamento de escaras ou ulcerações com retalhos miocutâneos ou musculares;9B;–;1;5
+3.01.01.89-1;Tratamento de fístula cutânea;3B;–;–;2
+3.01.01.90-5;"Tratamento de lesões cutâneas e vasculares a laser/photoderm – por
+sessão";2A;–;–;2
+3.01.01.91-3;TU partes moles – exérese;4A;–;1;1
+3.01.01.95-6;Unha (enxerto) – tratamento cirúrgico;2B;–;1;2
+3.07.01.01-5;Abdominal ou hipogástrico;12C;–;2;6
+3.07.01.02-3;Antebraço;13A;–;2;6
+3.07.01.03-1;Axilar;12C;–;2;6
+3.07.01.04-0;Couro cabeludo;12C;–;2;6
+3.07.01.05-8;Deltopeitoral;12C;–;2;6
+3.07.01.06-6;Digitais (da face volar e látero-cubital dos dedos médio e anular da mão);12C;–;2;5
+3.07.01.07-4;Digital do hallux;12B;–;1;5
+3.07.01.08-2;Dorsal do pé;12C;–;2;6
+3.07.01.09-0;Escapular;12C;–;2;6
+3.07.01.10-4;Femoral;12B;–;2;6
+3.07.01.11-2;Fossa poplítea;12B;–;2;6
+3.07.01.12-0;Inguino-cural;12C;–;2;6
+3.07.01.13-9;Intercostal;12B;–;2;6
+3.07.01.14-7;Interdigital da 1ª comissura dos dedos do pé;12B;–;2;6
+3.07.01.15-5;Outros transplantes cutâneos;12B;–;1;5
+3.07.01.16-3;Paraescapular;12B;–;2;6
+3.07.01.17-1;Retroauricular;12C;–;2;6
+3.07.01.18-0;Temporal;12C;–;2;6
+3.07.01.19-8;Transplante cutâneo com microanastomose;13A;–;3;6
+3.07.02.01-1;Grande dorsal (latissimus dorsi);12C;–;2;6
+3.07.02.02-0;Grande glúteo (gluteus maximus);12B;–;2;6
+3.07.02.03-8;Outros transplantes músculo-cutâneos;12B;–;2;6
+3.07.02.04-6;Reto abdominal (rectus abdominis);12C;–;2;6
+3.07.02.05-4;Reto interno (gracilis);12C;–;2;6
+3.07.02.06-2;Serrato maior (serratus);12C;–;2;6
+3.07.02.07-0;Tensor da fascia lata (tensor fascia lata);12C;–;2;6
+3.07.01.20-1;Transplante cutâneo sem microanastomose, ilha neurovascular;8B;–;2;4
+3.07.01.21-0;Transplante miocutâneo com microanastomose;13A;–;3;6
+3.07.02.08-9;Trapézio (trapezius);12B;–;2;6
+3.07.03.01-8;Bíceps femoral (biceps femoris);12B;–;2;6
+3.07.03.02-6;Extensor comum dos dedos (extensor digitorum longus);10A;–;1;6
+3.07.03.03-4;Extensor próprio do dedo gordo (extensor hallucis longus);9C;–;1;5
+3.07.03.04-2;Flexor curto plantar (flexor digitorum brevis);12A;–;2;6
+3.07.03.05-0;Grande dorsal (latissimus dorsi);12B;–;2;6
+3.07.03.06-9;Grande peitoral (pectoralis major);12B;–;2;6
+3.07.03.07-7;Músculo pédio (extensor digitorum brevis);12B;–;1;5
+3.07.03.08-5;"Os músculos latissimus dorsi, gracilis, rectus femoris, tensor fascia lata, flexor digitorum brevis, quando transplantados com sua inervação e praticada a microneurorrafia com finalidade de restaurar função e sensibilidade, serão considerados retalhos
+neurovasculares livres e terão acréscimo do porte";3B;–;–;1
+3.07.03.09-3;Outros transplantes musculares;12B;–;1;5
+3.07.03.10-7;Primeiro radial externo (extensor carpi radialis longus);12B;–;1;5
+3.07.03.11-5;Reto anterior (rectus femoris);12C;–;2;6
+3.07.03.12-3;Reto interno (gracilis);12C;–;2;6
+3.07.03.13-1;Sartório (sartorius);12C;–;2;6
+3.07.03.14-0;Semimembranoso (semimembranosus);12C;–;2;6
+3.07.03.15-8;Semitendinoso (semitendinosus);12C;–;2;6
+3.07.03.16-6;Serrato maior (serratus);12C;–;2;6
+3.07.03.17-4;Supinador longo (brachioradialis);12B;–;1;5
+3.07.03.18-2;Tensor da fascia lata (tensor fascia lata);12C;–;2;6
+3.07.04.01-4;Costela;12C;–;2;6
+3.07.04.02-2;Ilíaco;12C;–;2;6
+3.07.04.03-0;Osteocutâneo de ilíaco;12C;–;2;6
+3.07.04.04-9;Osteocutâneos de costela;13A;–;2;6
+3.07.04.05-7;Osteomusculocutâneo de costela;13A;–;2;6
+3.07.04.06-5;Outros transplantes ósseos e osteomusculocutâneos;13A;–;2;6
+3.07.04.07-3;Perônio ou fíbula;13A;–;2;6
+3.07.04.08-1;Transplante ósseo vascularizado (microanastomose);13A;–;1;6
+3.07.05.01-0;Autotransplante de dois retalhos musculares combinados, isolados e associados entre si, ligados por um único pedículo;13A;–;2;7
+3.07.05.02-9;Autotransplante de dois retalhos cutâneos combinados, isolados e associados entre si, ligados por um único pedículo vascular;13A;–;2;7
+3.07.05.03-7;Autotransplante de dois retalhos, um cutâneo combinado a um muscular, isolados e associados entre si, ligados por um único pedículo vascular;13A;–;2;7
+3.07.05.04-5;Autotransplante de dois retalhos, um cutâneo combinado a retalho osteomuscular, isolados e associados entre si, ligados por um único pedículo vascular;13A;–;2;7
+3.07.05.05-3;Autotransplante de epíplon;13A;–;2;7
+3.07.05.06-1;"Autotransplante de outros retalhos, isolados entre si, e associados
+mediante um único pedículo vascular comuns aos retalhos";13A;–;2;7
+3.07.05.07-0;Autotransplante de três retalhos, um cutâneo separado, combinado a outros dois retalhos musculares isolados e associados, ligados por um único pedículo vascular;13A;–;2;7
+3.07.05.10-0;Reimplante de segmentos distais do membro superior, com ressecção segmentar;13A;–;2;7
+3.07.06.01-7;Reimplante do membro inferior do nível médio proximal da perna até a coxa;13A;–;3;6
+3.07.06.02-5;Reimplante do membro inferior do pé até o terço médio da perna;13A;–;3;6
+3.07.06.03-3;Reimplante do membro superior, do nível médio do antebraço até o ombro;13A;–;3;6
+3.07.07.01-3;Transplante articular de metatarsofalangeana para a mão;13A;–;2;6
+3.07.07.02-1;Transplante de 2º pododáctilo para mão;13A;–;3;6
+3.07.07.03-0;Transplante de dedos do pé para a mão;13A;–;3;6
+3.07.07.06-4;Transplante de dois pododáctilos para a mão;13A;–;2;6
+3.07.07.04-8;Transplante do 2º pododáctilo para o polegar;13A;–;2;6
+3.07.07.05-6;Transplante do hallux para polegar;13A;–;3;6
+3.07.09.01-6;Instalação de halo craniano;3A;–;–;2
+3.07.09.02-4;Tração cutânea;2B;–;–;1
+3.07.09.03-2;Tração transesquelética (por membro);4A;–;–;1
+3.07.10.01-4;Fios ou pinos metálicos transósseos;4A;–;–;1
+3.07.10.03-0;Placas;7A;–;1;2
+3.07.10.04-9;Próteses de substituição de pequenas articulações;8A;–;1;3
+3.07.10.02-2;Retirada de fios ou pinos metálicos intraósseos;3C;–;1;2
+3.07.10.07-3;Retirada de fixador externo circular;5A;–;1;5
+3.07.10.05-7;Retirada de fixador externo linear;4A;–;–;1
+3.07.10.08-1;Retirada de hastes metálicas intraósseas, bloqueadas ou não;7A;–;2;3
+3.07.10.09-0;Retirada de parafusos metálicos intraósseos;5A;–;1;3
+3.07.11.01-0;Imobilizações não gessadas (qualquer segmento);1A;–;–;0
+3.07.11.02-9;Membro inferior;1C;–;–;0
+3.07.11.03-7;Membro superior;1B;–;–;0
+3.07.12.01-7;Áxilo-palmar ou pendente;2A;–;–;0
+3.07.12.02-5;Bota com ou sem salto;2A;–;–;0
+3.07.12.03-3;Colar;2A;–;–;0
+3.07.12.04-1;Colete;2B;–;1;0
+3.07.12.05-0;Cruro-podálico;2C;–;–;0
+3.07.12.06-8;Dupla abdução ou Ducroquet;2C;–;–;0
+3.07.12.07-6;Halo-gesso;4C;–;1;0
+3.07.12.08-4;Inguino-maleolar;2B;–;–;0
+3.07.12.09-2;Luva;2A;–;–;0
+3.07.12.10-6;Minerva ou Risser para escoliose;4C;–;1;0
+3.07.12.11-4;Pelvipodálico;4C;–;1;0
+3.07.12.12-2;Spica-gessada;2B;–;1;0
+3.07.12.13-0;Tipo Velpeau;1C;–;–;0
+3.07.12.14-9;Tóraco-braquial;3A;–;1;0
+3.07.13.15-3;Artroscopia para diagnóstico com ou sem biópsia sinovial;5C;–;1;3
+3.07.13.02-1;Biópsia óssea;2B;–;–;2
+3.07.13.03-0;Biópsias percutânea sinovial ou de tecidos moles;2B;–;–;2
+3.07.13.04-8;Enxertos em outras pseudoartroses;7C;–;1;4
+3.07.13.06-4;Manipulação articular sob anestesia geral;8A;–;–;2
+3.07.13.13-7;Punção articular diagnóstica ou terapêutica (infiltração). Quando orientada por RX, US, TC e RM, cobrar código correspondente;4C;–;–;3
+3.07.13.14-5;Punção extra-articular diagnóstica ou terapêutica (infiltração/ agulhamento seco). Quando orientada por RX, US, TC e RM, cobrar código correspondente;4C;–;–;3
+3.07.13.07-2;Retirada de enxerto ósseo;3B;–;1;1
+3.07.14.01-0;Corpo estranho intra-articular – tratamento cirúrgico;5A;–;1;2
+3.07.14.03-6;Corpo estranho intramuscular – tratamento cirúrgico;5A;–;1;2
+3.07.14.02-8;Corpo estranho intraósseo – tratamento cirúrgico;5A;–;1;2
+3.07.15.01-6;Artrodese da coluna com instrumentação por segmento;12C;–;2;8
+3.07.15.02-4;Artrodese de coluna via anterior ou póstero lateral – tratamento cirúrgico;12C;–;2;8
+3.07.15.59-8;Artroplastia discal de coluna vertebral;12C;–;2;8
+3.07.15.03-2;Biópsia da coluna;7C;–;1;5
+3.07.15.04-0;Biópsia de corpo vertebral com agulha;5A;–;1;3
+3.07.15.05-9;Cirurgia de coluna por via endoscópica;11A;–;2;7
+3.07.15.06-7;Cordotomia – mielotomia;10B;–;2;6
+3.07.15.07-5;Costela cervical – tratamento cirúrgico;8B;–;1;3
+3.07.15.58-0;Discectomia percutânea endoscópica;9A;–;1;5
+3.07.15.57-1;Discectomia percutânea mecânica;9A;–;1;5
+3.07.15.08-3;Derivação lombar externa;6A;–;1;3
+3.07.15.09-1;Descompressão medular e/ou cauda equina;9C;–;2;5
+3.07.15.10-5;Dorso curvo/escoliose/giba costal – tratamento cirúrgico;14B;–;2;8
+3.07.15.11-3;Espondilolistese – tratamento cirúrgico;10A;–;2;5
+3.07.15.12-1;Fratura de coluna – tratamento conservador;2C;–;–;–
+3.07.15.13-0;Fratura do cóccix – redução incruenta;3A;–;–;2
+3.07.15.14-8;Fratura do cóccix – tratamento cirúrgico;7C;–;1;2
+3.07.15.15-6;Fratura e/ou luxação de coluna vertebral – redução incruenta;5B;–;1;2
+3.07.15.16-4;Fraturas ou fratura-luxação de coluna – tratamento cirúrgico;12B;–;2;8
+3.07.15.17-2;"Hemivértebra – ressecção via anterior ou posterior – tratamento
+cirúrgico";11C;–;2;7
+3.07.15.39-3;Hérnia de disco cervical – tratamento cirúrgico;12B;–;2;8
+3.07.15.18-0;Hérnia de disco tóraco-lombar – tratamento cirúrgico;10A;–;1;6
+3.07.15.19-9;Laminectomia ou laminotomia;9C;–;2;5
+3.07.15.60-1;Localização/intervenção estereotáxica de lesões/estruturas de coluna vertebral por neuronavegação com intervenção;10A;–;1;5
+3.07.15.56-3;Osteoplastia vertebral por cifoplastia;8C;–;1;5
+3.07.15.55-5;Osteoplastia vertebral por vertebroplastia;8C;–;1;5
+3.07.15.21-0;Osteomielite de coluna – tratamento cirúrgico;8B;–;2;4
+3.07.15.22-9;Osteotomia de coluna vertebral – tratamento cirúrgico;8C;–;2;5
+3.07.15.23-7;Outras afecções da coluna – tratamento incruento;3B;–;–;2
+3.07.15.24-5;Pseudoartrose de coluna – tratamento cirúrgico;9C;–;2;6
+3.07.15.25-3;Punção liquórica;3C;–;–;2
+3.07.15.26-1;Retirada de corpo estranho – tratamento cirúrgico;8B;–;2;4
+3.07.15.27-0;Retirada de material de síntese – tratamento cirúrgico;8A;–;1;3
+3.07.15.28-8;Substituição de corpo vertebral;10B;–;2;6
+3.07.15.29-6;Tração cervical transesquelética;8B;–;1;2
+3.07.15.30-0;Tratamento cirúrgico da cifose infantil;14B;–;2;8
+3.07.15.31-8;Tratamento cirúrgico da lesão traumática raquimedular;14B;–;2;8
+3.07.15.32-6;Tratamento cirúrgico das malformações craniovertebrais;11B;–;2;7
+3.07.15.33-4;Tratamento cirúrgico do disrafismo;11B;–;2;7
+3.07.15.34-2;Tratamento conservador do traumatismo raquimedular (por dia);3C;–;–;0
+3.07.15.35-0;"Tratamento microcirúrgico das lesões intramedulares (tumor,
+malformações arteriovenosas, siringomielia, parasitoses)";13B;–;2;7
+3.07.15.36-9;Tratamento microcirúrgico do canal vertebral estreito por segmento;10B;–;2;6
+3.07.15.37-7;Tratamento pré-natal dos disrafismos espinhais;12A;–;2;8
+3.07.15.38-5;Tumor ósseo vertebral – ressecção com substituição com ou sem instrumentação – tratamento cirúrgico;13C;–;2;8
+3.07.17.19-1;Acromioplastia – procedimento aberto;8A;–;1;4
+3.07.17.20-5;Artrodese ao nível do ombro – escápulo-torácica;11B;–;2;5
+3.07.17.01-9;Artrodese ao nível do ombro – escápulo-umeral;10C;–;2;5
+3.07.17.02-7;Artroplastia parcial;11A;–;2;5
+3.07.17.21-3;Artroplastia parcial com interposição;11B;–;2;5
+3.07.17.18-3;Artroplastia reversa;11C;–;2;5
+3.07.17.22-1;Artroplastia total;11C;–;2;5
+3.07.17.03-5;Artrotomia glenoumeral – tratamento cirúrgico;8A;–;1;2
+3.07.17.04-3;Biópsia cirúrgica da cintura escapular;3C;–;1;1
+3.07.17.05-1;Deformidade (doença) Sprengel – tratamento cirúrgico;8A;–;2;5
+3.07.17.06-0;Desarticulação ao nível do ombro – tratamento cirúrgico;9A;–;2;4
+3.07.17.07-8;Escápula em ressalto – tratamento cirúrgico;7A;–;1;2
+3.07.17.23-0;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.17.24-8;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.17.25-6;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.17.26-4;Fratura da cabeça (apenas para “head split”);11C;–;2;5
+3.07.17.08-6;Fratura de cintura escapular – tratamento conservador;3C;–;–;1
+3.07.17.09-4;Fraturas e/ou luxações e/ou avulsões – redução incruenta;4C;–;1;2
+3.07.17.10-8;Fraturas e/ou fratura luxação em 2 partes (colo anatômico, colo cirúrgico ou tubérculos);10C;–;2;5
+3.07.17.27-2;Fratura e/ou fratura luxação em 3 partes;11A;–;2;5
+3.07.17.28-0;Fratura e/ou fratura luxação em 4 partes;11A;–;2;5
+3.07.17.13-2;Pseudoartroses e/ou osteotomia da clavícula ou escápula;10C;–;2;5
+3.07.17.29-9;Pseudoartrose e/ou osteotomia do úmero proximal;11A;–;2;5
+3.07.17.30-2;Reparo aberto da ruptura manguito rotador (2 tendões);9B;–;2;5
+3.07.17.31-0;Reparo aberto da ruptura manguito rotador (3 tendões);9C;–;2;5
+3.07.17.32-9;Reparo aberto da ruptura manguito rotador (parcial ou transfixante/completa de 1 tendão);9A;–;2;5
+3.07.17.33-7;Ressecção segmentar ao nível da cintura escapular;9C;–;2;4
+3.07.17.14-0;Ressecção parcial ou total de clavícula – tratamento cirúrgico;9A;–;1;4
+3.07.17.15-9;Revisão cirúrgica de prótese de ombro;11C;–;2;5
+3.07.17.12-4;Sequestrectomia ao nível da cintura escapular;8C;–;2;4
+3.07.17.34-5;Tenotomia/tenodese do cabo longo do bíceps – cirurgia aberta;8A;–;1;4
+3.07.17.16-7;Transferências musculares ao nível da cintura escapular (inclui manguito rotador);11A;–;1;5
+3.07.17.11-6;Tratamento cirúrgico aberto de luxações crônicas habituais e/ou recidivantes;10B;–;2;5
+3.07.17.35-3;Tratamento cirúrgico da re-ruptura manguito rotador – procedimento aberto;9C;–;2;5
+3.07.17.36-1;Tratamento cirúrgico de luxações inveteradas;11B;–;2;5
+3.07.18.07-4;Alongamento ou transporte ósseo com dispositivo intramedular combinado ou não à fixação externa;12A;–;2;6
+3.07.18.01-5;Amputação ao nível do braço – tratamento cirúrgico;8A;–;1;3
+3.07.18.02-3;Biópsia cirúrgica do úmero;5B;–;1;1
+3.07.18.11-2;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.18.12-0;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.18.03-1;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.18.04-0;Fratura (incluindo descolamento epifisário) – redução incruenta;3B;–;1;2
+3.07.18.05-8;Fratura (incluindo descolamento epifisário) – tratamento cirúrgico;8C;–;1;4
+3.07.18.06-6;Fratura de úmero – tratamento conservador;2B;–;–;–
+3.07.18.08-2;Osteomielite de úmero – tratamento cirúrgico;9A;–;1;3
+3.07.18.09-0;Pseudoartroses, osteotomias, alongamentos/encurtamentos – tratamento cirúrgico;9A;–;2;4
+3.07.18.14-7;Ressecção segmentar ao nível do úmero;9C;–;2;5
+3.07.18.13-9;Sequestrectomia ao nível do úmero;11C;–;2;5
+3.07.19.01-1;Artrodese – tratamento cirúrgico;8B;–;1;4
+3.07.19.13-5;Artrodiastase – tratamento cirúrgico com fixador externo;7C;–;1;3
+3.07.19.14-3;Artroplastia da cabeça do rádio;9C;–;1;5
+3.07.19.15-1;Artroplastia parcial com implante;10C;–;2;5
+3.07.19.02-0;Artroplastia total com implante;11A;–;2;5
+3.07.19.03-8;Artroplastias sem implante – tratamento cirúrgico;6A;–;1;3
+3.07.19.04-6;Artrotomia de cotovelo – tratamento cirúrgico;5B;–;1;1
+3.07.19.05-4;Biópsia cirúrgica de cotovelo;3B;–;1;1
+3.07.19.16-0;Capsulectomia do cotovelo;9C;–;2;5
+3.07.19.06-2;Desarticulação ao nível do cotovelo – tratamento cirúrgico;8B;–;1;3
+3.07.19.07-0;Fratura de cotovelo – tratamento conservador;2A;–;–;–
+3.07.19.17-8;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.19.18-6;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.19.08-9;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.19.09-7;Fraturas e/ou luxações – redução incruenta;4A;–;–;2
+3.07.19.11-9;Lesões ligamentares – redução incruenta;3A;–;–;2
+3.07.19.19-4;Osteotomia do úmero distal (ressecção ossificação heterotópica);9C;–;2;5
+3.07.19.20-8;Reconstrução ligamentar medial ou lateral com enxerto tendinoso;9C;–;1;5
+3.07.19.21-6;Reinserção do tendão distal do bíceps/tríceps;8C;–;1;4
+3.07.19.22-4;Reparo ligamentar medial ou lateral;8C;–;1;4
+3.07.19.23-2;Ressecção parcial do olecrâneo/cabeça do rádio;8C;–;1;4
+3.07.19.24-0;Sinovectomia;7C;–;1;4
+3.07.19.25-9;Tenoplastia epicondilar;8C;–;1;4
+3.07.19.10-0;Tratamento cirúrgico de fratura do úmero distal – 1 coluna;10A;–;2;5
+3.07.19.12-7;Tratamento cirúrgico das tendinites, sinovites e artrites;4C;–;1;2
+3.07.19.26-7;Tratamento da fratura da cabeça do rádio;9A;–;1;5
+3.07.19.27-5;Tratamento da fratura da ulna proximal;9C;–;2;5
+3.07.19.28-3;Tratamento da fratura do úmero distal – 2 colunas;10C;–;2;5
+3.07.19.29-1;Tratamento da fratura do úmero distal intra-articular (capítulo e/ ou tróclea);9C;–;2;5
+3.07.20.02-8;Alongamento dos ossos do antebraço com fixador externo dinâmico – tratamento cirúrgico;7C;–;2;4
+3.07.20.03-6;Amputação ao nível do antebraço – tratamento cirúrgico;8B;–;1;3
+3.07.20.04-4;Biópsia cirúrgica do antebraço;3B;–;1;1
+3.07.20.05-2;Contratura isquêmica de Volkmann – tratamento cirúrgico;8A;–;2;4
+3.07.20.06-0;Correção de deformidade adquirida de antebraço com fixador externo;6A;–;2;4
+3.07.20.07-9;Encurtamento segmentar dos ossos do antebraço com osteossíntese – tratamento cirúrgico;11B;–;2;5
+3.07.20.18-4;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.20.19-2;Fixação externa definitiva rígida, com fixador externo;11C;–;2;6
+3.07.20.17-6;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.20.08-7;Fratura do antebraço – tratamento conservador;2A;–;–;–
+3.07.20.09-5;Fratura e/ou luxações (incluindo descolamento epifisário cotovelo- punho) – tratamento cirúrgico;10C;–;1;4
+3.07.20.10-9;Fratura e/ou luxações (incluindo descolamento epifisário) – redução incruenta;4A;–;1;2
+3.07.20.11-7;Fratura viciosamente consolidada de antebraço – tratamento cirúrgico;11B;–;2;5
+3.07.20.12-5;Osteomielite dos ossos do antebraço – tratamento cirúrgico;9C;–;2;5
+3.07.20.13-3;Pseudoartroses e ou osteotomias – tratamento cirúrgico;11B;–;2;5
+3.07.20.14-1;Ressecção da cabeça do rádio e/ou da extremidade distal ulnar – tratamento cirúrgico;10C;–;1;4
+3.07.20.15-0;Ressecção do processo estiloide do rádio – tratamento cirúrgico;9A;–;1;3
+3.07.20.20-6;Ressecção segmentar ao nível do antebraço;9C;–;2;5
+3.07.20.21-4;Sequestrectomia ao nível do antebraço;8C;–;2;4
+3.07.20.16-8;Sinostose rádio-ulnar – tratamento cirúrgico;6A;–;1;2
+3.07.21.01-6;Agenesia de rádio (centralização da ulna no carpo);9A;–;2;4
+3.07.21.02-4;Alongamento do rádio/ulna – tratamento cirúrgico;11B;–;2;5
+3.07.21.04-0;Artrodese – fixador externo;6A;–;1;3
+3.07.21.03-2;Artrodese entre os ossos do carpo;11B;–;1;5
+3.07.21.05-9;Artrodese rádio-cárpica ou do punho;7C;–;1;3
+3.07.21.06-7;Artroplastia do punho (com implante) – tratamento cirúrgico;11B;–;1;5
+3.07.21.07-5;Artroplastia para ossos do carpo (com implante) – tratamento cirúrgico;11B;–;1;5
+3.07.21.08-3;Artrotomia – tratamento cirúrgico;3C;–;1;1
+3.07.21.09-1;Biópsia cirúrgica de punho;3B;–;1;1
+3.07.21.10-5;Coto de amputação punho e antebraço – revisão;3C;–;1;1
+3.07.21.11-3;Desarticulação do punho – tratamento cirúrgico;9B;–;1;4
+3.07.21.12-1;Encurtamento rádio/ulnar;8B;–;2;3
+3.07.21.26-1;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.21.27-0;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.21.14-8;Fratura de osso do carpo – redução cirúrgica;10C;–;1;4
+3.07.21.13-0;Fratura de punho – tratamento conservador;2A;–;–;–
+3.07.21.15-6;Fratura do carpo – redução incruenta;2C;–;1;1
+3.07.21.16-4;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.21.17-2;Fraturas do carpo – tratamento conservador;2C;–;–;–
+3.07.21.18-0;Fraturas e/ou luxações do punho – redução incruenta;4A;–;1;2
+3.07.21.19-9;Fraturas e/ou luxações do punho – tratamento cirúrgico;11B;–;1;4
+3.07.21.20-2;Luxação do carpo – redução incruenta;2B;–;–;1
+3.07.21.21-0;Pseudoartroses – tratamento cirúrgico;10C;–;2;4
+3.07.21.23-7;Reparação ligamentar do carpo;11B;–;1;4
+3.07.21.22-9;Ressecção de osso do carpo – tratamento cirúrgico;10C;–;1;4
+3.07.21.24-5;Sinovectomia de punho – tratamento cirúrgico;11C;–;1;5
+3.07.21.25-3;Transposição do rádio para ulna;9A;–;2;4
+3.07.22.01-2;Abscesso de mão e dedos – tenossinovites/espaços palmares/ dorsais e comissurais – tratamento cirúrgico;10A;–;1;4
+3.07.22.03-9;Abscessos de dedo (drenagem) – tratamento cirúrgico;2B;–;–;1
+3.07.22.04-7;Alongamento/transporte ósseo com fixador externo;11C;–;3;5
+3.07.22.05-5;Alongamentos tendinosos de mão;7C;–;3;3
+3.07.22.06-3;Amputação ao nível dos metacarpianos – tratamento cirúrgico;5B;–;1;3
+3.07.22.07-1;Amputação de dedo (cada) – tratamento cirúrgico;5A;–;1;1
+3.07.22.08-0;Amputação transmetacarpiana;9B;–;2;3
+3.07.22.09-8;Amputação transmetacarpiana com transposição de dedo;10C;–;2;4
+3.07.22.10-1;Aponevrose palmar (ressecção) – tratamento cirúrgico;10B;–;1;4
+3.07.22.11-0;Artrodese interfalangeana/metacarpofalangeana – tratamento cirúrgico;9B;–;1;3
+3.07.22.12-8;Artroplastia com implante na mão (MF e IF) múltipla;11B;–;1;4
+3.07.22.13-6;Artroplastia com implante na mão (MF ou IF);11B;–;1;4
+3.07.22.14-4;Artroplastia interfalangeana/metacarpofalangeana – tratamento cirúrgico;11B;–;1;4
+3.07.22.15-2;Artrotomia ao nível da mão – tratamento cirúrgico;3A;–;1;2
+3.07.22.16-0;Biópsia cirúrgica dos ossos da mão;3B;–;1;1
+3.07.22.17-9;Bridas congênitas – tratamento cirúrgico;13A;–;1;6
+3.07.22.20-9;Capsulectomias múltiplas MF ou IF;5B;–;1;2
+3.07.22.21-7;Capsulectomias única MF e IF;5A;–;1;1
+3.07.22.22-5;Centralização da ulna (tratamento da mão torta radial);10A;–;2;4
+3.07.22.23-3;Contratura isquêmica de mão – tratamento cirúrgico;8A;–;1;3
+3.07.22.24-1;Coto de amputação digital – revisão;5A;–;1;1
+3.07.22.25-0;Dedo colo de cisne – tratamento cirúrgico;9A;–;2;3
+3.07.22.26-8;Dedo em botoeira – tratamento cirúrgico;9A;–;2;3
+3.07.22.27-6;Dedo em gatilho, capsulotomia/fasciotomia – tratamento cirúrgico;5A;–;1;2
+3.07.22.28-4;Dedo em martelo – tratamento cirúrgico;9A;–;1;3
+3.07.22.29-2;Dedo em martelo – tratamento conservador;3B;–;–;–
+3.07.22.30-6;Enxerto ósseo (perda de substância) – tratamento cirúrgico;9A;–;1;3
+3.07.22.31-4;Exploração cirúrgica de tendão de mão;5A;–;1;2
+3.07.22.32-2;Falangização;9A;–;1;3
+3.07.22.33-0;Fixador externo em cirurgia da mão;4C;–;1;2
+3.07.22.92-6;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.22.93-4;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.22.94-2;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.22.35-7;Fratura de Bennett – redução incruenta;1B;–;–;1
+3.07.22.36-5;Fratura de Bennett – tratamento cirúrgico;9C;–;1;3
+3.07.22.34-9;Fratura de falange – tratamento conservador;2C;–;–;–
+3.07.22.37-3;Fratura de osso da mão – tratamento conservador;2A;–;–;–
+3.07.22.38-1;Fratura do metacarpiano – tratamento conservador;2B;–;–;–
+3.07.22.39-0;Fratura/artrodese com fixador externo;9C;–;1;4
+3.07.22.40-3;Fraturas de falanges ou metacarpianos – redução incruenta;1C;–;–;1
+3.07.22.41-1;Fraturas de falanges ou metacarpianos – tratamento cirúrgico com fixação;9C;–;1;4
+3.07.22.42-0;Fraturas e/ou luxações de falanges (interfalangeanas) – redução incruenta;4A;–;–;2
+3.07.22.43-8;Fraturas e/ou luxações de falanges (interfalangeanas) – tratamento cirúrgico;9C;–;1;4
+3.07.22.44-6;Fraturas e/ou luxações de metacarpianos – redução incruenta;3B;–;–;2
+3.07.22.45-4;Gigantismo ao nível da mão – tratamento cirúrgico;9A;–;2;3
+3.07.22.46-2;Lesões ligamentares agudas da mão – reparação cirúrgica;11B;–;1;4
+3.07.22.47-0;Lesões ligamentares crônicas da mão – reparação cirúrgica;11B;–;1;4
+3.07.22.48-9;Ligamentoplastia com âncora;11B;–;1;4
+3.07.22.49-7;Luxação metacarpofalangeana – redução incruenta;2C;–;–;1
+3.07.22.50-0;Luxação metacarpofalangeana – tratamento cirúrgico;9C;–;1;4
+3.07.22.51-9;Osteomielite ao nível da mão – tratamento cirúrgico;6C;–;1;2
+3.07.22.52-7;Osteossíntese de fratura de falange e metacarpiana com fixação externa;9C;–;1;4
+3.07.22.53-5;Osteossíntese de fratura de falange e metacarpiana com uso de miniparafuso;9C;–;1;4
+3.07.22.54-3;Perda de substância da mão (reparação) – tratamento cirúrgico;8C;–;1;2
+3.07.22.55-1;Plástica ungueal;9C;–;1;4
+3.07.22.56-0;Policização ou transferência digital;9A;–;2;5
+3.07.22.57-8;Polidactilia articulada – tratamento cirúrgico;10C;–;1;4
+3.07.22.58-6;Polidactilia não articulada – tratamento cirúrgico;4B;–;1;3
+3.07.22.59-4;Prótese (implante) para ossos do carpo;6A;–;2;3
+3.07.22.60-8;Pseudoartrose com perda de substâncias de metacarpiano e falanges;8B;–;1;3
+3.07.22.61-6;Pseudoartrose do escafoide – tratamento cirúrgico;8A;–;2;3
+3.07.22.62-4;Pseudoartrose dos ossos da mão – tratamento cirúrgico;10A;–;1;4
+3.07.22.63-2;Reconstrução da falange com retalho homodigital;9B;–;1;3
+3.07.22.64-0;Reconstrução de leito ungueal;9C;–;1;4
+3.07.22.65-9;Reconstrução do polegar com retalho ilhado osteocutâneo antebraquial;10A;–;2;4
+3.07.22.66-7;Reimplante de dois dedos da mão (por cada dedo adicional reimplantado será adicionado o porte 3B);13A;–;3;6
+3.07.22.67-5;Reimplante do membro superior nível transmetacarpiano até o terço distal do antebraço;13A;–;3;6
+3.07.22.68-3;Reimplante do polegar;13A;–;3;6
+3.07.22.69-1;Reparações cutâneas com retalho ilhado antebraquial invertido;9B;–;2;3
+3.07.22.70-5;Ressecção 1ª fileira dos ossos do carpo;10A;–;1;4
+3.07.22.71-3;Ressecção de cisto sinovial;11C;–;1;4
+3.07.22.72-1;Retração cicatricial de mais de um dedo, sem comprometimento tendinoso – tratamento cirúrgico;5A;–;1;2
+3.07.22.73-0;Retração cicatricial de um dedo sem comprometimento tendinoso – tratamento cirúrgico;3C;–;1;2
+3.07.22.74-8;Retração cicatricial dos dedos com lesão tendínea – tratamento cirúrgico;10A;–;1;4
+3.07.22.75-6;Revascularização do polegar ou outro dedo (por cada dedo adicional revascularizado será adicionado o porte 3B);13A;–;3;6
+3.07.22.76-4;Roturas do aparelho extensor de dedo – redução incruenta;1C;–;–;1
+3.07.22.77-2;Roturas tendino-ligamentares da mão (mais que 1) – tratamento cirúrgico;3C;–;1;1
+3.07.22.78-0;Sequestrectomias;6C;–;1;3
+3.07.22.79-9;Sindactilia de 2 dígitos – tratamento cirúrgico;10C;–;2;4
+3.07.22.80-2;Sindactilia múltipla – tratamento cirúrgico;8B;–;2;4
+3.07.22.81-0;Sinovectomia da mão (1 articulação);11C;–;1;4
+3.07.22.82-9;Sinovectomia da mão (múltiplas);5B;–;1;3
+3.07.22.84-5;Transposição de dedo – tratamento cirúrgico;9A;–;2;4
+3.07.22.85-3;Tratamento cirúrgico da polidactilia múltipla e/ou complexa;10C;–;1;4
+3.07.22.86-1;Tratamento cirúrgico da sindactilia múltipla com emprego de expansor – por estágio;10C;–;1;4
+3.07.22.87-0;Tratamento da doença de Kiembuck com transplante vascularizado;11B;–;2;5
+3.07.22.88-8;Tratamento da pseudoartrose do escafoide com transplante ósseo vascularizado;10A;–;2;5
+3.07.23.01-9;Biópsia cirúrgica de cintura pélvica;3B;–;1;1
+3.07.23.02-7;Desarticulação interílio abdominal – tratamento cirúrgico;11A;–;2;4
+3.07.23.03-5;Fratura da cintura pélvica – tratamento conservador;2A;–;–;–
+3.07.23.13-2;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.23.14-0;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.23.04-3;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.23.06-0;Fraturas e/ou luxações do anel pélvico – redução incruenta;2C;–;–;3
+3.07.23.05-1;Tratamento cirúrgico das fraturas e/ou luxações do anel pélvico (com uma ou mais abordagens);9C;–;2;5
+3.07.23.07-8;Osteomielite ao nível da pelve – tratamento cirúrgico;9C;–;2;3
+3.07.23.08-6;Osteotomias/artrodeses – tratamento cirúrgico;9A;–;2;4
+3.07.23.15-9;Tratamento cirúrgico das fraturas e/ou luxações do anel pélvico (instabilidade multidirecional com abordagens múltiplas);12C;–;2;6
+3.07.23.16-7;Tratamento cirúrgico das fraturas e/ou luxações do anel pélvico (instabilidade unidirecional com abordagem única);10C;–;2;5
+3.07.24.01-5;Artrite séptica – tratamento cirúrgico;9A;–;1;4
+3.07.24.02-3;Artrodese/fratura de acetábulo (ligamentotaxia) com fixador externo;8B;–;1;5
+3.07.24.03-1;Artrodese coxofemoral em geral – tratamento cirúrgico;10C;–;2;5
+3.07.24.04-0;Artrodiastase de quadril;8B;–;1;5
+3.07.24.05-8;Artroplastia (qualquer técnica ou versão de quadril) – tratamento cirúrgico;11C;–;3;6
+3.07.24.06-6;Artroplastia de quadril infectada (retirada dos componentes) – tratamento cirúrgico;9B;–;2;4
+3.07.24.07-4;Artroplastia de ressecção do quadril (Girdlestone) – tratamento cirúrgico;8C;–;2;4
+3.07.24.08-2;"Artroplastia parcial do quadril (tipo Thompson ou qualquer
+técnica) – tratamento cirúrgico";8C;–;2;5
+3.07.24.10-4;Artrotomia coxofemoral – tratamento cirúrgico;7B;–;1;2
+3.07.24.09-0;Artrotomia de quadril infectada (incisão e drenagem de artrite séptica) sem retirada de componente – tratamento cirúrgico;8A;–;2;3
+3.07.24.11-2;Biópsia cirúrgica coxofemoral;7A;–;1;2
+3.07.24.12-0;Desarticulação coxofemoral – tratamento cirúrgico;9A;–;2;5
+3.07.24.13-9;Epifisiodese com abaixamento do grande trocanter – tratamento cirúrgico;7C;–;1;3
+3.07.24.14-7;Epifisiolistese proximal de fêmur (fixação in situ) – tratamento cirúrgico;9A;–;1;3
+3.07.24.29-5;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.24.30-9;Fixação externa definitiva rígida, com fixador externo;11C;–;2;6
+3.07.24.26-0;Fixação externa na urgência, com fixador externo;9A;–;1;6
+3.07.24.16-3;Fratura de acetábulo – redução incruenta;4C;–;1;2
+3.07.24.17-1;Fratura e/ou luxação e/ou avulsão coxofemoral – redução incruenta;3B;–;1;2
+3.07.24.18-0;"Fratura e/ou luxação e/ou avulsão coxofemoral – tratamento
+cirúrgico";9C;–;2;5
+3.07.24.19-8;Luxação congênita de quadril (redução cirúrgica e osteotomia) – tratamento cirúrgico;11C;–;2;5
+3.07.24.20-1;Luxação congênita de quadril (redução cirúrgica simples) – tratamento cirúrgico;10C;–;2;4
+3.07.24.21-0;Luxação congênita de quadril (redução incruenta com ou sem tenotomia de adutores);10A;–;1;3
+3.07.24.22-8;Osteotomia – fixador externo;7C;–;2;5
+3.07.24.23-6;Osteotomias ao nível do colo ou região trocantérica (Sugioka, Martin, Bombelli, etc.) – tratamento cirúrgico;10C;–;2;5
+3.07.24.31-7;Osteotomia múltipla supra-acetabular (Chiari, Pemberton, dial, etc.);12A;–;2;6
+3.07.24.24-4;Osteotomia única supra-acetabular (Chiari, Pemberton, dial, etc.);11A;–;2;5
+3.07.24.25-2;Punção-biópsia coxofemoral-artrocentese;3C;–;1;1
+3.07.24.27-9;Revisão de artroplastias de quadril com retirada de componentes e implante de prótese;13A;–;3;7
+3.07.24.32-5;"Tratamento cirúrgico da fratura do acetábulo (abordagem dupla
+ou alargada)";12C;–;3;6
+3.07.24.15-5;Tratamento cirúrgico da fratura do acetábulo (abordagem única);10C;–;2;5
+3.07.24.33-3;Tratamento cirúrgico da fratura do acetábulo (fixação percutânea);11C;–;2;5
+3.07.24.28-7;Tratamento de necrose avascular por foragem de estaqueamento associada à necrose microcirúrgica da cabeça femoral – tratamento cirúrgico;9A;–;2;5
+3.07.25.01-1;Alongamento/transporte ósseo/pseudoartrose com fixador externo;8B;–;2;5
+3.07.25.02-0;Alongamento de fêmur – tratamento cirúrgico;10A;–;2;4
+3.07.25.21-6;Alongamento ou transporte ósseo com dispositivo intramedular combinado ou não à fixação externa;12A;–;2;6
+3.07.25.03-8;Amputação ao nível da coxa – tratamento cirúrgico;10A;–;2;3
+3.07.25.04-6;Biópsia cirúrgica de fêmur;3C;–;1;1
+3.07.25.05-4;Correção de deformidade adquirida de fêmur com fixador externo;8B;–;2;4
+3.07.25.06-2;Descolamento epifisário (traumático ou não) – redução incruenta;6A;–;1;2
+3.07.25.07-0;Descolamento epifisário (traumático ou não) – tratamento cirúrgico;9A;–;2;4
+3.07.25.08-9;Encurtamento de fêmur – tratamento cirúrgico;9C;–;2;4
+3.07.25.09-7;Epifisiodese (por segmento) – tratamento cirúrgico;7A;–;1;3
+3.07.25.22-4;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.25.23-2;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.25.13-5;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.25.10-0;Fratura de fêmur – tratamento conservador;3A;–;–;–
+3.07.25.11-9;Fraturas de fêmur – redução incruenta;4C;–;1;2
+3.07.25.14-3;Osteomielite de fêmur – tratamento cirúrgico;9C;–;2;4
+3.07.25.15-1;Pseudoartroses e/ou osteotomias – tratamento cirúrgico;9C;–;2;5
+3.07.25.24-0;"Tratamento cirúrgico das fraturas supracondilianas e/ou
+intercondilianas do fêmur com fixação interna";10B;–;2;5
+3.07.25.25-9;Tratamento cirúrgico das fraturas trocantéricas, subtrocantéricas e diafisárias do fêmur com fixação interna;10C;–;2;5
+3.07.25.12-7;Tratamento cirúrgico das fraturas do colo do fêmur com fixação interna;9C;–;2;5
+3.07.25.26-7;Tratamento de afecções do espaço peritrocantérico com reinserção tendinosa;12A;–;1;6
+3.07.25.16-0;Tratamento de afecções do espaço peritrocantérico sem reinserção tendinosa;11A;–;1;5
+3.07.26.01-8;Artrite séptica – tratamento cirúrgico;7A;–;1;3
+3.07.26.02-6;Artrodese de joelho – tratamento cirúrgico;8A;–;2;4
+3.07.26.03-4;Artroplastia total de joelho com implantes – tratamento cirúrgico;10B;–;2;6
+3.07.26.04-2;Artrotomia – tratamento cirúrgico;7A;–;1;2
+3.07.26.05-0;Biópsia cirúrgica de joelho;3C;–;1;2
+3.07.26.06-9;Desarticulação de joelho – tratamento cirúrgico;8B;–;2;3
+3.07.26.07-7;Epifisites e tendinites – tratamento cirúrgico;8A;–;1;3
+3.07.26.30-1;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.26.32-8;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.26.33-6;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.26.08-5;Fratura de joelho – tratamento conservador;2C;–;–;–
+3.07.26.10-7;Fratura e/ou luxação de patela – tratamento cirúrgico;7B;–;1;3
+3.07.26.09-3;"Fratura e/ou luxação de patela (inclusive osteocondral) – redução
+incruenta";3A;–;1;1
+3.07.26.11-5;Fraturas e/ou luxações ao nível do joelho – redução incruenta;2C;–;1;2
+3.07.26.13-1;Lesão aguda de ligamento colateral, associada a ligamento cruzado e menisco – tratamento cirúrgico;8B;–;2;4
+3.07.26.14-0;Lesões agudas e/ou luxações de meniscos (1 ou ambos) – tratamento cirúrgico;8A;–;1;4
+3.07.26.15-8;Lesões complexas de joelho (fratura com lesão ligamentar e meniscal) – tratamento cirúrgico;8A;–;2;5
+3.07.26.16-6;Lesões intrínsecas de joelho (lesões condrais, osteocondrite dissecante, plica patológica, corpos livres, artrofitose) – tratamento cirúrgico;8B;–;1;3
+3.07.26.18-2;Lesões ligamentares agudas – tratamento cirúrgico;8A;–;2;4
+3.07.26.17-4;Lesões ligamentares agudas – tratamento incruento;2C;–;1;1
+3.07.26.19-0;Lesões ligamentares periféricas crônicas – tratamento cirúrgico;9B;–;2;3
+3.07.26.20-4;Liberação lateral e facectomias – tratamento cirúrgico;8A;–;1;4
+3.07.26.21-2;Meniscorrafia – tratamento cirúrgico;7A;–;1;3
+3.07.26.22-0;Osteotomias ao nível do joelho – tratamento cirúrgico;8B;–;2;3
+3.07.26.34-4;Quadricepsplastia e liberação de partes moles no joelho rígido;13A;–;2;5
+3.07.26.23-9;Realinhamentos do aparelho extensor – tratamento cirúrgico;7B;–;1;3
+3.07.26.24-7;Reconstruções ligamentares do pivot central – tratamento cirúrgico;9A;–;2;4
+3.07.26.25-5;Revisões de artroplastia total – tratamento cirúrgico;9C;–;2;6
+3.07.26.26-3;Revisões de realinhamentos do aparelho extensor – tratamento cirúrgico;9A;–;2;3
+3.07.26.27-1;Revisões de reconstruções intra-articulares – tratamento cirúrgico;9A;–;2;3
+3.07.26.28-0;Toalete cirúrgica – correção de joelho flexo – tratamento cirúrgico;7B;–;1;3
+3.07.26.29-8;Transplantes homólogos ao nível do joelho – tratamento cirúrgico;9A;–;2;3
+3.07.26.35-2;Tratamento cirúrgico da fratura avulsão ao redor do joelho;9A;–;2;5
+3.07.26.36-0;Tratamento cirúrgico da fratura bicondilar do planalto tibial;11A;–;2;5
+3.07.26.37-9;Tratamento cirúrgico da fratura do fêmur distal, intra-articular completa;11A;–;2;5
+3.07.26.12-3;Tratamento cirúrgico da fratura do fêmur distal, não articular;10A;–;2;5
+3.07.26.38-7;Tratamento cirúrgico da fratura do fêmur distal, unicondilar;9C;–;2;5
+3.07.26.39-5;Tratamento cirúrgico da fratura do planalto tibial lateral;10A;–;2;5
+3.07.26.40-9;Tratamento cirúrgico da fratura do planalto tibial medial;10A;–;2;5
+3.07.27.01-4;Alongamento/transporte ósseo/pseudoartrose com fixador externo;7C;–;2;5
+3.07.27.02-2;Alongamento com fixador dinâmico – tratamento cirúrgico;8A;–;2;4
+3.07.27.03-0;Alongamento dos ossos da perna – tratamento cirúrgico;8A;–;2;4
+3.07.27.20-0;Alongamento ou transporte ósseo com dispositivo intramedular combinado ou não à fixação externa;12A;–;2;6
+3.07.27.04-9;Amputação de perna – tratamento cirúrgico;7C;–;1;3
+3.07.27.05-7;Biópsia cirúrgica de tíbia ou fíbula;3C;–;1;1
+3.07.27.06-5;Correção de deformidade adquirida de tíbia com fixador externo;8A;–;2;4
+3.07.27.07-3;Correção de deformidades congênitas na perna com fixador externo;8C;–;2;4
+3.07.27.08-1;Encurtamento dos ossos da perna – tratamento cirúrgico;8A;–;2;3
+3.07.27.09-0;Epifisiodese de tíbia/fíbula – tratamento cirúrgico;6A;–;1;2
+3.07.27.21-9;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.27.22-7;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.27.18-9;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.27.10-3;Fratura de osso da perna – tratamento conservador;2B;–;–;–
+3.07.27.12-0;Fraturas de fíbula (inclui descolamento epifisário) – redução incruenta;3A;–;1;3
+3.07.27.11-1;Fraturas de fíbula (inclui o descolamento epifisário) – tratamento cirúrgico;7C;–;1;3
+3.07.27.13-8;Fraturas de tíbia associada ou não a fíbula (inclui descolamento epifisário) – tratamento cirúrgico;9A;–;2;4
+3.07.27.14-6;Fraturas de tíbia e fíbula (inclui descolamento epifisário) – redução incruenta;3A;–;1;3
+3.07.27.15-4;Osteomielite dos ossos da perna – tratamento cirúrgico;6A;–;1;2
+3.07.27.16-2;Osteotomias e/ou pseudoartroses – tratamento cirúrgico;9A;–;2;3
+3.07.27.17-0;Transposição de fíbula/tíbia – tratamento cirúrgico;8C;–;2;4
+3.07.28.01-0;Amputação ao nível do tornozelo – tratamento cirúrgico;8A;–;1;3
+3.07.28.02-9;Artrite ou osteoartrite – tratamento cirúrgico;8C;–;1;2
+3.07.28.03-7;Artrodese (com ou sem alongamento simultâneo) com fixador externo;12A;–;2;6
+3.07.28.04-5;Artrodese ao nível do tornozelo – tratamento cirúrgico;10C;–;1;3
+3.07.28.05-3;Artroplastia de tornozelo (com implante) – tratamento cirúrgico;13C;–;2;5
+3.07.28.06-1;Artrorrise do tornozelo – tratamento cirúrgico;8A;–;1;3
+3.07.28.07-0;Artrotomia de tornozelo – tratamento cirúrgico;7B;–;1;2
+3.07.28.08-8;Biópsia cirúrgica do tornozelo;5A;–;1;1
+3.07.28.18-5;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.28.19-3;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.28.10-0;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.28.09-6;Fratura de tornozelo – tratamento conservador;4C;–;–;3
+3.07.28.11-8;Fraturas e/ou luxações ao nível do tornozelo – redução incruenta;6C;–;1;2
+3.07.28.14-2;Lesões ligamentares agudas ao nível do tornozelo – tratamento cirúrgico;8B;–;1;3
+3.07.28.13-4;Lesões ligamentares agudas ao nível do tornozelo – tratamento incruento;4C;–;1;1
+3.07.28.15-0;Lesões ligamentares crônicas ao nível do tornozelo – tratamento cirúrgico;9B;–;1;3
+3.07.28.16-9;Osteocondrite de tornozelo – tratamento cirúrgico;9B;–;1;3
+3.07.28.17-7;Pseudoartroses ou osteotomias – tratamento cirúrgico;9B;–;2;3
+3.07.28.21-5;Tratamento cirúrgico da fratura de dois maléolos e/ou luxações ao nível do tornozelo;9A;–;2;5
+3.07.28.20-7;Tratamento cirúrgico da fratura de três maléolos e/ou luxações ao nível do tornozelo;10A;–;2;5
+3.07.28.12-6;Tratamento cirúrgico da fratura de um maléolo e/ou luxações ao nível do tornozelo;8A;–;2;4
+3.07.28.22-3;Tratamento cirúrgico das fraturas do pilão tíbia;11C;–;2;5
+3.07.29.01-7;Amputação ao nível do pé – tratamento cirúrgico;9B;–;1;3
+3.07.29.02-5;Amputação/desarticulação de pododáctilos (por segmento) – tratamento cirúrgico;7B;–;1;2
+3.07.29.03-3;Artrite ou osteoartrite dos ossos do pé (inclui osteomielite) – tratamento cirúrgico;8C;–;1;3
+3.07.29.04-1;Artrodese de tarso e/ou médio pé – tratamento cirúrgico;10C;–;1;3
+3.07.29.05-0;Artrodese metatarso – falângica ou interfalângica – tratamento cirúrgico;8A;–;1;2
+3.07.29.06-8;Biópsia cirúrgica dos ossos do pé;5A;–;1;1
+3.07.29.08-4;Correção de deformidades do pé com fixador externo dinâmico – tratamento cirúrgico;12A;–;1;4
+3.07.29.09-2;Correção de pé torto congênito com fixador externo;12A;–;2;5
+3.07.29.10-6;Deformidade dos dedos – tratamento cirúrgico;8A;–;1;2
+3.07.29.11-4;Exérese ungueal;3A;–;–;1
+3.07.29.12-2;Fasciotomia ou ressecção de fáscia plantar – tratamento cirúrgico;7B;–;1;3
+3.07.29.35-1;Fixação externa definitiva dinâmica, com fixador externo;13A;–;2;6
+3.07.29.36-0;Fixação externa definitiva rígida, com fixador externo;11C;–;2;5
+3.07.29.21-1;Fixação externa na urgência, com fixador externo;9A;–;1;5
+3.07.29.13-0;Fratura de osso do pé – tratamento conservador;4C;–;–;1
+3.07.29.16-5;Fraturas e/ou luxações do antepé – redução incruenta;6C;–;1;2
+3.07.29.14-9;Fratura e/ou luxações do pé (exceto antepé) – redução incruenta;6C;–;1;2
+3.07.29.18-1;Hallux valgus (um pé) – tratamento cirúrgico;8C;–;1;3
+3.07.29.19-0;Osteotomia ou pseudoartrose do tarso e médio pé – tratamento cirúrgico;11C;–;1;4
+3.07.29.20-3;Osteotomia ou pseudoartrose dos metatarsos/falanges – tratamento cirúrgico;8A;–;1;3
+3.07.29.22-0;Pé plano/pé cavo/coalisão tarsal – tratamento cirúrgico;11A;–;1;4
+3.07.29.15-7;Redução cirúrgica das luxações do retropé e médio pé;7C;–;1;3
+3.07.29.17-3;Redução cirúrgica da luxação do antepé;7A;–;1;3
+3.07.29.24-6;Ressecção de osso do pé – tratamento cirúrgico;7C;–;1;2
+3.07.29.25-4;Retração cicatricial dos dedos;10C;–;1;2
+3.07.29.27-0;Rotura do tendão de Aquiles – tratamento cirúrgico;10C;–;1;2
+3.07.29.26-2;Rotura do tendão de Aquiles – tratamento incruento;4C;–;1;2
+3.07.29.28-9;Tratamento cirúrgico da sindactilia complexa e/ou múltipla;12C;–;2;5
+3.07.29.29-7;Tratamento cirúrgico da sindactilia simples;11A;–;1;3
+3.07.29.30-0;Tratamento cirúrgico de gigantismo;12C;–;1;3
+3.07.29.31-9;Tratamento cirúrgico de linfedema ao nível do pé;11A;–;2;3
+3.07.29.32-7;Tratamento cirúrgico de polidactilia múltipla e/ou complexa;11C;–;1;3
+3.07.29.33-5;Tratamento cirúrgico de polidactilia simples;10C;–;1;2
+3.07.29.34-3;Tratamento cirúrgico do mal perfurante plantar;9B;–;1;3
+3.07.29.37-8;Tratamento cirúrgico da fratura de um metatarso;7C;–;1;3
+3.07.29.38-6;Tratamento cirúrgico da fratura de uma falange;7B;–;1;3
+3.07.29.39-4;Tratamento cirúrgico das fraturas do tálus;11C;–;2;5
+3.07.29.40-8;Tratamento cirúrgico das fraturas dos calcâneo;11C;–;2;5
+3.07.29.41-6;Tratamento cirúrgico de fratura de um osso do médio pé;8A;–;1;4
+3.07.29.23-8;Tratamento cirúrgico do pé torto congênito (um pé);12C;–;2;6
+3.07.29.42-2;Tratamento conservador do pé torto congênito pelo método de Ponseti (por pé e por manipulação). Não inclui a colocação do gessado;3C;–;1;2
+3.07.30.01-5;Alongamento;2C;–;1;2
+3.07.30.02-3;Biópsia de músculo;2B;–;1;1
+3.07.30.03-1;Desbridamento cirúrgico de feridas ou extremidades;3B;–;1;2
+3.07.30.04-0;Desinserção ou miotomia;3C;–;1;1
+3.07.30.05-8;Dissecção muscular;3C;–;1;1
+3.07.30.06-6;Drenagem cirúrgica do psoas;5B;–;1;2
+3.07.30.07-4;Fasciotomia;4C;–;1;2
+3.07.30.08-2;Fasciotomia – por compartimento;3B;–;2;3
+3.07.30.09-0;Fasciotomias (descompressivas);4C;–;1;3
+3.07.30.10-4;Fasciotomias acima do punho;4C;–;1;2
+3.07.30.11-2;Miorrafias;3C;–;1;1
+3.07.30.12-0;Terapia por ondas de choque extracorpórea em partes moles – acompanhamento 1ª aplicação;8A;60,000;–;0
+3.07.30.13-9;Terapia por ondas de choque extracorpórea em partes moles – acompanhamento reaplicações;4C;60,000;–;0
+3.07.30.15-5;Transposição muscular;4C;–;1;3
+3.07.31.01-1;Abertura de bainha tendinosa – tratamento cirúrgico;3C;–;1;1
+3.07.31.26-7;Biópsia de tumor de partes moles por agulha;8A;–;1;1
+3.07.31.27-5;Biópsia de tumor de partes moles por cirurgia;8A;–;1;2
+3.07.31.28-3;Biópsia óssea por agulha;8A;–;1;1
+3.07.31.29-1;Biópsia óssea por cirurgia;8A;–;1;2
+3.07.31.02-0;Biópsias cirúrgicas de tendões, bursas e sinóvias;3B;–;1;1
+3.07.31.03-8;Bursectomia – tratamento cirúrgico;3C;–;1;1
+3.07.31.04-6;Cisto sinovial – tratamento cirúrgico;3B;–;1;1
+3.07.31.05-4;Encurtamento de tendão – tratamento cirúrgico;3C;–;1;2
+3.07.31.06-2;Sinovectomia – tratamento cirúrgico;5B;–;1;2
+3.07.31.07-0;Tenoartroplastia para ossos do carpo;9C;–;1;4
+3.07.31.08-9;Tenodese;5B;–;1;1
+3.07.31.09-7;Tenólise no túnel osteofibroso;10A;–;1;4
+3.07.31.10-0;Tenólise/tendonese – tratamento cirúrgico;4C;–;1;2
+3.07.31.11-9;Tenoplastia/enxerto de tendão – tratamento cirúrgico;6A;–;1;3
+3.07.31.12-7;Tenoplastia de tendão em outras regiões;4C;–;2;4
+3.07.31.13-5;Tenorrafia múltipla em outras regiões;4C;–;1;3
+3.07.31.14-3;Tenorrafia no túnel osteofibroso – mais de 2 dígitos;10A;–;1;4
+3.07.31.15-1;Tenorrafia no túnel osteofibroso até 2 dígitos;4C;–;1;2
+3.07.31.16-0;Tenorrafia única em outras regiões;3C;–;1;2
+3.07.31.17-8;Tenossinovectomia de mão ou punho;4C;–;1;2
+3.07.31.18-6;Tenossinovites estenosantes – tratamento cirúrgico;10A;–;1;4
+3.07.31.19-4;Tenossinovites infecciosas – drenagem;10A;–;1;4
+3.07.31.20-8;Tenotomia;5B;–;1;1
+3.07.31.21-6;Transposição de mais de 1 tendão – tratamento cirúrgico;6A;–;1;4
+3.07.31.22-4;Transposição única de tendão;4C;–;2;4
+3.07.31.23-2;Tratamento cirúrgico dos tumores de tendão ou sinovial;4A;–;1;1
+3.07.32.14-0;Cirurgia de Berger;13C;–;3;6
+3.07.32.10-7;Curetagem ou ressecção em bloco + cimentação em tumor ósseo;10A;–;2;4
+3.07.32.11-5;Curetagem ou ressecção em bloco + autoenxerto em tumor ósseo;13C;–;2;6
+3.07.32.15-8;Curetagem ou ressecção em bloco + endoprótese em tumor ósseo;13C;–;3;6
+3.07.32.01-8;Curetagem ou ressecção em bloco + enxerto ósseo vascularizado;13C;–;3;6
+3.07.32.16-6;Curetagem ou ressecção em bloco + haloenxerto em tumor ósseo;13C;–;3;5
+3.07.32.02-6;Enxerto ósseo – retirada de enxerto autólogo;9B;–;2;3
+3.07.32.17-4;Hemipelvectomia;13C;–;4;5
+3.07.32.18-2;Infiltração ósseo para tratamento;8A;–;1;1
+3.07.32.03-4;Ressecção da lesão com cimentação e osteossíntese;9A;–;2;5
+3.07.32.19-0;Ressecção de tumor de partes moles benigno;10C;–;2;3
+3.07.32.20-4;Ressecção de tumor de partes moles maligno;13C;–;3;5
+3.07.32.21-2;Ressecção de tumor ósseo com alongamento;12B;–;2;5
+3.07.32.22-0;Ressecção de tumor ósseo e/ou de partes moles com rotação de retalho;13C;–;2;3
+3.07.32.13-1;Ressecção simples de tumor ósseo;10B;–;2;4
+3.07.32.23-9;Revisão cirúrgica com autoenxerto vascularizado;13C;–;3;5
+3.07.32.24-7;Revisão cirúrgica com utilização de autoenxerto não vascularizado;11C;–;2;4
+3.07.32.25-5;Revisão cirúrgica com utilização de aloenxerto;13C;–;3;5
+3.07.32.26-3;Revisão cirúrgica de endoprótese não convencional;13C;–;3;5
+3.07.32.05-0;"Terapia por ondas de choque extracorpórea em partes ósseas –
+acompanhamento 1ª aplicação";8A;60,000;–;0
+3.07.32.06-9;Terapia por ondas de choque extracorpórea em partes ósseas – acompanhamento reaplicações;4C;60,000;–;0
+3.07.32.27-1;"Tratamento de recidiva de tumor de partes moles no esqueleto
+apendicular";13C;–;3;6
+3.07.32.28-0;Tratamento de recidiva de tumor ósseo no esqueleto apendicular;13C;–;3;4
+3.07.32.08-5;Tumor ósseo (ressecção com substituição);9A;–;2;5
+3.07.32.09-3;Tumor ósseo (ressecção e artrodese);11B;–;3;4
+3.07.32.12-3;Tumor ósseo (ressecção segmentar);12C;–;2;3
+3.07.32.29-8;Videoscopia extra-articular de pequenas articulações;10C;–;2;5
+3.07.33.03-0;Condroplastia (com remoção de corpos livres);8C;33,800;1;4
+3.07.33.08-1;"Fratura com redução e/ou estabilização da superfície articular – um
+compartimento #";9C;33,800;1;5
+3.07.33.10-3;Instabilidade femoropatelar, release lateral da patela, retencionamento, reforço ou reconstrução do ligamento patelofemoral medial #;10C;38,500;1;6
+3.07.33.05-7;Meniscectomia – um menisco;8C;33,800;1;4
+3.07.33.04-9;Osteocondroplastia – estabilização, ressecção e/ou plastia #;10C;38,500;1;6
+3.07.33.07-3;Reconstrução, retencionamento ou reforço do ligamento cruzado anterior ou posterior #;10C;38,500;1;6
+3.07.33.06-5;Reparo ou sutura de um menisco;10C;38,500;1;6
+3.07.33.02-2;Sinovectomia parcial ou subtotal;8C;33,800;1;4
+3.07.33.01-4;Sinovectomia total;9C;33,800;1;5
+3.07.33.09-0;Tratamento cirúrgico da artrofibrose #;10B;38,500;1;6
+3.07.34.03-7;Condroplastia (com remoção de corpos livres);11C;33,800;1;5
+3.07.34.06-1;Fraturas – redução e estabilização de cada superfície;11C;33,800;1;5
+3.07.34.04-5;Osteocondroplastia – estabilização, ressecção e ou plastia (enxertia) #;10C;38,500;1;6
+3.07.34.05-3;Reconstrução, retencionamento ou reforço de ligamento;10C;38,500;1;6
+3.07.34.02-9;Sinovectomia parcial ou subtotal;8C;33,800;1;4
+3.07.34.01-0;Sinovectomia total;11C;33,800;1;5
+3.07.35.03-3;Acromioplastia;9C;33,800;1;5
+3.07.35.10-6;Capsulotomia;10C;–;2;5
+3.07.35.11-4;Cobertura do defeito de Hill-Sachs (cirurgia de Remplissage);10C;–;2;5
+3.07.35.12-2;Drenagem tendinite calcária;9A;–;1;5
+3.07.35.13-0;Fraturas da glenoide;10C;–;2;5
+3.07.35.14-9;Fraturas da parte proximal do úmero;10C;–;2;5
+3.07.35.05-0;Instabilidade glenoumeral, por via artroscópica;10C;38,500;2;6
+3.07.35.07-6;Instabilidade multidirecional;10C;38,500;2;6
+3.07.35.15-7;Neurólise;11A;–;2;5
+3.07.35.04-1;Lesão labral;10C;38,500;2;6
+3.07.35.16-5;Osteocondroplastia;10A;–;2;5
+3.07.35.17-3;Osteoplastia escapular artroscópica;10A;–;2;5
+3.07.35.18-1;Reparo artroscópico da ruptura manguito rotador (2 tendões);11A;–;2;6
+3.07.35.19-0;Reparo artroscópico da ruptura manguito rotador (3 tendões);11B;–;2;6
+3.07.35.06-8;Reparo artroscópico da ruptura manguito rotador (transfixante/ completa ou parcial de 1 tendão);10C;38,500;2;6
+3.07.35.20-3;Reparo da avulsão ligamentar glenoumeral;11A;–;2;5
+3.07.35.08-4;Ressecção lateral da clavícula;9C;33,800;1;5
+3.07.35.21-1;Sinovectomia escápulo-torácica;9C;–;2;5
+3.07.35.02-5;Sinovectomia parcial ou subtotal;8C;33,800;1;4
+3.07.35.01-7;Sinovectomia total;9C;33,800;2;5
+3.07.35.22-0;Sinovectomia via artroscópica;9C;–;2;5
+3.07.35.23-8;Tenodese da porção longa do bíceps;10B;–;2;5
+3.07.35.09-2;Tenotomia da porção longa do bíceps, via artroscópica;9C;33,800;1;5
+3.07.35.24-6;Tratamento cirúrgico artroscópico da re-ruptura manguito rotador;11B;–;2;6
+3.07.36.07-2;Capsulotomia via artroscópica;11B;–;2;5
+3.07.36.03-0;Condroplastia (com remoção de corpos livres);8C;33,800;1;4
+3.07.36.06-4;Fraturas: redução e estabilização para cada superfície;9B;33,800;1;5
+3.07.36.04-8;Osteocondroplastia por via artroscópica;10A;33,800;2;5
+3.07.36.05-6;Reconstrução, retencionamento ou reforço de ligamento #;9C;33,800;1;5
+3.07.36.01-3;Sinovectomia total;9C;33,800;1;5
+3.07.36.02-1;Sinovectomia parcial ou subtotal;8C;33,800;1;4
+3.07.37.03-6;Condroplastia (com remoção de corpos livres);8C;33,800;1;4
+3.07.37.06-0;Fraturas – redução e estabilização de cada superfície;9C;33,800;1;5
+3.07.37.04-4;Osteocondroplastia – estabilização, ressecção e/ou plastia (enxertia);10C;38,500;1;6
+3.07.37.05-2;Reconstrução, retencionamento ou reforço de ligamento ou reparo de cartilagem triangular #;9C;33,800;1;5
+3.07.37.02-8;Sinovectomia parcial ou subtotal;11C;33,800;1;4
+3.07.37.01-0;Sinovectomia total;11C;33,800;1;5
+3.07.37.07-9;Túnel do carpo – descompressão;11C;33,800;1;5
+3.07.38.05-9;Condroplastia com sutura labral;11B;38,500;1;6
+3.07.38.03-2;"Desbridamento do labrum ou ligamento redondo com ou sem
+condroplastia";10C;38,500;1;6
+3.07.38.02-4;Sinovectomia parcial e/ou remoção de corpos livres;9C;33,800;1;5
+3.07.38.01-6;Sinovectomia total;10C;38,500;1;6
+3.07.38.04-0;Tratamento do impacto fêmoro-acetabular;12B;42,900;1;7
+3.14.01.34-1;Acesso endoscópico ao tratamento cirúrgico dos tumores da região selar;12A;–;2;8
+3.14.01.01-5;Biópsia estereotáxica de encéfalo;10B;–;2;6
+3.14.01.02-3;Cingulotomia ou capsulotomia unilateral;13C;–;2;8
+3.14.01.03-1;Cirurgia intracraniana por via endoscópica;12B;–;1;8
+3.14.01.04-0;Craniotomia para remoção de corpo estranho;11C;–;2;5
+3.14.01.05-8;Derivação ventricular externa;8C;–;1;5
+3.14.01.06-6;Drenagem estereotáxica – cistos, hematomas ou abscessos;11C;–;2;7
+3.14.01.07-4;Hipofisectomia por qualquer método;12B;–;2;8
+3.14.01.35-0;Implantação de halo para radiocirurgia;10A;–;2;5
+3.14.01.08-2;Implante de cateter intracraniano;8C;–;1;5
+3.14.01.09-0;Implante de eletrodo cerebral profundo;13C;–;2;8
+3.14.01.10-4;Implante de eletrodos cerebral ou medular;13C;–;2;8
+3.14.01.11-2;Implante estereotáxico de cateter para braquiterapia;11A;–;2;7
+3.14.01.12-0;Implante intratecal de bombas para infusão de fármacos;9C;–;2;6
+3.14.01.41-4;Localização/intervenção estereotáxica de lesões/estruturas de crânio por neuronavegação com intervenção;10A;–;1;5
+3.14.01.13-9;Localização estereotáxica de corpo estranho intracraniano com remoção;12B;–;2;8
+3.14.01.14-7;Localização estereotáxica de lesões intracranianas com remoção;13C;–;1;8
+3.14.01.15-5;Microcirurgia para tumores intracranianos;14A;–;2;7
+3.14.01.16-3;Microcirurgia por via transesfenoidal;14B;–;2;8
+3.14.01.17-1;Microcirurgia vascular intracraniana;14A;–;2;7
+3.14.01.19-8;Punção subdural ou ventricular transfontanela;7C;–;–;5
+3.14.01.20-1;Ressecção de mucocele frontal;8B;–;2;5
+3.14.01.22-8;Revisão de sistema de neuroestimulação;7C;–;1;5
+3.14.01.23-6;Sistema de derivação ventricular interna com válvulas ou revisões;10B;–;2;6
+3.14.01.24-4;Terceiro ventriculostomia;9C;–;2;4
+3.14.01.25-2;Tratamento cirúrgico da epilepsia;13C;–;2;8
+3.14.01.26-0;Tratamento cirúrgico da fístula liquórica;10C;–;2;6
+3.14.01.27-9;Tratamento cirúrgico da meningoencefalocele;10B;–;2;6
+3.14.01.28-7;Tratamento cirúrgico de tumores cerebrais sem microscopia;12A;–;2;8
+3.14.01.29-5;Tratamento cirúrgico do abscesso encefálico;11C;–;2;5
+3.14.01.30-9;Tratamento cirúrgico do hematoma intracraniano;11C;–;2;5
+3.14.01.33-3;Tratamento pré-natal das hidrocefalias e cistos cerebrais;13C;–;2;8
+3.14.01.42-2;Tratamento radiocirúrgico cerebral ou medular – participação e acompanhamento médico do neurocirurgião nos procedimentos de radiocirurgia, de forma complementar ao radioterapeuta;13C;–;–;–
+3.14.02.01-1;Cordotomia-mielotomias por radiofrequência;12B;–;2;8
+3.14.02.02-0;Lesão de substância gelatinosa medular (DREZ) por radiofrequência;12B;–;2;8
+3.14.02.03-8;Tampão sanguíneo peridural para tratamento de cefaleia após punção (não indicada na profilaxia da cefaleia);3C;–;–;2
+3.14.03.01-8;Biópsia de nervo;4A;–;1;2
+3.14.03.02-6;Bloqueio de nervo periférico;3B;–;1;2
+3.14.03.03-4;Denervação percutânea de faceta articular – por segmento;9C;–;1;4
+3.14.03.04-2;Enxerto de nervo;8B;–;2;4
+3.14.03.05-0;Enxerto de nervo interfascicular, pediculado (1º estágio);11A;–;1;6
+3.14.03.06-9;Enxerto de nervo interfascicular, pediculado (2º estágio);11A;–;1;6
+3.14.03.08-5;Enxerto interfascicular;9A;–;1;5
+3.14.03.07-7;Enxerto interfascicular de nervo vascularizado;12C;–;3;6
+3.14.03.09-3;Enxerto para reparo de 2 ou mais nervos;9B;–;3;5
+3.14.03.10-7;Excisão de tumores de nervos periféricos com enxerto interfascicular;9B;–;1;5
+3.14.03.11-5;Excisão de tumores dos nervos periféricos;10A;–;1;6
+3.14.03.12-3;Exploração cirúrgica de nervo (neurólise externa);5B;–;1;3
+3.14.03.13-1;Extirpação de neuroma;4A;–;1;2
+3.14.03.14-0;Implante de gerador para neuroestimulação;10C;–;1;7
+3.14.03.15-8;Lesão de nervos associada à lesão óssea;8C;–;1;3
+3.14.03.16-6;"Lesão estereotáxica de estruturas profundas para tratamento da
+dor ou movimento anormal";14B;–;2;8
+3.14.03.17-4;Microcirurgia do plexo braquial com a exploração, neurólise e enxertos interfasciculares para reparo das lesões;13A;–;2;7
+3.14.03.18-2;Microcirurgia do plexo braquial com exploração e neurólise;12C;–;2;5
+3.14.03.21-2;Microneurólise intraneural ou intrafascicular de dois ou mais nervos;8B;–;1;4
+3.14.03.20-4;Microneurólise intraneural ou intrafascicular de um nervo;7C;–;1;4
+3.14.03.22-0;Microneurólise múltiplas;8B;–;1;4
+3.14.03.23-9;Microneurólise única;6A;–;1;3
+3.14.03.25-5;Microneurorrafia de dedos da mão;8B;–;2;4
+3.14.03.26-3;Microneurorrafia múltipla (plexo nervoso);12B;–;2;5
+3.14.03.27-1;Microneurorrafia única;8A;–;1;4
+3.14.03.28-0;Neurólise das síndromes compressivas;6C;–;1;3
+3.14.03.29-8;Neurotripsia (cada extremidade);3B;–;2;2
+3.14.03.30-1;Reposição de fármaco(s) em bombas implantadas;5B;–;–;3
+3.14.03.31-0;Ressecção de neuroma;4A;–;2;3
+3.14.03.32-8;Revisão de sistema implantados para infusão de fármacos;6A;–;–;3
+3.14.03.33-6;Rizotomia percutânea por segmento – qualquer método;10C;–;1;5
+3.14.03.34-4;Simpatectomia;9B;–;1;5
+3.14.03.37-9;Simpatectomia por videotoracoscopia;10B;38,500;1;6
+3.14.03.35-2;Transposição de nervo;10A;–;1;2
+3.14.03.36-0;Tratamento microcirúrgico das neuropatias compressivas (tumoral, inflamatório, etc.);8B;–;2;5
+3.14.04.01-4;Descompressão vascular de nervos cranianos;12A;–;2;8
+3.14.04.02-2;Neurotomia seletiva do trigêmio;12A;–;2;8
+3.14.04.03-0;Tratamento da nevralgia do trigêmio por técnica cirúrgica percutânea – qualquer método (quando orientado por imagem, cobrar o código correspondente);10A;–;1;4
+3.14.05.01-0;Bloqueio do sistema nervoso autônomo;6A;–;1;2
+3.14.05.02-9;Lesão do sistema nervoso autônomo – qualquer método;6C;–;1;4
+3.14.05.03-7;Tratamento da síndrome do desfiladeiro cérvico-torácico;11C;–;2;7

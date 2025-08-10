@@ -1,0 +1,37 @@
+codigo;procedimento;porte;aux;porteAnestesico
+3.14.03.01-8;Biópsia de nervo;4A;–;1
+3.14.03.02-6;Bloqueio de nervo periférico;3B;–;1
+3.14.03.03-4;Denervação percutânea de faceta articular – por segmento;9C;–;1
+3.14.03.04-2;Enxerto de nervo;8B;–;2
+3.14.03.05-0;Enxerto de nervo interfascicular, pediculado (1º estágio);11A;–;1
+3.14.03.06-9;Enxerto de nervo interfascicular, pediculado (2º estágio);11A;–;1
+3.14.03.08-5;Enxerto interfascicular;9A;–;1
+3.14.03.07-7;Enxerto interfascicular de nervo vascularizado;12C;–;3
+3.14.03.09-3;Enxerto para reparo de 2 ou mais nervos;9B;–;3
+3.14.03.10-7;Excisão de tumores de nervos periféricos com enxerto interfascicular;9B;–;1
+3.14.03.11-5;Excisão de tumores dos nervos periféricos;10A;–;1
+3.14.03.12-3;Exploração cirúrgica de nervo (neurólise externa);5B;–;1
+3.14.03.13-1;Extirpação de neuroma;4A;–;1
+3.14.03.14-0;Implante de gerador para neuroestimulação;10C;–;1
+3.14.03.15-8;Lesão de nervos associada à lesão óssea;8C;–;1
+3.14.03.16-6;Lesão estereotáxica de estruturas profundas para tratamento da
+dor ou movimento anormal;14B;–;2
+3.14.03.17-4;Microcirurgia do plexo braquial com a exploração, neurólise e enxertos interfasciculares para reparo das lesões;13A;–;2
+3.14.03.18-2;Microcirurgia do plexo braquial com exploração e neurólise;12C;–;2
+3.14.03.21-2;Microneurólise intraneural ou intrafascicular de dois ou mais nervos;8B;–;1
+3.14.03.20-4;Microneurólise intraneural ou intrafascicular de um nervo;7C;–;1
+3.14.03.22-0;Microneurólise múltiplas;8B;–;1
+3.14.03.23-9;Microneurólise única;6A;–;1
+3.14.03.25-5;Microneurorrafia de dedos da mão;8B;–;2
+3.14.03.26-3;Microneurorrafia múltipla (plexo nervoso);12B;–;2
+3.14.03.27-1;Microneurorrafia única;8A;–;1
+3.14.03.28-0;Neurólise das síndromes compressivas;6C;–;1
+3.14.03.29-8;Neurotripsia (cada extremidade);3B;–;2
+3.14.03.30-1;Reposição de fármaco(s) em bombas implantadas;5B;–;–
+3.14.03.31-0;Ressecção de neuroma;4A;–;2
+3.14.03.32-8;Revisão de sistema implantados para infusão de fármacos;6A;–;–
+3.14.03.33-6;Rizotomia percutânea por segmento – qualquer método;10C;–;1
+3.14.03.34-4;Simpatectomia;9B;–;1
+3.14.03.37-9;Simpatectomia por videotoracoscopia;10B;38.5;1
+3.14.03.35-2;Transposição de nervo;10A;–;1
+3.14.03.36-0;Tratamento microcirúrgico das neuropatias compressivas (tumoral, inflamatório, etc.);8B;–;2

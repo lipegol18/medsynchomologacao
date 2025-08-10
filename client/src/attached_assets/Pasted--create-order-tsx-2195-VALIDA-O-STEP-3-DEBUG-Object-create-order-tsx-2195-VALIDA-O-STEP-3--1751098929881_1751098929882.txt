@@ -1,0 +1,138 @@
+
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1153 CIDs encontrados via API relacional: 
+Array(1)
+create-order.tsx:1174 Justificativa clínica encontrada no pedido: Paciente portador de gonartrose severa (grau IV de Kellgren-Lawrence), com dor incapacitante e limitação funcional importante que compromete significativamente as atividades de vida diária. Falha do tratamento conservador com analgésicos, anti-inflamatórios, fisioterapia e infiltrações. Indicada artroplastia total de joelho para alívio da dor e restauração da função.
+create-order.tsx:1185 🔍 LOAD - order.attachments: 
+Array(2)
+create-order.tsx:1186 🔍 LOAD - order.examImagesUrl: undefined
+create-order.tsx:1187 🔍 LOAD - order.medicalReportUrl: undefined
+create-order.tsx:1191 ✅ Anexos unificados encontrados: 
+Array(2)
+create-order.tsx:1213 🔍 FINAL - orderMediaData.attachments: 
+Array(2)
+create-order.tsx:1214 🔍 FINAL - attachments length: 2
+create-order.tsx:1217 ✅ _loadExistingOrder concluído para pedido 172
+create-order.tsx:379 ✅ loadExistingOrder CONCLUÍDO
+create-order.tsx:381 🔄 MODO EDIÇÃO: Dados relacionais já carregados em loadExistingOrder
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1269 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1270 📋 6 procedimentos definidos como secundários
+create-order.tsx:1289 🔍 DEBUG OPME - Estado selectedOpmeItems completo: 
+Array(4)
+create-order.tsx:1293 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: 
+Array(4)
+ Quantidades: 
+Array(4)
+create-order.tsx:1301 CIDs a serem enviados: 
+Array(1)
+create-order.tsx:1352 Dados de lateralidade sendo enviados ao backend: 
+Object
+create-order.tsx:1404 Preservando attachments existentes: 
+Array(2)
+create-order.tsx:1443 saveProgress - Salvando 1 CIDs relacionais para pedido 172: 
+Array(1)
+create-order.tsx:1455 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1489 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 172: 
+Array(8)
+create-order.tsx:1501 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1518 saveProgress - Salvando 4 itens OPME relacionais para pedido 172: 
+Array(4)
+create-order.tsx:1530 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1554 saveProgressMutation - Dados a serem enviados: 
+Object
+create-order.tsx:1566 saveProgressMutation - Dados válidos após limpeza: 
+Object
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+surgery-data.tsx:333 SurgeryData: Carregando fornecedores do supplierDetails: 0
+surgery-data.tsx:336 SurgeryData: Nenhum fornecedor recebido
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:1578 saveProgressMutation - Dados retornados após salvamento: 
+Object
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:96 🔍 URL params detectados: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+create-order.tsx:2195 🔍 VALIDAÇÃO STEP 3 DEBUG: 
+Object
+﻿
+

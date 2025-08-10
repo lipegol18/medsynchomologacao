@@ -1,0 +1,21 @@
+Selecionadas 2 imagens: RADIOGRAFIA 2.jpeg, RADIOGRAFIA 1.jpeg
+exam-info.tsx:164 Iniciando upload imediato de 2 imagens...
+exam-info.tsx:178 Enviando imagem RADIOGRAFIA 2.jpeg para o servidor...
+exam-info.tsx:189 Imagem RADIOGRAFIA 2.jpeg enviada com sucesso: /uploads/images/1748081407521.jpeg
+exam-info.tsx:178 Enviando imagem RADIOGRAFIA 1.jpeg para o servidor...
+exam-info.tsx:189 Imagem RADIOGRAFIA 1.jpeg enviada com sucesso: /uploads/images/1748081408118.jpeg
+exam-info.tsx:200 Atualizando banco de dados com novas URLs: (2) ['/uploads/images/1748081407521.jpeg', '/uploads/images/1748081408118.jpeg']
+create-order.tsx:978 Campo exam_images_url atualizado com sucesso: {id: 64, patientId: 2, userId: 41, hospitalId: 1, procedureId: 1, …}
+exam-info.tsx:203 URLs de imagens atualizadas no banco de dados: (2) ['/uploads/images/1748081407521.jpeg', '/uploads/images/1748081408118.jpeg']
+exam-info.tsx:216 Total de 2 imagens após seleção
+create-order.tsx:1213 Dados de lateralidade ANTES de salvar (próximo passo): {cidLaterality: null, procedureLaterality: 'direito'}
+create-order.tsx:712 Itens OPME a serem enviados: (2) [1, 4] (2) [1, 1]
+create-order.tsx:716 Múltiplos CIDs a serem enviados: (2) [26, 29]
+create-order.tsx:750 🏭 FORNECEDORES DEBUG: {suppliersObject: {…}, collectedSuppliers: Array(3), hasSuppliers: true}
+create-order.tsx:766 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1221 Próximo passo: Valores de lateralidade salvos com sucesso
+create-order.tsx:905 saveProgressMutation - Enviando dados de lateralidade: {procedureLaterality: 'direito'}
+create-order.tsx:918 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: null, procedureLateralitySalvo: 'direito'}
+surgery-data.tsx:296 Fornecedor 1 carregado da base de dados: Axiste Comércio de Produtos Médicos Hospitalares Ltda
+surgery-data.tsx:309 Fornecedor 2 carregado da base de dados: BlueSynthes Produtos Hospitalares Ltda
+surgery-data.tsx:322 Fornecedor 3 carregado da base de dados: DMO – Distribuidora de Materiais Ortopédicos

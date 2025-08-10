@@ -1,0 +1,68 @@
+2:37:26.309 🖼️ currentOrderData atualizado com URLs do servidor: 
+Object { exam_images_url: [], medical_report_url: null }
+create-order.tsx:1215:16
+12:37:31.733 Encontrados 1 códigos CID-10 para a consulta "mang": 
+Array [ {…} ]
+surgery-data.tsx:367:16
+12:37:32.725 Buscando associações para CID ID: 26 surgery-data.tsx:846:14
+12:37:33.263 Encontradas 5 associações para CID 26: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+surgery-data.tsx:862:14
+12:37:33.264 Procedimentos associados extraídos: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+surgery-data.tsx:869:14
+12:37:33.265 Frontend - Procedimentos associados recebidos: 
+Array(5) [ {…}, {…}, {…}, {…}, {…} ]
+​
+0: Object { id: 699, code: "3.07.35.01-7", name: "SINOVECTOMIA TOTAL", … }
+​
+1: Object { id: 701, code: "3.07.35.03-3", name: "ACROMIOPLASTIA", … }
+​
+2: Object { id: 704, code: "3.07.35.06-8", name: "RUPTURA DO MANGUITO ROTADOR", … }
+​
+3: Object { id: 706, code: "3.07.35.08-4", name: "RESSECÇÃO LATERAL DA CLAVÍCULA", … }
+​
+4: Object { id: 707, code: "3.07.35.09-2", name: "TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS", … }
+​
+length: 5
+​
+<prototype>: Array []
+surgery-data.tsx:910:14
+12:37:33.265 Frontend - Processando procedimento: 
+Object { id: 699, code: "3.07.35.01-7", name: "SINOVECTOMIA TOTAL", porte: "09C" }
+surgery-data.tsx:918:18
+12:37:33.265 Frontend - Verificações para SINOVECTOMIA TOTAL: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0, isFirstProcedure: true }
+surgery-data.tsx:925:18
+12:37:33.265 Frontend - Definindo como procedimento principal: 
+Object { id: 699, code: "3.07.35.01-7", name: "SINOVECTOMIA TOTAL", porte: "09C" }
+surgery-data.tsx:936:22
+12:37:33.265 Frontend - Processando procedimento: 
+Object { id: 701, code: "3.07.35.03-3", name: "ACROMIOPLASTIA", porte: "09C" }
+surgery-data.tsx:918:18
+12:37:33.266 Frontend - Verificações para ACROMIOPLASTIA: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0, isFirstProcedure: false }
+surgery-data.tsx:925:18
+12:37:33.266 Frontend - Adicionando como procedimento secundário: 
+Object { id: 701, code: "3.07.35.03-3", name: "ACROMIOPLASTIA", porte: "09C" }
+surgery-data.tsx:942:22
+12:37:33.266 Frontend - Processando procedimento: 
+Object { id: 704, code: "3.07.35.06-8", name: "RUPTURA DO MANGUITO ROTADOR", porte: "10C" }
+surgery-data.tsx:918:18
+12:37:33.266 Frontend - Verificações para RUPTURA DO MANGUITO ROTADOR: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0, isFirstProcedure: false }
+surgery-data.tsx:925:18
+12:37:33.266 Frontend - Adicionando como procedimento secundário: 
+Object { id: 704, code: "3.07.35.06-8", name: "RUPTURA DO MANGUITO ROTADOR", porte: "10C" }
+surgery-data.tsx:942:22
+12:37:33.266 Frontend - Processando procedimento: 
+Object { id: 706, code: "3.07.35.08-4", name: "RESSECÇÃO LATERAL DA CLAVÍCULA", porte: "09C" }
+surgery-data.tsx:918:18
+12:37:33.266 Frontend - Verificações para RESSECÇÃO LATERAL DA CLAVÍCULA: 
+Object { existsInMain: false, existsInSecondary: false, selectedProcedureId: undefined, secondaryProceduresCount: 0, isFirstProcedure: false }
+surgery-data.tsx:925:18
+12:37:33.266 Frontend - Adicionando como procedimento secundário: 
+Object { id: 706, code: "3.07.35.08-4", name: "RESSECÇÃO LATERAL DA CLAVÍCULA", porte: "09C" }
+surgery-data.tsx:942:22
+12:37:33.266 Frontend - Processando procedimento: 
+Object { id: 707, code: "3.07.35.09-2", name: "TENOTOMIA DA PORÇÃO LONGA DO BÍCEPS", porte: "09C" }

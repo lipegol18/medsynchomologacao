@@ -1,0 +1,127 @@
+chunk-XQLYTHWV.js?v=2a2a9c1a:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+theme-provider.tsx:57 Aplicando tema: dark
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:243 🔍 useEffect EXECUTADO - editOrderId: 172 user.id: 41
+create-order.tsx:247 🚀 INÍCIO useEffect - Carregando pedido para edição: 172
+create-order.tsx:250 🔍 Fazendo requisição para: /api/medical-orders/172
+create-order.tsx:252 📡 Response status: 200
+create-order.tsx:256 📋 Dados do pedido carregados para edição: {id: 172, patientId: 25, userId: 41, hospitalId: 3, procedureDate: null, …}
+create-order.tsx:258 🔄 INICIANDO loadExistingOrder...
+create-order.tsx:596 🔄 INICIANDO loadExistingOrder para pedido 172
+create-order.tsx:597 Carregando pedido existente: {id: 172, patientId: 25, userId: 41, hospitalId: 3, procedureDate: null, …}
+create-order.tsx:605 === MODO EDIÇÃO: Carregando dados relacionais para pedido 172 ===
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:611 MODO EDIÇÃO: CIDs salvos encontrados: 1 CIDs
+create-order.tsx:612 MODO EDIÇÃO: Dados dos CIDs recebidos: [{…}]
+create-order.tsx:617 MODO EDIÇÃO: Condutas cirúrgicas encontradas: [{…}]
+create-order.tsx:640 MODO EDIÇÃO: CIDs com condutas carregados: [{…}]
+create-order.tsx:641 🔍 DEBUG CONDUTAS: Estrutura detalhada do multipleCids: [
+  {
+    "cid": {
+      "id": 26,
+      "code": "M75.1",
+      "description": "Síndrome do manguito rotador",
+      "category": "Ombro"
+    },
+    "surgicalApproach": {
+      "id": 2,
+      "name": "Cirurgia Aberta",
+      "description": "Procedimento cirúrgico convencional com incisão direta para acesso à área a ser tratada",
+      "isPrimary": false
+    }
+  }
+]
+create-order.tsx:652 MODO EDIÇÃO: CID principal carregado: M75.1
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:661 MODO EDIÇÃO FUNÇÃO 1: Response from /api/orders/172/procedures: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:664 MODO EDIÇÃO: Procedimentos salvos encontrados: 8 procedimentos
+create-order.tsx:669 MODO EDIÇÃO: mainProcedure: {id: 631, orderId: 172, procedureId: 1, quantityRequested: 1, quantityApproved: null, …}
+create-order.tsx:670 MODO EDIÇÃO: secondaryProcedures: (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:673 MODO EDIÇÃO: Definindo procedimento principal: {id: 1, code: '1.01.01.01-2', name: 'CONSULTA EM CONSULTÓRIO (NO HORÁRIO NORMAL OU PREESTABELECIDO)', porte: '02B', custoOperacional: null, …}
+create-order.tsx:676 MODO EDIÇÃO: Procedimento principal carregado: 1.01.01.01-2
+create-order.tsx:684 MODO EDIÇÃO: Definindo procedimentos secundários: (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:686 MODO EDIÇÃO: Procedimentos secundários carregados: 7 procedimentos
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:722 MODO EDIÇÃO: Itens OPME salvos encontrados: 4 itens
+create-order.tsx:726 MODO EDIÇÃO: Itens OPME carregados: 4 itens
+create-order.tsx:732 MODO EDIÇÃO: Carregamento de dados relacionais concluído
+create-order.tsx:740 Buscando paciente com ID 25
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:745 Paciente encontrado: {id: 25, fullName: 'LUIS MARCELO DE AZEVEDO MALTA', cpf: '012.613.177-50', birthDate: '1971-06-08', gender: 'M', …}
+create-order.tsx:755 Buscando hospital com ID 3
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:764 Hospital encontrado via API específica: {id: 3, name: 'CENTRO ORTOPÉDICO SÃO LUCAS', businessName: 'Icaraí - Niterói', cnpj: '30091722000160', cnes: '3587053', …}
+create-order.tsx:819 Carregando lateralidade do procedimento do banco de dados: {procedureLaterality: 'direito', procedureLateralityType: 'string'}
+create-order.tsx:841 Carregadas 0 URLs de imagens de exame
+create-order.tsx:846 Carregadas 0 URLs de laudos médicos
+create-order.tsx:861 === Carregando dados relacionais para pedido 172 ===
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:867 CIDs salvos encontrados: 1 CIDs
+create-order.tsx:871 Carregando CIDs via API relacional (sem condutas cirúrgicas)
+create-order.tsx:881 CID principal carregado: M75.1
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:890 DEBUG: Response from /api/orders/172/procedures: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:893 Procedimentos salvos encontrados: 8 procedimentos
+create-order.tsx:905 DEBUG: mainProcedure formatado: {item: {…}, quantity: 1, isMain: true}
+create-order.tsx:906 DEBUG: secondaryProcedures formatados: (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:909 DEBUG: Definindo procedimento principal: {id: 1, code: '1.01.01.01-2', name: 'CONSULTA EM CONSULTÓRIO (NO HORÁRIO NORMAL OU PREESTABELECIDO)', porte: '02B', custoOperacional: null, …}
+create-order.tsx:912 Procedimento principal carregado: 1.01.01.01-2 - Quantidade: 1
+create-order.tsx:922 DEBUG: Definindo procedimentos secundários: (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:924 Procedimentos secundários carregados: 7 procedimentos
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1161 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1162 📋 6 procedimentos definidos como secundários
+create-order.tsx:1181 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1185 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (4) [43, 80, 92, 95] Quantidades: (4) [1, 4, 1, 1]
+create-order.tsx:1193 CIDs a serem enviados: [26]
+create-order.tsx:1244 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1335 saveProgress - Salvando 1 CIDs relacionais para pedido 172: [26]
+create-order.tsx:965 Itens OPME salvos encontrados: 4 itens
+create-order.tsx:969 Itens OPME carregados: 4 itens
+create-order.tsx:975 === Carregamento de dados relacionais concluído ===
+create-order.tsx:995 ✅ Dados relacionais carregados com sucesso - procedimentos e fornecedores já processados via API relacional
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1347 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1381 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 172: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1002 Itens OPME encontrados via API relacional: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1006 Itens OPME carregados: (4) [{…}, {…}, {…}, {…}]
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1393 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1410 saveProgress - Salvando 4 itens OPME relacionais para pedido 172: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1161 🏆 Procedimento de maior porte definido como principal: 3.07.26.03-4 - ARTROPLASTIA TOTAL DE JOELHO COM IMPLANTES - TRATAMENTO CIRÚRGICO (Porte: 10B)
+create-order.tsx:1162 📋 6 procedimentos definidos como secundários
+create-order.tsx:1181 🔍 DEBUG OPME - Estado selectedOpmeItems completo: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1185 🔍 DEBUG OPME - Itens OPME a serem enviados: IDs: (4) [43, 80, 92, 95] Quantidades: (4) [1, 4, 1, 1]
+create-order.tsx:1193 CIDs a serem enviados: [26]
+create-order.tsx:1244 Dados de lateralidade sendo enviados ao backend: {procedureLaterality: 'direito'}
+create-order.tsx:1335 saveProgress - Salvando 1 CIDs relacionais para pedido 172: [26]
+create-order.tsx:1023 Fornecedores encontrados via API relacional: []
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+create-order.tsx:1422 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1446 saveProgressMutation - Dados a serem enviados: {patientId: 25, userId: 41, hospitalId: 3, id: 172}
+create-order.tsx:1458 saveProgressMutation - Dados válidos após limpeza: {patientId: 25, userId: 41, hospitalId: 3, id: 172}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: CENTRO ORTOPÉDICO SÃO LUCAS
+surgery-data.tsx:333 SurgeryData: Carregando fornecedores do supplierDetails: 0
+surgery-data.tsx:336 SurgeryData: Nenhum fornecedor recebido
+create-order.tsx:1347 saveProgress - CIDs relacionais salvos com sucesso
+create-order.tsx:1381 saveProgress - Salvando 8 procedimentos CBHPM relacionais para pedido 172: (8) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+create-order.tsx:1045 CIDs encontrados via API relacional: [{…}]
+create-order.tsx:1066 Justificativa clínica encontrada no pedido: Paciente portador de gonartrose severa (grau IV de Kellgren-Lawrence), com dor incapacitante e limitação funcional importante que compromete significativamente as atividades de vida diária. Falha do tratamento conservador com analgésicos, anti-inflamatórios, fisioterapia e infiltrações. Indicada artroplastia total de joelho para alívio da dor e restauração da função.
+create-order.tsx:1077 🔍 LOAD - order.attachments: (2) [{…}, {…}]
+create-order.tsx:1078 🔍 LOAD - order.examImagesUrl: undefined
+create-order.tsx:1079 🔍 LOAD - order.medicalReportUrl: undefined
+create-order.tsx:1083 ✅ Anexos unificados encontrados: (2) [{…}, {…}]
+create-order.tsx:1105 🔍 FINAL - orderMediaData.attachments: (2) [{…}, {…}]
+create-order.tsx:1106 🔍 FINAL - attachments length: 2
+create-order.tsx:1109 ✅ _loadExistingOrder concluído para pedido 172
+create-order.tsx:261 ✅ loadExistingOrder CONCLUÍDO
+create-order.tsx:263 🔄 MODO EDIÇÃO: Dados relacionais já carregados em loadExistingOrder
+create-order.tsx:1470 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}
+create-order.tsx:1393 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso
+create-order.tsx:1410 saveProgress - Salvando 4 itens OPME relacionais para pedido 172: (4) [{…}, {…}, {…}, {…}]
+create-order.tsx:1422 saveProgress - Itens OPME relacionais salvos com sucesso
+create-order.tsx:1446 saveProgressMutation - Dados a serem enviados: {patientId: 25, userId: 41, hospitalId: 3, id: 172}
+create-order.tsx:1458 saveProgressMutation - Dados válidos após limpeza: {patientId: 25, userId: 41, hospitalId: 3, id: 172}
+create-order.tsx:1470 saveProgressMutation - Dados retornados após salvamento: {cidLateralitySalvo: undefined, procedureLateralitySalvo: 'direito'}

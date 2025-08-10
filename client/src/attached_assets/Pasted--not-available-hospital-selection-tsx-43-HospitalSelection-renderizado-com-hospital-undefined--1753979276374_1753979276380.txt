@@ -1,0 +1,31 @@
+
+not available
+﻿
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:289 🔍 useEffect EXECUTADO - editOrderId: undefined user.id: 41
+create-order.tsx:293 🚀 INÍCIO useEffect - Carregando pedido para edição: undefined
+create-order.tsx:296 🔍 Fazendo requisição para: /api/medical-orders/undefined
+create-order?edit=undefined:1 A soft navigation has been detected: https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=undefined
+create-order.tsx:297 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/medical-orders/undefined 400 (Bad Request)
+create-order.tsx:298 📡 Response status: 400
+create-order.tsx:315 ❌ Erro na resposta da API: 400
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+queryClient.ts:144 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/surgery-appointments/by-medical-order/176 404 (Not Found)
+queryClient.ts:144 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/surgery-appointments/by-medical-order/128 404 (Not Found)
+queryClient.ts:144 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/surgery-appointments/by-medical-order/146 404 (Not Found)
+queryClient.ts:144 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/surgery-appointments/by-medical-order/144 404 (Not Found)
+queryClient.ts:144 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/surgery-appointments/by-medical-order/72 404 (Not Found)
+queryClient.ts:144 
+ GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/surgery-appointments/by-medical-order/75 404 (Not Found)
+orders.tsx:90 Nenhum agendamento encontrado para pedido 176
+orders.tsx:90 Nenhum agendamento encontrado para pedido 128
+orders.tsx:90 Nenhum agendamento encontrado para pedido 146
+orders.tsx:90 Nenhum agendamento encontrado para pedido 144
+orders.tsx:90 Nenhum agendamento encontrado para pedido 72
+orders.tsx:90 Nenhum agendamento encontrado para pedido 75

@@ -1,0 +1,99 @@
+Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+theme-provider.tsx:57 Aplicando tema: dark
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:360 🔍 useEffect EXECUTADO - editOrderId: 170 user.id: 41
+create-order.tsx:364 🚀 INÍCIO useEffect - Carregando pedido para edição: 170
+create-order.tsx:367 🔍 Fazendo requisição para: /api/medical-orders/170
+create-order.tsx:369 📡 Response status: 200
+create-order.tsx:373 📋 Dados do pedido carregados para edição: {id: 170, patientId: 24, userId: 41, hospitalId: 21, procedureDate: null, …}
+create-order.tsx:375 🔄 INICIANDO loadExistingOrder...
+create-order.tsx:713 🔄 INICIANDO loadExistingOrder para pedido 170
+create-order.tsx:714 Carregando pedido existente: {id: 170, patientId: 24, userId: 41, hospitalId: 21, procedureDate: null, …}
+create-order.tsx:722 === MODO EDIÇÃO: Carregando dados relacionais para pedido 170 ===
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+hospital-selection.tsx:36 Encontrados 4 hospitais associados ao médico para seleção
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:728 MODO EDIÇÃO: CIDs salvos encontrados: 1 CIDs
+create-order.tsx:729 MODO EDIÇÃO: Dados dos CIDs recebidos: [{…}]
+create-order.tsx:737 MODO EDIÇÃO: CID principal carregado: M75
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:746 MODO EDIÇÃO FUNÇÃO 1: Response from /api/orders/170/procedures: [{…}]
+create-order.tsx:749 MODO EDIÇÃO: Procedimentos salvos encontrados: 1 procedimentos
+create-order.tsx:754 MODO EDIÇÃO: mainProcedure: {id: 334, orderId: 170, procedureId: 200, quantityRequested: 1, quantityApproved: null, …}
+create-order.tsx:755 MODO EDIÇÃO: secondaryProcedures: []
+create-order.tsx:758 MODO EDIÇÃO: Definindo procedimento principal: {id: 200, code: '3.07.06.03-3', name: 'Reimplante do membro superior, do nível médio do antebraço até o ombro', porte: '13A', custoOperacional: null, …}
+create-order.tsx:761 MODO EDIÇÃO: Procedimento principal carregado: 3.07.06.03-3
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:784 MODO EDIÇÃO: Fornecedores salvos encontrados: 3 fornecedores
+create-order.tsx:785 MODO EDIÇÃO: Dados dos fornecedores recebidos: (3) [{…}, {…}, {…}]
+create-order.tsx:793 MODO EDIÇÃO: Fornecedores carregados: Arthrex Brasil, Axiste - Comércio de Produtos Médicos Hospitalares Ltda, BlueSynthes
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:803 MODO EDIÇÃO: Itens OPME salvos encontrados: 2 itens
+create-order.tsx:807 MODO EDIÇÃO: Itens OPME carregados: 2 itens
+create-order.tsx:813 MODO EDIÇÃO: Carregamento de dados relacionais concluído
+create-order.tsx:821 Buscando paciente com ID 24
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:826 Paciente encontrado: {id: 24, fullName: 'Netuno joao', cpf: '675.983.620-09', birthDate: '1979-11-11', gender: 'M', …}
+create-order.tsx:836 Buscando hospital com ID 21
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: undefined
+create-order.tsx:845 Hospital encontrado via API específica: {id: 21, name: 'HOSPITAL COPA STAR', businessName: "Rede D'or", cnpj: '06047087002697', cnes: '9065946', …}
+create-order.tsx:900 Carregando lateralidade do procedimento do banco de dados: {procedureLaterality: 'direito', procedureLateralityType: 'string'}
+create-order.tsx:922 Carregadas 0 URLs de imagens de exame
+create-order.tsx:927 Carregadas 0 URLs de laudos médicos
+create-order.tsx:942 === Carregando dados relacionais para pedido 170 ===
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:948 CIDs salvos encontrados: 1 CIDs
+create-order.tsx:956 CID principal carregado: M75
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:965 DEBUG: Response from /api/orders/170/procedures: [{…}]
+create-order.tsx:968 Procedimentos salvos encontrados: 1 procedimentos
+create-order.tsx:980 DEBUG: mainProcedure formatado: {item: {…}, quantity: 1, isMain: true}
+create-order.tsx:981 DEBUG: secondaryProcedures formatados: []
+create-order.tsx:984 DEBUG: Definindo procedimento principal: {id: 200, code: '3.07.06.03-3', name: 'Reimplante do membro superior, do nível médio do antebraço até o ombro', porte: '13A', custoOperacional: null, …}
+create-order.tsx:987 Procedimento principal carregado: 3.07.06.03-3 - Quantidade: 1
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1012 Fornecedores salvos encontrados: 3 fornecedores
+create-order.tsx:1020 DEBUG: Fornecedores formatados: (3) [{…}, {…}, {…}]
+create-order.tsx:1028 Fornecedores carregados: Arthrex Brasil, Axiste - Comércio de Produtos Médicos Hospitalares Ltda, BlueSynthes
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1038 Itens OPME salvos encontrados: 2 itens
+create-order.tsx:1042 Itens OPME carregados: 2 itens
+create-order.tsx:1048 === Carregamento de dados relacionais concluído ===
+create-order.tsx:1176 Nenhum procedimento encontrado para o pedido
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1185 Itens OPME encontrados via API relacional: (2) [{…}, {…}]
+create-order.tsx:1189 Itens OPME carregados: (2) [{…}, {…}]
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1206 Fornecedores encontrados via API relacional: (3) [{…}, {…}, {…}]
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:1228 CIDs encontrados via API relacional: [{…}]
+create-order.tsx:1249 Justificativa clínica encontrada no pedido: teste 26/06/2025
+create-order.tsx:1260 🔍 LOAD - order.attachments: (2) [{…}, {…}]
+create-order.tsx:1261 🔍 LOAD - order.examImagesUrl: undefined
+create-order.tsx:1262 🔍 LOAD - order.medicalReportUrl: undefined
+create-order.tsx:1266 ✅ Anexos unificados encontrados: (2) [{…}, {…}]
+create-order.tsx:1288 🔍 FINAL - orderMediaData.attachments: (2) [{…}, {…}]
+create-order.tsx:1289 🔍 FINAL - attachments length: 2
+create-order.tsx:1292 ✅ _loadExistingOrder concluído para pedido 170
+create-order.tsx:378 ✅ loadExistingOrder CONCLUÍDO
+create-order.tsx:380 🔄 MODO EDIÇÃO: Dados relacionais já carregados em loadExistingOrder
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR
+create-order.tsx:96 🔍 URL params detectados: {editOrderId: '170', currentURL: 'https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/create-order?edit=170'}
+hospital-selection.tsx:43 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR

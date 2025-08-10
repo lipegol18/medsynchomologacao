@@ -1,0 +1,61 @@
+CIDs encontrados via API relacional: [{…}]
+queryClient.ts:144 
+            
+            
+           GET https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/cid-codes/[object%20Object] 400 (Bad Request)
+apiRequest @ queryClient.ts:144
+loadExistingOrder @ create-order.tsx:1200
+await in loadExistingOrder
+loadOrderForEdit @ create-order.tsx:352
+await in loadOrderForEdit
+(anonymous) @ create-order.tsx:382
+commitHookEffectListMount @ chunk-XQLYTHWV.js?v=2a2a9c1a:16915
+commitPassiveMountOnFiber @ chunk-XQLYTHWV.js?v=2a2a9c1a:18156
+commitPassiveMountEffects_complete @ chunk-XQLYTHWV.js?v=2a2a9c1a:18129
+commitPassiveMountEffects_begin @ chunk-XQLYTHWV.js?v=2a2a9c1a:18119
+commitPassiveMountEffects @ chunk-XQLYTHWV.js?v=2a2a9c1a:18109
+flushPassiveEffectsImpl @ chunk-XQLYTHWV.js?v=2a2a9c1a:19490
+flushPassiveEffects @ chunk-XQLYTHWV.js?v=2a2a9c1a:19447
+commitRootImpl @ chunk-XQLYTHWV.js?v=2a2a9c1a:19416
+commitRoot @ chunk-XQLYTHWV.js?v=2a2a9c1a:19277
+performSyncWorkOnRoot @ chunk-XQLYTHWV.js?v=2a2a9c1a:18895
+flushSyncCallbacks @ chunk-XQLYTHWV.js?v=2a2a9c1a:9119
+(anonymous) @ chunk-XQLYTHWV.js?v=2a2a9c1a:18627
+setTimeout
+scheduleFn @ @tanstack_react-query.js?v=2a2a9c1a:555
+flush @ @tanstack_react-query.js?v=2a2a9c1a:569
+batch @ @tanstack_react-query.js?v=2a2a9c1a:587
+dispatch_fn @ @tanstack_react-query.js?v=2a2a9c1a:996
+setData @ @tanstack_react-query.js?v=2a2a9c1a:696
+onSuccess @ @tanstack_react-query.js?v=2a2a9c1a:897
+resolve @ @tanstack_react-query.js?v=2a2a9c1a:456
+Promise.then
+run @ @tanstack_react-query.js?v=2a2a9c1a:498
+start @ @tanstack_react-query.js?v=2a2a9c1a:536
+fetch @ @tanstack_react-query.js?v=2a2a9c1a:926
+executeFetch_fn @ @tanstack_react-query.js?v=2a2a9c1a:2211
+onSubscribe @ @tanstack_react-query.js?v=2a2a9c1a:1898
+subscribe @ @tanstack_react-query.js?v=2a2a9c1a:24
+(anonymous) @ @tanstack_react-query.js?v=2a2a9c1a:3022
+subscribeToStore @ chunk-XQLYTHWV.js?v=2a2a9c1a:11984
+commitHookEffectListMount @ chunk-XQLYTHWV.js?v=2a2a9c1a:16915
+commitPassiveMountOnFiber @ chunk-XQLYTHWV.js?v=2a2a9c1a:18156
+commitPassiveMountEffects_complete @ chunk-XQLYTHWV.js?v=2a2a9c1a:18129
+commitPassiveMountEffects_begin @ chunk-XQLYTHWV.js?v=2a2a9c1a:18119
+commitPassiveMountEffects @ chunk-XQLYTHWV.js?v=2a2a9c1a:18109
+flushPassiveEffectsImpl @ chunk-XQLYTHWV.js?v=2a2a9c1a:19490
+flushPassiveEffects @ chunk-XQLYTHWV.js?v=2a2a9c1a:19447
+performSyncWorkOnRoot @ chunk-XQLYTHWV.js?v=2a2a9c1a:18868
+flushSyncCallbacks @ chunk-XQLYTHWV.js?v=2a2a9c1a:9119
+commitRootImpl @ chunk-XQLYTHWV.js?v=2a2a9c1a:19432
+commitRoot @ chunk-XQLYTHWV.js?v=2a2a9c1a:19277
+finishConcurrentRender @ chunk-XQLYTHWV.js?v=2a2a9c1a:18805
+performConcurrentWorkOnRoot @ chunk-XQLYTHWV.js?v=2a2a9c1a:18718
+workLoop @ chunk-XQLYTHWV.js?v=2a2a9c1a:197
+flushWork @ chunk-XQLYTHWV.js?v=2a2a9c1a:176
+performWorkUntilDeadline @ chunk-XQLYTHWV.js?v=2a2a9c1a:384Understand this error
+create-order.tsx:1206 Erro ao carregar CID: Error: ID inválido
+    at throwIfResNotOk (queryClient.ts:64:11)
+    at async apiRequest (queryClient.ts:145:5)
+    at async loadExistingOrder (create-order.tsx:1200:29)
+    at async loadOrderForEdit (create-order.tsx:352:13)

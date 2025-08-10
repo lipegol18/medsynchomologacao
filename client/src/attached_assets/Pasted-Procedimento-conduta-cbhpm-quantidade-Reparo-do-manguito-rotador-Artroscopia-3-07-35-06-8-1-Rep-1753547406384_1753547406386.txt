@@ -1,0 +1,155 @@
+Procedimento; conduta; cbhpm; quantidade
+Reparo do manguito rotador;Artroscopia;3.07.35.06-8;1
+Reparo do manguito rotador;Artroscopia;3.07.35.01-7;1
+Reparo do manguito rotador;Artroscopia;3.07.35.08-4;1
+Reparo do manguito rotador;Artroscopia;3.07.35.09-2;1
+Reparo do manguito rotador;Artroscopia;3.07.35.03-3;1
+Reparo do manguito rotador;Artroscopia;3.07.35.16-5;1
+Reparo do manguito rotador;Cirurgia aberta;3.07.35.06-8;1
+Reparo do manguito rotador;Cirurgia aberta;3.07.35.01-7;1
+Reparo do manguito rotador;Cirurgia aberta;3.07.35.08-4;1
+Reparo do manguito rotador;Cirurgia aberta;3.07.35.09-2;1
+Reparo do manguito rotador;Cirurgia aberta;3.07.35.03-3;1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;3.16.02.33-9;1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;3.14.03.02-6;1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;3.07.13.13-7;1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;4.09.01.22-0;1
+Luxação glenoumeral;Artroscopia;3.07.35.04-1;1
+Luxação glenoumeral;Artroscopia;3.07.35.01-7;1
+Luxação glenoumeral;Artroscopia;3.07.35.05-0;1
+Luxação glenoumeral;Artroscopia;3.07.35.09-2;1
+Luxação glenoumeral;Artroscopia;3.07.35.11-4;1
+Luxação glenoumeral;Latarjet;3.07.35.04-1;1
+Luxação glenoumeral;Latarjet;3.07.35.01-7;1
+Luxação glenoumeral;Latarjet;3.07.35.05-0;1
+Luxação glenoumeral;Latarjet;3.07.35.23-8;1
+Luxação glenoumeral;Latarjet;3.07.35.07-6;1
+Luxação glenoumeral;Latarjet;3.07.17.13-2;1
+Luxação glenoumeral;Latarjet;3.14.03.22-0;1
+Luxação glenoumeral;Latarjet;3.07.35.06-8;1
+Luxação acrômio-clavicular (LAC);LAC;3.07.17.10-8;1
+Luxação acrômio-clavicular (LAC);LAC;3.07.35.01-7;1
+Luxação acrômio-clavicular (LAC);LAC;3.07.35.08-4;1
+Luxação acrômio-clavicular (LAC);LAC;3.14.03.22-0;1
+Artroplastia reversa do ombro;Artroplastia;3.07.17.18-3;1
+Artroplastia reversa do ombro;Artroplastia;3.07.17.02-7;1
+Artroplastia reversa do ombro;Artroplastia;3.07.35.09-2;1
+Artroplastia reversa do ombro;Artroplastia;3.14.03.22-0;1
+Artroplastia reversa do ombro;Artroplastia;3.07.32.02-6;1
+Artroplastia reversa do ombro;Artroplastia;3.07.18.09-0;1
+Artroplastia reversa do ombro;Fratura;3.07.17.18-3;1
+Artroplastia reversa do ombro;Fratura;3.07.17.02-7;1
+Artroplastia reversa do ombro;Fratura;3.07.35.09-2;1
+Artroplastia reversa do ombro;Fratura;3.14.03.22-0;1
+Artroplastia reversa do ombro;Fratura;3.07.32.02-6;1
+Artroplastia reversa do ombro;Fratura;3.07.18.09-0;1
+Artroplastia reversa do ombro;Revisão;3.07.17.15-9;1
+Artroplastia reversa do ombro;Revisão;3.07.17.02-7;1
+Artroplastia reversa do ombro;Revisão;3.07.35.09-2;1
+Artroplastia reversa do ombro;Revisão;3.14.03.22-0;1
+Artroplastia reversa do ombro;Revisão;3.07.32.02-6;1
+Artroplastia reversa do ombro;Revisão;3.07.18.09-0;1
+Artroplastia reversa do ombro;Revisão;3.07.17.13-2;1
+Artroplastia reversa do ombro;Revisão;3.07.10.03-0;1
+Artroplastia reversa do ombro;Revisão;3.07.35.34-5;0
+Artroplastia reversa do ombro;Revisão;3.07.10.08-1;0
+Fratura da escápula;Osteossíntese;3.14.03.17-4;1
+Fratura da escápula;Osteossíntese;3.07.17.10-8;1
+Fratura da escápula;Osteossíntese;3.07.17.13-2;1
+Fratura da escápula;Osteossíntese;3.07.32.02-6;1
+Fratura da escápula;Osteossíntese;3.14.03.22-0;1
+Fratura da escápula;Osteossíntese;2.02.02.04-0;1
+Fratura da clavícula;Osteossíntese;3.07.17.10-8;1
+Fratura da clavícula;Osteossíntese;3.07.35.01-7;1
+Fratura da clavícula;Osteossíntese;3.07.35.08-4;1
+Fratura da clavícula;Osteossíntese;3.14.03.22-0;1
+Fratura da clavícula;Osteossíntese;3.07.17.13-2;1
+Fratura do coracóide;Osteossíntese;3.07.17.10-8;1
+Fratura do coracóide;Osteossíntese;3.07.31.08-9;1
+Fratura do coracóide;Osteossíntese;3.07.31.11-9;1
+Fratura do coracóide;Osteossíntese;3.14.03.22-0;1
+Fratura do coracóide;Osteossíntese;3.07.35.06-8;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;3.07.18.05-8;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;3.07.32.02-6;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;3.14.03.22-0;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;3.07.31.11-9;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;3.07.35.06-8;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;3.07.35.09-2 ;1
+Fratura diafisária do úmero;Haste intramedular;3.07.18.05-8;1
+Fratura diafisária do úmero;Haste intramedular;3.07.32.02-6;1
+Fratura diafisária do úmero;Haste intramedular;3.14.03.22-0;1
+Fratura diafisária do úmero;Haste intramedular;3.07.31.11-9;1
+Fratura diafisária do úmero;Haste intramedular;3.07.35.06-8;1
+Fratura diafisária do úmero;Placa e parafusos;3.07.18.05-8;1
+Fratura diafisária do úmero;Placa e parafusos;3.07.32.02-6;1
+Fratura diafisária do úmero;Placa e parafusos;3.14.03.22-0;1
+Fratura diafisária do úmero;Placa e parafusos;3.07.31.11-9;1
+Fratura da extremidade distal do úmero;Placa e parafusos;3.07.18.05-8;1
+Fratura da extremidade distal do úmero;Placa e parafusos;3.07.32.02-6;1
+Fratura da extremidade distal do úmero;Placa e parafusos;3.14.03.22-0;1
+Fratura da extremidade distal do úmero;Placa e parafusos;3.07.31.11-9;1
+Fratura da cabeça do rádio;Osteossíntese;3.07.36.06-4;1
+Fratura da cabeça do rádio;Osteossíntese;3.07.20.09-5;1
+Fratura da cabeça do rádio;Osteossíntese;3.07.36.05-6;1
+Fratura da cabeça do rádio;Osteossíntese;3.07.36.01-3;1
+Fratura da cabeça do rádio;Osteossíntese;3.14.03.22-0;1
+Fratura da cabeça do rádio;Artroplastia;3.07.19.02-0;1
+Fratura da cabeça do rádio;Artroplastia;3.07.36.06-4;1
+Fratura da cabeça do rádio;Artroplastia;3.07.36.05-6;1
+Fratura da cabeça do rádio;Artroplastia;3.07.36.01-3;1
+Fratura da cabeça do rádio;Artroplastia;3.14.03.22-0;1
+Fratura do olécrano;Osteossíntese;3.07.36.06-4;1
+Fratura do olécrano;Osteossíntese;3.07.19.10-0;1
+Fratura do olécrano;Osteossíntese;3.07.36.05-6;1
+Fratura do olécrano;Osteossíntese;3.07.32.02-6;1
+Ruptura do peitoral maior;Cirurgia aberta;3.07.03.06-9 ;1
+Ruptura do peitoral maior;Cirurgia aberta;3.07.18.09-0 ;1
+Ruptura do peitoral maior;Cirurgia aberta;3.14.03.22-0;1
+Ruptura do peitoral maior;Cirurgia aberta;3.07.31.11-9 ;1
+Ruptura do peitoral maior;Cirurgia aberta;3.07.31.08-9;1
+Ruptura do peitoral maior;Cirurgia aberta;3.07.35.09-2 ;1
+Ruptura do Bíceps distal;Cirurgia aberta;3.07.35.23-8;1
+Ruptura do Bíceps distal;Cirurgia aberta;3.07.31.08-9;1
+Ruptura do Bíceps distal;Cirurgia aberta;3.07.36.05-6;1
+Ruptura do Bíceps distal;Cirurgia aberta;3.07.31.21-6;1
+Ruptura do Bíceps distal;Cirurgia aberta;3.14.03.22-0;1
+Epicondilite lateral;Infiltração;3.07.13.14-5;1
+Epicondilite lateral;Infiltração;3.14.03.02-6;1
+Epicondilite lateral;Infiltração;4.09.02.05-6;1
+Epicondilite lateral;Artroscopia;3.07.36.05-6;1
+Epicondilite lateral;Artroscopia;3.07.36.04-8 ;1
+Epicondilite lateral;Artroscopia;3.07.36.01-3 ;1
+Epicondilite lateral;Artroscopia;3.14.03.22-0;1
+Epicondilite lateral;Artroscopia;3.07.18.09-0;1
+Epicondilite lateral;Cirurgia aberta;3.07.36.05-6 ;1
+Epicondilite lateral;Cirurgia aberta;3.07.31.11-9 ;1
+Epicondilite lateral;Cirurgia aberta;3.07.36.04-8 ;1
+Epicondilite lateral;Cirurgia aberta;3.07.36.01-3 ;1
+Epicondilite lateral;Cirurgia aberta;3.14.03.22-0;1
+Epicondilite medial;Infiltração;3.07.13.14-5;1
+Epicondilite medial;Infiltração;3.14.03.02-6;1
+Epicondilite medial;Infiltração;4.09.02.05-6;1
+Epicondilite medial;Tratamento cirúrgico;3.07.36.05-6 ;1
+Epicondilite medial;Tratamento cirúrgico;3.07.31.11-9 ;1
+Epicondilite medial;Tratamento cirúrgico;3.07.36.04-8 ;1
+Epicondilite medial;Tratamento cirúrgico;3.07.36.01-3 ;1
+Epicondilite medial;Tratamento cirúrgico; 3.14.03.22-0;1
+Bursite de olécrano;Tratamento cirúrgico;3.01.01.56-5;1
+Bursite de olécrano;Tratamento cirúrgico;3.01.01.56-5;1
+Bursite de olécrano;Tratamento cirúrgico;3.01.01.56-5;1
+Bursite de olécrano;Tratamento cirúrgico;3.01.01.56-5;1
+Bursite de olécrano;Tratamento cirúrgico;3.01.01.56-5;1
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;3.07.20.09-5;2
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;3.07.31.11-9;1
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;3.14.03.22-0;1
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;3.14.03.36-0;1
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;3.07.37.05-2;1
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;3.07.20.09-5;2
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;3.07.37.05-2;1
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;3.07.37.06-0;1
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;3.07.31.11-9;1
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;3.14.03.22-0;1
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;3.07.32.02-6;1
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;3.07.20.09-5;2
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;3.07.31.11-9;1
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;3.14.03.22-0;1

@@ -1,0 +1,80 @@
+PROCEDIMENTO;DESCRIÇÃO;FORNECEDORES
+Reparo do manguito rotador;Artroscopia;Artrhex
+Reparo do manguito rotador;Artroscopia;Porto Surgical
+Reparo do manguito rotador;Artroscopia;Smith & Nephew
+Reparo do manguito rotador;Artroscopia;ConMed
+Reparo do manguito rotador;Artroscopia;BlueSynthes
+Reparo do manguito rotador;Cirurgia aberta;Artrhex
+Reparo do manguito rotador;Cirurgia aberta;Porto Surgical
+Reparo do manguito rotador;Cirurgia aberta;Smith & Nephew
+Reparo do manguito rotador;Cirurgia aberta;ConMed
+Reparo do manguito rotador;Cirurgia aberta;BlueSynthes
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;BlueSynthes
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;PerPrima
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;Spine Rio
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;GusMed
+Luxação glenoumeral;Artroscopia;Artrhex
+Luxação glenoumeral;Artroscopia;Porto Surgical
+Luxação glenoumeral;Artroscopia;Smith & Nephew
+Luxação glenoumeral;Artroscopia;ConMed
+Luxação glenoumeral;Artroscopia;BlueSynthes
+Luxação glenoumeral;Latarjet;Artrhex
+Luxação glenoumeral;Latarjet;Smith & Nephew
+Luxação acrômio-clavicular (LAC);LAC;Artrhex
+Luxação acrômio-clavicular (LAC);LAC;Smith & Nephew
+Artroplastia reversa do ombro;Artropatia;Porto Surgical
+Artroplastia reversa do ombro;Artropatia;AtlasMed (Lima)
+Artroplastia reversa do ombro;Artropatia;Zimmer Biomet
+Artroplastia reversa do ombro;Artropatia;UP Medical
+Artroplastia reversa do ombro;Fratura;Porto Surgical
+Artroplastia reversa do ombro;Fratura;AtlasMed (Lima)
+Artroplastia reversa do ombro;Fratura;Zimmer Biomet
+Artroplastia reversa do ombro;Fratura;UP Medical
+Artroplastia reversa do ombro;Revisão;Porto Surgical
+Artroplastia reversa do ombro;Revisão;AtlasMed 
+Artroplastia reversa do ombro;Revisão;Zimmer Biomet
+Artroplastia reversa do ombro;Revisão;UP Medical
+Fratura da escápula;Osteossíntese;Porto Surgical
+Fratura da escápula;Osteossíntese;PerPrima
+Fratura da escápula;Osteossíntese;TechBio
+Fratura da escápula;Osteossíntese;Spine Rio
+Fratura da escápula;Osteossíntese;N.O.S.
+Fratura da clavícula;Osteossíntese;PerPrima
+Fratura da clavícula;Osteossíntese;N.O.S.
+Fratura da clavícula;Osteossíntese;Porto Surgical
+Fratura da clavícula;Osteossíntese;Spine Rio
+Fratura do coracóide;Osteossíntese;PerPrima
+Fratura do coracóide;Osteossíntese;N.O.S.
+Fratura do coracóide;Osteossíntese;Porto Surgical
+Fratura da extremidade proximal do úmero;Placa e parafusos;PerPrima
+Fratura da extremidade proximal do úmero;Placa e parafusos;N.O.S.
+Fratura da extremidade proximal do úmero;Placa e parafusos;Porto Surgical
+Fratura da extremidade proximal do úmero;Placa e parafusos;RPM
+Fratura diafisária do úmero;Haste intramedular;N.O.S.
+Fratura diafisária do úmero;Haste intramedular;Porto Surgical
+Fratura diafisária do úmero;Haste intramedular;RPM
+Fratura diafisária do úmero;Placa e parafusos;PerPrima
+Fratura diafisária do úmero;Placa e parafusos;N.O.S.
+Fratura diafisária do úmero;Placa e parafusos;Porto Surgical
+Fratura diafisária do úmero;Placa e parafusos;RPM
+Fratura da extremidade distal do úmero;Placa e parafusos;PerPrima 
+Fratura da extremidade distal do úmero;Placa e parafusos;NOS
+Fratura da extremidade distal do úmero;Placa e parafusos;Porto Surgical
+Fratura da extremidade distal do úmero;Placa e parafusos;RPM
+Fratura da cabeça do rádio;Osteossíntese;PerPrima 
+Fratura da cabeça do rádio;Osteossíntese;RPM
+Fratura da cabeça do rádio;Artroplastia;Porto Surgical
+Fratura da cabeça do rádio;Artroplastia;RPM
+Fratura do olécrano;Osteossíntese;PerPrima 
+Fratura do olécrano;Osteossíntese;N.O.S.
+Fratura do olécrano;Osteossíntese;Porto Surgical
+Ruptura do peitoral maior;Cirurgia aberta;Arthrex
+Ruptura do Bíceps distal;Cirurgia aberta;Arthrex
+Epicondilite lateral;Tratamento cirúrgico - Artroscopia;N.O.S.
+Epicondilite lateral;Tratamento cirúrgico - Artroscopia;BlueSynthes
+Epicondilite lateral;Tratamento cirúrgico - Artroscopia;Porto Surgical
+Epicondilite lateral;Tratamento cirúrgico - Artroscopia;Arthrex
+Epicondilite lateral;Tratamento cirúrgico - Aberto;N.O.S.
+Epicondilite lateral;Tratamento cirúrgico - Aberto;BlueSynthes
+Epicondilite lateral;Tratamento cirúrgico - Aberto;Porto Surgical
+Epicondilite lateral;Tratamento cirúrgico - Aberto;Arthrex

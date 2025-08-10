@@ -1,0 +1,121 @@
+html2canvas.js?v=9f35d23e:7648 #1 637ms Error loading image https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/attached_assets/image_1747832555798.png
+Logger2.error	@	html2canvas.js?v=9f35d23e:7648
+(anonymous)	@	html2canvas.js?v=9f35d23e:6798
+step	@	html2canvas.js?v=9f35d23e:116
+(anonymous)	@	html2canvas.js?v=9f35d23e:68
+rejected	@	html2canvas.js?v=9f35d23e:47
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+(anonymous)	@	html2canvas.js?v=9f35d23e:55
+__awaiter	@	html2canvas.js?v=9f35d23e:37
+CanvasRenderer2.renderNodeContent	@	html2canvas.js?v=9f35d23e:6762
+(anonymous)	@	html2canvas.js?v=9f35d23e:6643
+step	@	html2canvas.js?v=9f35d23e:116
+(anonymous)	@	html2canvas.js?v=9f35d23e:68
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+(anonymous)	@	html2canvas.js?v=9f35d23e:55
+__awaiter	@	html2canvas.js?v=9f35d23e:37
+CanvasRenderer2.renderNode	@	html2canvas.js?v=9f35d23e:6628
+(anonymous)	@	html2canvas.js?v=9f35d23e:6978
+step	@	html2canvas.js?v=9f35d23e:116
+(anonymous)	@	html2canvas.js?v=9f35d23e:68
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+Promise.then		
+step	@	html2canvas.js?v=9f35d23e:53
+fulfilled	@	html2canvas.js?v=9f35d23e:40
+
+create-order.tsx:1261 
+ POST https://066a917b-4a6c-4696-93ce-3a79b006d860-00-4qsmp6ntacn8.riker.replit.dev/api/upload-order-pdf 500 (Internal Server Error)
+generatePDF	@	create-order.tsx:1261
+await in generatePDF		
+handleComplete	@	create-order.tsx:1303
+goToNextStep	@	create-order.tsx:1427

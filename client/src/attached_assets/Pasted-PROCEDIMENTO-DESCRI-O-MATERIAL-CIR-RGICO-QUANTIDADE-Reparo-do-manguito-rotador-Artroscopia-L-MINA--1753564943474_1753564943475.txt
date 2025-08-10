@@ -1,0 +1,147 @@
+PROCEDIMENTO;DESCRIÇÃO;MATERIAL CIRÚRGICO;QUANTIDADE
+Reparo do manguito rotador;Artroscopia;LÂMINA DE SHAVER DE PARTES MOLES;1
+Reparo do manguito rotador;Artroscopia;LÂMINA DE SHAVER ÓSSEA;1
+Reparo do manguito rotador;Artroscopia;EQUIPO BOMBA DE INFUSÃO;1
+Reparo do manguito rotador;Artroscopia;PONTEIRA DE RADIOFREQUÊNCIA;1
+Reparo do manguito rotador;Artroscopia;ÂNCORAS DE TECIDO;4
+Reparo do manguito rotador;Artroscopia;ÂNCORAS SEM NÓ;2
+Reparo do manguito rotador;Artroscopia;AGULHA PARA PINÇA SCORPION;1
+Reparo do manguito rotador;Artroscopia;CÂNULAS DE ARTROSCOPIA PARA OMBRO;3
+Reparo do manguito rotador;Cirurgia aberta;ÂNCORAS DE TECIDO;4
+Reparo do manguito rotador;Cirurgia aberta;ÂNCORAS SEM NÓ;2
+Reparo do manguito rotador;Cirurgia aberta;AGULHA PARA PINÇA SCORPION;1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;ÁCIDO HIALURÔNICO;1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;CÂNULA DE BLOQUEIO;1
+Luxação glenoumeral;Artroscopia;LÂMINA DE SHAVER DE PARTES MOLES;1
+Luxação glenoumeral;Artroscopia;LÂMINA DE SHAVER ÓSSEA;1
+Luxação glenoumeral;Artroscopia;EQUIPO BOMBA DE INFUSÃO;1
+Luxação glenoumeral;Artroscopia;PONTEIRA DE RADIOFREQUÊNCIA;1
+Luxação glenoumeral;Artroscopia;ÂNCORAS DE TECIDO;4
+Luxação glenoumeral;Artroscopia;ÂNCORAS SEM NÓ;2
+Luxação glenoumeral;Artroscopia;AGULHA PARA PINÇA SCORPION;1
+Luxação glenoumeral;Artroscopia;CÂNULAS DE ARTROSCOPIA PARA OMBRO;3
+Luxação glenoumeral;Latarjet;LÂMINA DE SHAVER ÓSSEA;1
+Luxação glenoumeral;Latarjet;BROCAS;2
+Luxação glenoumeral;Latarjet;ÂNCORAS DE TECIDO;2
+Luxação glenoumeral;Latarjet;LÂMINA DE SERRA RETA;1
+Luxação glenoumeral;Latarjet;LÂMINA DE SERRA EM L;1
+Luxação glenoumeral;Latarjet;PARAFUSOS CANULADOS - LATARJET;2
+Luxação glenoumeral;Latarjet;FIOS GUIA ROSQUEADOS;2
+Luxação glenoumeral;Latarjet;ARRUELAS;2
+Luxação glenoumeral;Latarjet;KIT INSTRUMENTAL DE LATARJET;1
+Luxação acrômio-clavicular (LAC);LAC;LÂMINA DE SHAVER DE PARTES MOLES;1
+Luxação acrômio-clavicular (LAC);LAC;LÂMINA DE SHAVER ÓSSEA;1
+Luxação acrômio-clavicular (LAC);LAC;EQUIPO BOMBA DE INFUSÃO;1
+Luxação acrômio-clavicular (LAC);LAC;PONTEIRA DE RADIOFREQUÊNCIA;1
+Luxação acrômio-clavicular (LAC);LAC;ÂNCORAS;2
+Luxação acrômio-clavicular (LAC);LAC;CÂNULAS DE ARTROSCOPIA PARA OMBRO;2
+Luxação acrômio-clavicular (LAC);LAC;02 BOTÕES DOG BONE;2
+Luxação acrômio-clavicular (LAC);LAC;FIOS FIBER TAPE LOOP.;2
+Luxação acrômio-clavicular (LAC);LAC;BROCA CANULADA;1
+Artroplastia reversa do ombro;Artroplastia;GLENOSFERA INVERSA;1
+Artroplastia reversa do ombro;Artroplastia;INVERSE EPIFISE;1
+Artroplastia reversa do ombro;Artroplastia;PARAFUSOS DE FIXAÇÃO INVERSE LAGSCREW;4
+Artroplastia reversa do ombro;Artroplastia;METAGLENA INVERSE;1
+Artroplastia reversa do ombro;Artroplastia;HASTE INVERSE;1
+Artroplastia reversa do ombro;Artroplastia;ESPAÇADOR INVERSE INLAY;1
+Artroplastia reversa do ombro;Artroplastia;LÂMINA DE SERRA OSCILANTE;1
+Artroplastia reversa do ombro;Artroplastia;FIOS DE ALTA RESISTÊNCIA TIPO TAPER;6
+Artroplastia reversa do ombro;Artroplastia;CIMENTO COM ANTIBIÓTICO;1
+Artroplastia reversa do ombro;Fratura;GLENOSFERA INVERSA;1
+Artroplastia reversa do ombro;Fratura;INVERSE EPIFISE;1
+Artroplastia reversa do ombro;Fratura;PARAFUSOS DE FIXAÇÃO INVERSE LAGSCREW;4
+Artroplastia reversa do ombro;Fratura;METAGLENA INVERSE;1
+Artroplastia reversa do ombro;Fratura;HASTE INVERSE;1
+Artroplastia reversa do ombro;Fratura;ESPAÇADOR INVERSE INLAY;1
+Artroplastia reversa do ombro;Fratura;LÂMINA DE SERRA OSCILANTE;1
+Artroplastia reversa do ombro;Fratura;FIOS DE ALTA RESISTÊNCIA TIPO TAPER;6
+Artroplastia reversa do ombro;Fratura;CIMENTO COM ANTIBIÓTICO;1
+Artroplastia reversa do ombro;Revisão;HASTE UMERAL REVERSA DE FRATURA;1
+Artroplastia reversa do ombro;Revisão;INSERTO REVERSO DE FRATURA;1
+Artroplastia reversa do ombro;Revisão;BASE GLENOIDAL;1
+Artroplastia reversa do ombro;Revisão;ESFERA GLENOIDAL;1
+Artroplastia reversa do ombro;Revisão;PARAFUSO DE COMPRESSÃO 4,5MM;2
+Artroplastia reversa do ombro;Revisão;PARAFUSO BLOQUEADO 4,5MM;2
+Artroplastia reversa do ombro;Revisão;CENTRALIZADOR DISTAL;1
+Artroplastia reversa do ombro;Revisão;DOSE DE CIMENTO COM ANTIBIÓTICO;1
+Artroplastia reversa do ombro;Revisão;LÂMINA DE SERRA DE PONTA OSCILANTE;1
+Artroplastia reversa do ombro;Revisão;FIOS DE ALTA RESISTÊNCIA;6
+Artroplastia reversa do ombro;Revisão;CIMENTOS COM ANTIBIÓTICO;1
+Artroplastia reversa do ombro;Revisão;KIT DE LAVAGEM;1
+Artroplastia reversa do ombro;Revisão;PONTEIRA FLUSH CUT;1
+Artroplastia reversa do ombro;Revisão;CURATIVO AQUACEL AG;1
+Artroplastia reversa do ombro;Revisão;ENXERTO ÓSSEO;1
+Fratura da escápula;Osteossíntese;PLACA DE RECONSTRUÇÃO BLOQUEADA LONGA;1
+Fratura da escápula;Osteossíntese;PLACA DE MINI-MICRO;2
+Fratura da escápula;Osteossíntese;PARAFUSOS CORTICAIS;4
+Fratura da escápula;Osteossíntese;PARAFUSOS BLOQUEADOS;6
+Fratura da escápula;Osteossíntese;PARAFUSOS CORTICAIS;4
+Fratura da escápula;Osteossíntese;PARAFUSOS BLOQUEADOS;6
+Fratura da escápula;Osteossíntese;ENXERTO ÓSSEO;1
+Fratura da escápula;Osteossíntese;GEL ANTI-FIBRÓTICO;1
+Fratura da escápula;Osteossíntese;ÂNCORAS;1
+Fratura da escápula;Osteossíntese;NEURAWRAP 2CM;1
+Fratura da escápula;Osteossíntese;I-STIM;1
+Fratura da clavícula;Osteossíntese;PLACA DE CLAVÍCULA;1
+Fratura da clavícula;Osteossíntese;PARAFUSOS CORTICAIS;2
+Fratura da clavícula;Osteossíntese;PARAFUSOS BLOQUEADOS;6
+Fratura da clavícula;Osteossíntese;FIO TAPER;2
+Fratura do coracóide;Osteossíntese;PARAFUSOS CANULADOS 4,0MM;2
+Fratura do coracóide;Osteossíntese;FIOS GUIA;2
+Fratura do coracóide;Osteossíntese;ÂNCORA DE TECIDO;2
+Fratura da extremidade proximal do úmero;Placa e parafusos;PLACA DE ÚMERO PROXIMAL;1
+Fratura da extremidade proximal do úmero;Placa e parafusos;PARAFUSO CORTICAL;2
+Fratura da extremidade proximal do úmero;Placa e parafusos;PARAFUSO BLOQUEADO;8
+Fratura da extremidade proximal do úmero;Placa e parafusos;FIOS TAPER;3
+Fratura diafisária do úmero;Haste intramedular;HASTE DE ÚMERO  ;1
+Fratura diafisária do úmero;Haste intramedular;PARAFUSO DE BLOQUEIO ;4
+Fratura diafisária do úmero;Haste intramedular;PARAFUSO TAMPÃO ;1
+Fratura diafisária do úmero;Haste intramedular;FIO GUIA OLIVADO;2
+Fratura diafisária do úmero;Placa e parafusos;PLACA LATERAL DE ÚMERO ;1
+Fratura diafisária do úmero;Placa e parafusos;PARAFUSO CORTICAL;4
+Fratura diafisária do úmero;Placa e parafusos;PARAFUSO BLOQUEADO;8
+Fratura da extremidade distal do úmero;Placa e parafusos;PLACA POSTEROLATERAL DE ÚMERO DISTAL;1
+Fratura da extremidade distal do úmero;Placa e parafusos;PLACA MEDIAL DE ÚMERO DISTAL;1
+Fratura da extremidade distal do úmero;Placa e parafusos;PARAFUSO CORTICAL;6
+Fratura da extremidade distal do úmero;Placa e parafusos;PARAFUSO BLOQUEADO;12
+Fratura da extremidade distal do úmero;Placa e parafusos;PARAFUSO CANULADO;2
+Fratura da extremidade distal do úmero;Placa e parafusos;ENXERTO ÓSSEO;1
+Fratura da cabeça do rádio;Osteossíntese;PLACA DE CABEÇA DE RÁDIO;1
+Fratura da cabeça do rádio;Osteossíntese;PARAFUSO CORTICAL;2
+Fratura da cabeça do rádio;Osteossíntese;PARAFUSO BLOQUEADO;8
+Fratura da cabeça do rádio;Osteossíntese;PARAFUSO CANULADO DE DUPLA COMPRESSÃO;3
+Fratura da cabeça do rádio;Osteossíntese;FIOS GUIA;3
+Fratura da cabeça do rádio;Osteossíntese;ÂNCORA DE TECIDO;2
+Fratura da cabeça do rádio;Artroplastia;HASTE EVOLVE;1
+Fratura da cabeça do rádio;Artroplastia;CABEÇA RADIAL EVOLVE;1
+Fratura da cabeça do rádio;Artroplastia;ÂNCORA DE TECIDO;2
+Fratura da cabeça do rádio;Artroplastia;CIMENTO ORTOPÉDICO;1
+Fratura do olécrano;Osteossíntese;PLACA DE OLÉCRANO;1
+Fratura do olécrano;Osteossíntese;PARAFUSO CORTICAL;2
+Fratura do olécrano;Osteossíntese;PARAFUSO BLOQUEADO;10
+Fratura do olécrano;Osteossíntese;ÂNCORA DE TECIDO;2
+Ruptura do peitoral maior;Cirurgia aberta;PEC BUTTON (2,6MM);3
+Ruptura do peitoral maior;Cirurgia aberta;FIBERWIRE;3
+Ruptura do peitoral maior;Cirurgia aberta;DRILL PIN (3,2MM);1
+Ruptura do peitoral maior;Cirurgia aberta;INSERSOR PARA BUTTON;1
+Ruptura do peitoral maior;Cirurgia aberta;TIGERLOOP ;1
+Ruptura do Bíceps distal;Cirurgia aberta;BÍCEPS BOTON;1
+Ruptura do Bíceps distal;Cirurgia aberta;INSERSOR PARA BUTTON;1
+Ruptura do Bíceps distal;Cirurgia aberta;DRILL PIN (3,2MM);1
+Ruptura do Bíceps distal;Cirurgia aberta;TIGERLOOP ;1
+Ruptura do Bíceps distal;Cirurgia aberta;PARAFUSO DE BIOTENODESE;1
+Epicondilite lateral;Infiltração;ÁCIDO HIALURÔNICO;1
+Epicondilite lateral;Infiltração;TRIANCIL;1
+Epicondilite lateral;Artroscopia;ÂNCORA DE TECIDO;3
+Epicondilite lateral;Artroscopia;LÂMINA DE SHAVER ;1
+Epicondilite lateral;Artroscopia;EQUIPO BOMBA;1
+Epicondilite lateral;Artroscopia; PONTEIRA DE RADIOFREQUÊNCIA;1
+Epicondilite lateral;Cirurgia aberta;ÂNCORA DE TECIDO;3
+Epicondilite medial;Infiltração;ÁCIDO HIALURÔNICO;1
+Epicondilite medial;Infiltração;TRIANCIL;1
+Epicondilite medial;Tratamento cirúrgico;ÂNCORA DE TECIDO;3
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;PLACA DE RÁDIO DISTAL;1
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;PARAFUSO CORTICAL;2
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;PARAFUSO BLOQUEADO;10
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;FIO DE KIRSCHNER;3
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;FIO DE KIRSCHNER;3

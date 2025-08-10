@@ -1,0 +1,48 @@
+Procedimento Cirurgico;Conduta Clinica ;CID-10
+Reparo do manguito rotador;Artroscopia;S46.0
+Reparo do manguito rotador;Artroscopia;M75.1
+Reparo do manguito rotador;Cirurgia aberta;S46.0
+Reparo do manguito rotador;Cirurgia aberta;M75.1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;M75.1
+Infiltração e bloqueio do ombro;Bloqueio - Guiado por USG;M75.0
+Luxação glenoumeral;Artroscopia;S43.0
+Luxação glenoumeral;Artroscopia; M24.41
+Luxação glenoumeral;Latarjet;S43.0
+Luxação acrômio-clavicular (LAC);LAC;S43.1
+Artroplastia reversa do ombro;Artroplastia;M75.8
+Artroplastia reversa do ombro;Artroplastia;M75.9
+Artroplastia reversa do ombro;Artroplastia;M12.8 
+Artroplastia reversa do ombro;Artroplastia;M19.0
+Artroplastia reversa do ombro;Fratura;S42.2
+Artroplastia reversa do ombro;Revisão;S42.2
+Artroplastia reversa do ombro;Revisão;T84.0
+Artroplastia reversa do ombro;Revisão;M96.0
+Fratura da escápula;Osteossíntese;S42.1
+Fratura da clavícula;Osteossíntese;S42.7
+Fratura da clavícula;Osteossíntese;S42.8
+Fratura da clavícula;Osteossíntese;S42.0
+Fratura do coracóide;Osteossíntese;S42.9
+Fratura da extremidade proximal do úmero;Placa e parafusos;S42.2
+Fratura diafisária do úmero;Haste intramedular;S42.3
+Fratura diafisária do úmero;Placa e parafusos;S42.3
+Fratura da extremidade distal do úmero;Placa e parafusos;S42.4
+Fratura da cabeça do rádio;Osteossíntese;S52.1 
+Fratura da cabeça do rádio;Artroplastia;S52.1 
+Fratura do olécrano;Osteossíntese;S52.0
+Ruptura do peitoral maior;Cirurgia aberta;S46.2
+Ruptura do Bíceps distal;Cirurgia aberta;S46.2
+Epicondilite lateral;Infiltração;M77.1
+Epicondilite lateral;Artroscopia;M77.1
+Epicondilite lateral;Cirurgia aberta;M77.1
+Epicondilite medial;Infiltração;M77.0
+Epicondilite medial;Tratamento cirúrgico;M77.0
+Bursite de olécrano;Tratamento cirúrgico;M70.2
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;S52.2 
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;S52.3
+Fratura dos ossos do antebraço - diáfise;Tratamento cirúrgico;S52.4
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;S52.5 
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;S52.6 
+Fratura da extremidade distal do rádio;Osteossíntese + Placa;S52.7 
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;S52.5 
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;S52.6 
+Fratura da extremidade distal do rádio;Osteossíntese + Fios;S52.7 

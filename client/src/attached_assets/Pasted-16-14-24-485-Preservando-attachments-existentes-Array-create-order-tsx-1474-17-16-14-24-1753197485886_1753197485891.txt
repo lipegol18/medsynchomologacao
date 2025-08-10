@@ -1,0 +1,58 @@
+16:14:24.485 Preservando attachments existentes: 
+Array [ {…} ]
+create-order.tsx:1474:17
+16:14:24.486 saveProgress - Salvando 0 CIDs relacionais para pedido 192: 
+Array []
+create-order.tsx:1520:19
+16:14:25.057 saveProgress - CIDs relacionais salvos com sucesso create-order.tsx:1532:21
+16:14:25.058 saveProgress - Salvando 0 procedimentos CBHPM relacionais para pedido 192: 
+Array []
+create-order.tsx:1566:19
+16:14:25.401 saveProgress - Procedimentos CBHPM relacionais salvos com sucesso create-order.tsx:1578:21
+16:14:25.404 saveProgressMutation - Dados a serem enviados: 
+Object { patientId: 25, userId: 41, hospitalId: 21, id: 192, attachments: (1) […] }
+create-order.tsx:1631:15
+16:14:25.405 saveProgressMutation - Dados válidos após limpeza: 
+Object { patientId: 25, userId: 41, hospitalId: 21, id: 192, attachments: (1) […] }
+create-order.tsx:1643:17
+16:14:25.443 HospitalSelection renderizado com hospital: HOSPITAL COPA STAR hospital-selection.tsx:43:11
+16:14:25.524 SurgeryData: Carregando fornecedores do supplierDetails: 0 surgery-data.tsx:779:13
+16:14:25.525 SurgeryData: Nenhum fornecedor recebido surgery-data.tsx:782:15
+16:14:25.918 saveProgressMutation - Dados retornados após salvamento: 
+Object { cidLateralitySalvo: undefined, procedureLateralitySalvo: "direito" }
+create-order.tsx:1655:17
+16:14:28.175 Região Ombro: 10 procedimentos disponíveis para seleção manual surgery-data.tsx:3939:19
+16:14:28.175 Região anatômica selecionada: 
+Object { id: 1, name: "Ombro", iconUrl: "/assets/icons/anatomy/shoulder.png", title: "Ombro", description: "Articulação do ombro, manguito rotador, clavícula e procedimentos do membro superior" }
+create-order.tsx:154:13
+16:14:30.918 Carregados 20 procedimentos cirúrgicos surgery-data.tsx:674:17
+16:14:32.333 Condutas carregadas para procedimento 1: 
+Array [ {…}, {…} ]
+surgery-data.tsx:284:19
+16:14:33.823 🔍 Buscando CIDs para procedimento 1 + conduta 6 surgery-data.tsx:313:17
+16:14:34.226 📋 CIDs encontrados para a conduta: 
+Array [ {…}, {…} ]
+surgery-data.tsx:321:19
+16:14:34.227 ✅ CID auto-adicionado: M75.1 - Síndrome do manguito rotador (Principal) surgery-data.tsx:350:29
+16:14:34.227 ✅ CID auto-adicionado: S460 - Traumatismo de tendão do manguito rotador do ombro (Secundário) surgery-data.tsx:350:29
+16:14:34.228 🔍 Buscando procedimentos CBHPM para procedimento 1 + conduta 6 surgery-data.tsx:376:17
+16:14:34.606 🏥 Procedimentos CBHPM encontrados: 
+Array(6) [ {…}, {…}, {…}, {…}, {…}, {…} ]
+​
+0: Object { id: 29, procedureId: 704, procedureCode: "3.07.35.06-8", … }
+​
+1: Object { id: 30, procedureId: 699, procedureCode: "3.07.35.01-7", … }
+​
+2: Object { id: 33, procedureId: 701, procedureCode: "3.07.35.03-3", … }
+​
+3: Object { id: 31, procedureId: 706, procedureCode: "3.07.35.08-4", … }
+​
+4: Object { id: 32, procedureId: 707, procedureCode: "3.07.35.09-2", … }
+​
+5: Object { id: 34, procedureId: 772, procedureCode: "3.07.35.16-5", … }
+​
+length: 6
+​
+<prototype>: Array []
+surgery-data.tsx:384:19
+16:14:34.607 ✅ 6 procedimentos CBHPM disponíveis para auto-preenchimento

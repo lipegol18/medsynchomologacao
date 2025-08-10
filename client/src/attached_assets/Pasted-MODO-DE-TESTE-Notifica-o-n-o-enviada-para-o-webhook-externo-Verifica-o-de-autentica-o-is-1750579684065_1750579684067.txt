@@ -1,0 +1,278 @@
+MODO DE TESTE: Notificação não enviada para o webhook externo
+🔍 Verificação de autenticação: {
+  isAuthenticated: true,
+  hasUser: true,
+  sessionID: '_Ur4w6LSeEbe9LrPd9S1iGZSsYHMKj8u',
+  userId: 41
+}
+✅ Usuário autenticado: 41
+🔍 Dados recebidos no POST /api/medical-orders: {
+  "patientId": 25,
+  "userId": 41,
+  "hospitalId": 21,
+  "statusCode": "em_preenchimento",
+  "procedureType": "eletiva",
+  "clinicalIndication": "A ser preenchido",
+  "procedureLaterality": null,
+  "additionalNotes": null,
+  "clinicalJustification": null,
+  "attachments": []
+}
+🔍 Estrutura dos dados: {
+  patientId: 25,
+  userId: 41,
+  hospitalId: 21,
+  patientIdType: 'number',
+  userIdType: 'number',
+  hospitalIdType: 'number'
+}
+✅ Validação passou - preparando dados do pedido
+🔍 ROUTES.TS - Dados preparados que serão enviados para storage.createMedicalOrder:
+preparedOrderData: {
+  "patientId": 25,
+  "userId": 41,
+  "hospitalId": 21,
+  "procedureId": null,
+  "procedureDate": null,
+  "clinicalIndication": "A ser preenchido",
+  "additionalNotes": null,
+  "cidCodeId": null,
+  "cidLaterality": null,
+  "procedureLaterality": null,
+  "procedureType": "eletiva",
+  "opmeItemIds": [],
+  "opmeItemQuantities": [],
+  "exam_images_url": [],
+  "exam_image_count": 0,
+  "medical_report_url": null,
+  "statusCode": "em_preenchimento",
+  "complexity": null,
+  "clinicalJustification": null,
+  "cid_code_id": []
+}
+🔍 ROUTES.TS - Verificação de campos críticos:
+{
+  patientId: 25,
+  userId: 41,
+  hospitalId: 21,
+  patientIdType: 'number',
+  userIdType: 'number',
+  hospitalIdType: 'number'
+}
+🔍 ROUTES.TS - ANTES DE CHAMAR STORAGE - preparedOrderData: {
+  patientId: 25,
+  userId: 41,
+  hospitalId: 21,
+  procedureId: null,
+  procedureDate: null,
+  clinicalIndication: 'A ser preenchido',
+  additionalNotes: null,
+  cidCodeId: null,
+  cidLaterality: null,
+  procedureLaterality: null,
+  procedureType: 'eletiva',
+  opmeItemIds: [],
+  opmeItemQuantities: [],
+  exam_images_url: [],
+  exam_image_count: 0,
+  medical_report_url: null,
+  statusCode: 'em_preenchimento',
+  complexity: null,
+  clinicalJustification: null,
+  cid_code_id: []
+}
+🔍 STORAGE.TS - INÍCIO createMedicalOrder
+🔍 STORAGE.TS - Tipo do parâmetro recebido: object
+🔍 STORAGE.TS - Dados brutos recebidos: {
+  "patientId": 25,
+  "userId": 41,
+  "hospitalId": 21,
+  "procedureId": null,
+  "procedureDate": null,
+  "clinicalIndication": "A ser preenchido",
+  "additionalNotes": null,
+  "cidCodeId": null,
+  "cidLaterality": null,
+  "procedureLaterality": null,
+  "procedureType": "eletiva",
+  "opmeItemIds": [],
+  "opmeItemQuantities": [],
+  "exam_images_url": [],
+  "exam_image_count": 0,
+  "medical_report_url": null,
+  "statusCode": "em_preenchimento",
+  "complexity": null,
+  "clinicalJustification": null,
+  "cid_code_id": []
+}
+🔍 STORAGE.TS - Verificação individual de campos:
+  - insertOrder.patientId: 25 (tipo: number )
+  - insertOrder.userId: 41 (tipo: number )
+  - insertOrder.hospitalId: 21 (tipo: number )
+🔍 STORAGE.TS - Campos presentes no objeto: [
+  'patientId',             'userId',
+  'hospitalId',            'procedureId',
+  'procedureDate',         'clinicalIndication',
+  'additionalNotes',       'cidCodeId',
+  'cidLaterality',         'procedureLaterality',
+  'procedureType',         'opmeItemIds',
+  'opmeItemQuantities',    'exam_images_url',
+  'exam_image_count',      'medical_report_url',
+  'statusCode',            'complexity',
+  'clinicalJustification', 'cid_code_id'
+]
+🔍 STORAGE.TS - insertOrder completo: {
+  patientId: 25,
+  userId: 41,
+  hospitalId: 21,
+  procedureId: null,
+  procedureDate: null,
+  clinicalIndication: 'A ser preenchido',
+  additionalNotes: null,
+  cidCodeId: null,
+  cidLaterality: null,
+  procedureLaterality: null,
+  procedureType: 'eletiva',
+  opmeItemIds: [],
+  opmeItemQuantities: [],
+  exam_images_url: [],
+  exam_image_count: 0,
+  medical_report_url: null,
+  statusCode: 'em_preenchimento',
+  complexity: null,
+  clinicalJustification: null,
+  cid_code_id: []
+}
+🔍 STORAGE.TS - orderData após spread de insertOrder:
+orderData: {
+  "patientId": 25,
+  "userId": 41,
+  "hospitalId": 21,
+  "procedureId": null,
+  "procedureDate": null,
+  "clinicalIndication": "A ser preenchido",
+  "additionalNotes": null,
+  "cidCodeId": null,
+  "cidLaterality": null,
+  "procedureLaterality": null,
+  "procedureType": "eletiva",
+  "opmeItemIds": [],
+  "opmeItemQuantities": [],
+  "exam_images_url": [],
+  "exam_image_count": 0,
+  "medical_report_url": null,
+  "statusCode": "em_preenchimento",
+  "complexity": null,
+  "clinicalJustification": null,
+  "cid_code_id": []
+}
+🔍 STORAGE.TS - Verificação de campos após spread:
+  - orderData.patientId: 25 (tipo: number )
+  - orderData.userId: 41 (tipo: number )
+  - orderData.hospitalId: 21 (tipo: number )
+🔍 Dados originais antes da sanitização: {
+  patientId: 25,
+  userId: 41,
+  hospitalId: 21,
+  patientIdValue: 25,
+  userIdValue: 41
+}
+🔍 Dados sanitizados para inserção: {
+  "patient_id": 25,
+  "user_id": 41,
+  "hospital_id": 21,
+  "procedure_date": null,
+  "clinical_indication": "A ser preenchido",
+  "status_code": "em_preenchimento",
+  "procedure_laterality": null,
+  "procedure_type": "eletiva",
+  "complexity": null,
+  "additional_notes": null,
+  "clinical_justification": null,
+  "received_value": null,
+  "attachments": []
+}
+🔍 Verificação final dos campos obrigatórios: {
+  patient_id: 25,
+  user_id: 41,
+  clinical_indication: 'A ser preenchido',
+  patient_id_type: 'number',
+  user_id_type: 'number'
+}
+SQL que seria gerado pelo Drizzle: insert into "medical_orders" ("id", "patient_id", "user_id", "hospital_id", "procedure_date", "clinical_indication", "clinical_justification", "procedure_laterality", "procedure_type", "attachments", "additional_notes", "status_code", "complexity", "received_value", "created_at", "updated_at") values (default, default, default, default, default, default, default, default, default, $1, default, default, $2, default, default, default)
+Parâmetros da query: [ '[]', null ]
+Tentando inserção direta com a conexão do pool...
+Verificando campos antes da inserção:
+Existência do campo exam_images_url: false
+Valor de exam_images_url: undefined
+Erro na inserção via Drizzle: error: null value in column "patient_id" of relation "medical_orders" violates not-null constraint
+    at file:///home/runner/workspace/node_modules/@neondatabase/serverless/index.mjs:1345:74
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NeonPreparedQuery.execute (/home/runner/workspace/node_modules/src/neon-serverless/session.ts:102:18)
+    at async DatabaseStorage.createMedicalOrder (/home/runner/workspace/server/storage.ts:1405:24)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:2461:26) {
+  length: 363,
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (166, null, null, null, null, null, null, null, null, 2025-06-22 08:03:58.876237, 2025-06-22 08:03:58.876237, null, em_preenchimento, null, null, []).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'medical_orders',
+  column: 'patient_id',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2006',
+  routine: 'ExecConstraints'
+}
+Erro ao criar pedido médico: error: null value in column "patient_id" of relation "medical_orders" violates not-null constraint
+    at file:///home/runner/workspace/node_modules/@neondatabase/serverless/index.mjs:1345:74
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NeonPreparedQuery.execute (/home/runner/workspace/node_modules/src/neon-serverless/session.ts:102:18)
+    at async DatabaseStorage.createMedicalOrder (/home/runner/workspace/server/storage.ts:1405:24)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:2461:26) {
+  length: 363,
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (166, null, null, null, null, null, null, null, null, 2025-06-22 08:03:58.876237, 2025-06-22 08:03:58.876237, null, em_preenchimento, null, null, []).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'medical_orders',
+  column: 'patient_id',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2006',
+  routine: 'ExecConstraints'
+}
+Erro ao criar pedido médico: error: null value in column "patient_id" of relation "medical_orders" violates not-null constraint
+    at file:///home/runner/workspace/node_modules/@neondatabase/serverless/index.mjs:1345:74
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async NeonPreparedQuery.execute (/home/runner/workspace/node_modules/src/neon-serverless/session.ts:102:18)
+    at async DatabaseStorage.createMedicalOrder (/home/runner/workspace/server/storage.ts:1405:24)
+    at async <anonymous> (/home/runner/workspace/server/routes.ts:2461:26) {
+  length: 363,
+  severity: 'ERROR',
+  code: '23502',
+  detail: 'Failing row contains (166, null, null, null, null, null, null, null, null, 2025-06-22 08:03:58.876237, 2025-06-22 08:03:58.876237, null, em_preenchimento, null, null, []).',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: 'public',
+  table: 'medical_orders',
+  column: 'patient_id',
+  dataType: undefined,
+  constraint: undefined,
+  file: 'execMain.c',
+  line: '2006',
+  routine: 'ExecConstraints'

@@ -14,7 +14,7 @@ app.use(cookieParser());
 
 // Configure CORS para permitir chamadas de aplicações mobile
 app.use(cors({
-  origin: ["http://localhost:5000", "http://localhost:3000"], // Permitir localhost
+  origin: ["http://localhost:5001", "http://localhost:3000"], // Permitir localhost
   credentials: true, // Permitir credenciais (cookies, session)
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "Accept", "Cookie"] 
@@ -108,10 +108,10 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
+  // ALWAYS serve the app on port 5001
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
-  const port = 5000;
+  const port = 5001;
   server.listen({
     port,
     host: "0.0.0.0",
